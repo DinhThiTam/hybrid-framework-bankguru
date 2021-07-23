@@ -1,17 +1,29 @@
 package pageObjects.nopCommerce;
 
-public class HomePageObject {
+import org.openqa.selenium.WebDriver;
 
-	public boolean isHomePageSliderDisplayed;
+import commons.BasePage;
+import pageUIs.nopCommerce.HomePageUI;
+
+public class HomePageObject extends BasePage {
+	private WebDriver driver;
+	
+	public HomePageObject(WebDriver driver) {
+		this.driver = driver;
+	}
+	public boolean isHomePageSliderDisplayed() {
+		waitForElementVisible(driver, HomePageUI.HOMEPAGE_SLIDER);
+		return isElementDisplayed(driver, HomePageUI.HOMEPAGE_SLIDER);
+	}
 
 	public void clickToRegisterLink() {
-		// TODO Auto-generated method stub
-		
+		waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
+		clickToElement(driver, HomePageUI.REGISTER_LINK);	
 	}
 
 	public void clickToLoginLink() {
-		// TODO Auto-generated method stub
-		
+		waitForElementClickable(driver, HomePageUI.LOGIN_LINK);
+		clickToElement(driver, HomePageUI.LOGIN_LINK);
 	}
 
 }

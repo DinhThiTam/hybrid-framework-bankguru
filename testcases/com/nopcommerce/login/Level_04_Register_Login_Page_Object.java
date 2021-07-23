@@ -16,7 +16,7 @@ import pageObjects.nopCommerce.RegisterPageObject;
 
 public class Level_04_Register_Login_Page_Object {
 	WebDriver driver;
-	String username, password;
+	String emailAddress, password;
 	String projectLocation = System.getProperty("user.dir");
 	BasePage basePage;
 	
@@ -25,36 +25,37 @@ public class Level_04_Register_Login_Page_Object {
 	System.setProperty("webdriver.gecko.driver", projectLocation + "\\browserDrivers\\geckodriver.exe");
 	driver = new FirefoxDriver();
 	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
+	emailAddress = getRandomEmail();
+	password = "123456";
 	}
 	@Test
 	public void Login_01_Register_To_System() {
-		driver.get("https://www.nopcommerce.com/");
-		homePage = new HomePageObject();
-		Assert.assertTrue(homePage.isHomePageSliderDisplayed);
+		driver.get("https://demo.nopcommerce.com/");
+		homePage = new HomePageObject(driver);
+		Assert.assertTrue(homePage.isHomePageSliderDisplayed());
 		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject();
+		registerPage = new RegisterPageObject(driver);
 		registerPage.clickToGenderRadioButton();
-		registerPage.enterToFirstNameTextbox("");
-		registerPage.enterToLastNameTextbox("");
-		registerPage.enterToEmailTextbox("");
-		registerPage.enterToPasswordTextbox("");
-		registerPage.enterToConfirmPasswordTextbox("");
+		registerPage.enterToFirstNameTextbox("dinh");
+		registerPage.enterToLastNameTextbox("tam");
+		registerPage.enterToEmailTextbox(emailAddress);
+		registerPage.enterToPasswordTextbox(password);
+		registerPage.enterToConfirmPasswordTextbox(password);
 		registerPage.clickToRegisterButton();
 		Assert.assertTrue(registerPage.isSuccessMessageDisplayed());
 		registerPage.clickToLogoutLink();
-		homePage = new HomePageObject();	
+		homePage = new HomePageObject(driver);	
 	}
 	
 	@Test
 	public void Login_02_Login_To_System() {
 		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject();
-		loginPage.enterToEmailTextbox("");
-		loginPage.enterToPasswordTextbox("");
+		loginPage = new LoginPageObject(driver);
+		loginPage.enterToEmailTextbox(emailAddress);
+		loginPage.enterToPasswordTextbox(password);
 		loginPage.clickToLoginButton();
-		homePage = new HomePageObject();
-		Assert.assertTrue(homePage.isHomePageSliderDisplayed);
+		homePage = new HomePageObject(driver);
+		Assert.assertTrue(homePage.isHomePageSliderDisplayed());
 	}
 	
 	@AfterClass

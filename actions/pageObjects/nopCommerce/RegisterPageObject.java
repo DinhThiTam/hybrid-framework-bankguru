@@ -1,49 +1,62 @@
 package pageObjects.nopCommerce;
 
-public class RegisterPageObject {
+import org.openqa.selenium.WebDriver;
 
+import commons.BasePage;
+import pageUIs.nopCommerce.RegisterPageUI;
+
+public class RegisterPageObject extends BasePage {
+	private WebDriver driver;
+	
+	public RegisterPageObject (WebDriver driver) {
+		this.driver = driver;
+	}
 	public void clickToGenderRadioButton() {
-		// TODO Auto-generated method stub
+		waitForElementClickable(driver, RegisterPageUI.GENDER_MALE_RADIO);
+		clickToElement(driver, RegisterPageUI.GENDER_MALE_RADIO);
+	}
+	
+	public void enterToFirstNameTextbox(String firstName) {
+		waitForElementVisible(driver, RegisterPageUI.FIRSTNAME_TEXTBOX);
+		senkeyToElement(driver, RegisterPageUI.FIRSTNAME_TEXTBOX, firstName);
 		
 	}
 
-	public void enterToLastNameTextbox(String string) {
-		// TODO Auto-generated method stub
+	public void enterToLastNameTextbox(String lastName) {
+		waitForElementVisible(driver, RegisterPageUI.LASTNAME_TEXTBOX);
+		senkeyToElement(driver, RegisterPageUI.LASTNAME_TEXTBOX, lastName);
 		
 	}
 
-	public void enterToFirstNameTextbox(String string) {
-		// TODO Auto-generated method stub
+	public void enterToEmailTextbox(String emailAddress) {
+		waitForElementVisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
+		senkeyToElement(driver, RegisterPageUI.EMAIL_TEXTBOX, emailAddress);
 		
 	}
 
-	public void enterToEmailTextbox(String string) {
-		// TODO Auto-generated method stub
-		
+	public void enterToPasswordTextbox(String password) {
+		waitForElementVisible(driver, RegisterPageUI.PASSWORD_TEXTBOX);
+		senkeyToElement(driver, RegisterPageUI.PASSWORD_TEXTBOX, password);	
 	}
-
-	public void enterToPasswordTextbox(String string) {
-		// TODO Auto-generated method stub
-		
+	
+	public void enterToConfirmPasswordTextbox(String confirmPassword) {
+		waitForElementVisible(driver, RegisterPageUI.CONFIRMPASSWORD_TEXTBOX);
+		senkeyToElement(driver, RegisterPageUI.CONFIRMPASSWORD_TEXTBOX, confirmPassword);	
 	}
 
 	public void clickToRegisterButton() {
-		// TODO Auto-generated method stub
-		
+		waitForElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
+		clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);		
 	}
 
 	public boolean isSuccessMessageDisplayed() {
-		// TODO Auto-generated method stub
-		return false;
+		waitForElementVisible(driver, RegisterPageUI.SUCCESS_MESSAGE);
+		return isSuccessMessageDisplayed();
 	}
 
 	public void clickToLogoutLink() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void enterToConfirmPasswordTextbox(String string) {
-		// TODO Auto-generated method stub
+		waitForElementClickable(driver, RegisterPageUI.LOGOUT_LINK);
+		clickToElement(driver, RegisterPageUI.LOGOUT_LINK);
 		
 	}
 
