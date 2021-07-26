@@ -51,7 +51,7 @@ public class RegisterPageObject extends BasePage {
 
 	public boolean isSuccessMessageDisplayed() {
 		waitForElementVisible(driver, RegisterPageUI.SUCCESS_MESSAGE);
-		return isSuccessMessageDisplayed();
+		return isElementDisplayed(driver, RegisterPageUI.SUCCESS_MESSAGE);
 	}
 
 	public void clickToLogoutLink() {
