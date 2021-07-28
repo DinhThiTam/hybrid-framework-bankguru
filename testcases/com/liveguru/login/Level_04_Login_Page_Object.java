@@ -59,8 +59,7 @@ public class Level_04_Login_Page_Object extends BaseTest{
 //		loginPage.enterToPasswordTextbox("123");
 //		loginPage.clickToLoginButton();
 		loginPage.loginToSystem("dam@gmail.com", "123");
-		Assert.assertEquals(loginPage.getInvalidPasswordErrorMessage(),
-				"Please enter 6 or more characters without leading or trailing spaces.");
+		Assert.assertEquals(loginPage.getInvalidPasswordErrorMessage(),"Please enter 6 or more characters without leading or trailing spaces.");
 	}
 
 	@Test(description = "Email not exist in system")
