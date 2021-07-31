@@ -15,7 +15,7 @@ import pageObject.liveGuru.HomePageObject;
 import pageObject.liveGuru.LoginPageObject;
 import pageObject.liveGuru.MyDashboardPageObject;
 
-public class Level_04_Login_Page_Object extends BaseTest{
+public class Level_05_Login_Page_Multiple_Browser extends BaseTest{
 	WebDriver driver;
 	BasePage basePage;
 
@@ -23,6 +23,7 @@ public class Level_04_Login_Page_Object extends BaseTest{
 	@BeforeClass
 	public void initBrowser(String browserName, String appURL) {
 		driver = getBrowserDriver(browserName, appURL);
+		driver = new FirefoxDriver();
 		driver.get("http://live.demoguru99.com/");
 	}
 
