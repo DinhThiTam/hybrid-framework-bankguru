@@ -23,7 +23,6 @@ public class Level_04_Login_Page_Object extends BaseTest{
 	@BeforeClass
 	public void initBrowser(String browserName, String appURL) {
 		driver = getBrowserDriver(browserName, appURL);
-		driver.get("http://live.demoguru99.com/");
 	}
 
 	@Test

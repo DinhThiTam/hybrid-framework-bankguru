@@ -370,7 +370,7 @@ public class BasePage {
 	
 	private Alert alert;
 	private WebDriverWait explicitWait;
-	private long timeout = 20;
+	private long timeout = 30;
 	private Select select;
 	private JavascriptExecutor jsExecutor;
 	private Actions action;

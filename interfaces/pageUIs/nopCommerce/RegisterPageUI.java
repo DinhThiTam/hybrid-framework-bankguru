@@ -10,4 +10,15 @@ public class RegisterPageUI {
 	public static final String REGISTER_BUTTON = "//button[@id='register-button']";
 	public static final String SUCCESS_MESSAGE = "//div[@class='result' and text()='Your registration completed']";
 	public static final String LOGOUT_LINK = "//a[@class='ico-logout']";
+	public static final String EMAIL_INVALID_MESSAGE = "//div[@class='page-body']//li[text()='Wrong email']";
+	public static final String EMAIL_EXIST_MESSAGE = "//div[@class='page-body']//li[text()='The specified email already exists']";
+	public static final String PASSWORD_INVALID_MESSAGE = "//span[@id='Password-error']/p[text()='Password must meet the following rules: ']";
+	public static final String CONFIRM_PASSWORD_INVALID_MESSAGE = "//span[@id='ConfirmPassword-error' and text() = 'The password and confirmation password do not match.']";	
+	public static final String FIRSTNAME_EMPTY_MESSAGE = "//span[@id='FirstName-error' and text()='First name is required.']";	
+	public static final String LASTNAME_EMPTY_MESSAGE = "//span[@id='LastName-error' and text()='Last name is required.']";	
+	public static final String PASSWORD_EMPTY_MESSAGE = "//span[@id='Password-error' and text() = 'Password is required.']";
+	public static final String CONFIRM_PASSWORD_EMPTY_MESSAGE = "//span[@id='ConfirmPassword-error' and text() = 'Password is required.']";
+	public static final String EMAIL_EMPTY_MESSAGE = "//span[@id='Email-error' and text() = 'Email is required.']";	
+	
+	
 }

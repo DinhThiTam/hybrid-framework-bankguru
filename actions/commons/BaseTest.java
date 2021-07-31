@@ -75,7 +75,7 @@ public class BaseTest {
 			throw new RuntimeException("Please enter browser correct");
 		}
 		
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.get(appURL);
 		return driver;
 	}
