@@ -51,6 +51,10 @@ public class BasePage {
 	public void refreshPage(WebDriver driver) {
 		driver.navigate().refresh();
 	}
+	
+	public void clearTextbox (WebDriver driver, String locator) {
+		getElement(driver, locator).clear();
+	}
 
 	public Alert waitAlertPresence(WebDriver driver) {
 		explicitWait = new WebDriverWait(driver, timeout);

@@ -22,6 +22,9 @@ public class Practice_TC_01_Register extends BaseTest {
 	String emailAddress, password;
 	String projectLocation = System.getProperty("user.dir");
 	BasePage basePage;
+	public static Practice_TC_01_Register getRegister() {
+		return new Practice_TC_01_Register();
+	}
 	
 	@Parameters({"browser","url"})
 	@BeforeClass
@@ -39,77 +42,45 @@ public class Practice_TC_01_Register extends BaseTest {
 		Assert.assertTrue(homePage.isHomePageSliderDisplayed());
 		homePage.clickToRegisterLink();
 		registerPage = new RegisterPageObject(driver);
-		registerPage.enterToFirstNameTextbox("");
-		registerPage.enterToLastNameTextbox("");
-		registerPage.enterToEmailTextbox("");
-		registerPage.enterToPasswordTextbox("");
-		registerPage.enterToConfirmPasswordTextbox("");
-		registerPage.clickToRegisterButton();	
-		Assert.assertTrue(registerPage.isElementDisplayed(driver, RegisterPageUI.FIRSTNAME_EMPTY_MESSAGE));
-		Assert.assertTrue(registerPage.isElementDisplayed(driver, RegisterPageUI.LASTNAME_EMPTY_MESSAGE));
-		Assert.assertTrue(registerPage.isElementDisplayed(driver, RegisterPageUI.EMAIL_EMPTY_MESSAGE));
-		Assert.assertTrue(registerPage.isElementDisplayed(driver, RegisterPageUI.PASSWORD_EMPTY_MESSAGE));
-		Assert.assertTrue(registerPage.isElementDisplayed(driver, RegisterPageUI.CONFIRM_PASSWORD_EMPTY_MESSAGE));
+		registerPage.registerToSystem("", "", "", "", "");
+		Assert.assertTrue(registerPage.isFirstnameEmptyInvalidMessageDisplayed());
+		Assert.assertTrue(registerPage.isLastnameEmptyInvalidMessageDisplayed());
+		Assert.assertTrue(registerPage.isEmailEmptyMessageDisplayed());
+		Assert.assertTrue(registerPage.isPasswordEmptyInvalidMessageDisplayed());
+		Assert.assertTrue(registerPage.isConfirmPasswordEmptyInvalidMessageDisplayed());
 	}
 	
 	@Test
 	public void Register_02_Invalid_Email() {
 		registerPage.refreshPage(driver);
-		registerPage.enterToFirstNameTextbox("dinh");
-		registerPage.enterToLastNameTextbox("tam");
-		registerPage.enterToEmailTextbox("abc@123.456");
-		registerPage.enterToPasswordTextbox(password);
-		registerPage.enterToConfirmPasswordTextbox(password);
-		registerPage.clickToRegisterButton();	
-		Assert.assertTrue(registerPage.isElementDisplayed(driver, RegisterPageUI.EMAIL_INVALID_MESSAGE));
+		registerPage.registerToSystem("abc@123.456", password, password, "dinh", "tam");	
+		Assert.assertTrue(registerPage.isEmailInvalidMessageDisplayed());
 	}
 	
 	@Test
 	public void Register_03_Exist_Email() {
 		registerPage.refreshPage(driver);
-		registerPage.enterToFirstNameTextbox("dinh");
-		registerPage.enterToLastNameTextbox("tam");
-		registerPage.enterToEmailTextbox("automationfc.vn@gmail.com");
-		registerPage.enterToPasswordTextbox(password);
-		registerPage.enterToConfirmPasswordTextbox(password);
-		registerPage.clickToRegisterButton();	
-		Assert.assertTrue(registerPage.isElementDisplayed(driver, RegisterPageUI.EMAIL_EXIST_MESSAGE));
+		registerPage.registerToSystem("automationfc.vn@gmail.com", password, password, "dinh", "tam");	
+		Assert.assertTrue(registerPage.isEmailExistMessageDisplayed());
 	}
 	
 	@Test(description = "Password less than 6 chars")
 	public void Register_04_Valid_Password() {
 		registerPage.refreshPage(driver);
-		registerPage.clickToGenderRadioButton();
-		registerPage.enterToFirstNameTextbox("dinh");
-		registerPage.enterToLastNameTextbox("tam");
-		registerPage.enterToEmailTextbox(emailAddress);
-		registerPage.enterToPasswordTextbox("123");
-		registerPage.clickToRegisterButton();	
-		Assert.assertTrue(registerPage.isElementDisplayed(driver, RegisterPageUI.PASSWORD_INVALID_MESSAGE));
+		registerPage.registerToSystem(emailAddress, "123", "", "dinh", "tam");	
+		Assert.assertTrue(registerPage.isPasswordInvalidMessageDisplayed());
 	}
 	
 	@Test
 	public void Register_05_Not_Match_Password() {
 		registerPage.refreshPage(driver);
-		registerPage.clickToGenderRadioButton();
-		registerPage.enterToFirstNameTextbox("dinh");
-		registerPage.enterToLastNameTextbox("tam");
-		registerPage.enterToEmailTextbox(emailAddress);
-		registerPage.enterToPasswordTextbox(password);
-		registerPage.enterToConfirmPasswordTextbox("123");
-		registerPage.clickToRegisterButton();
-		Assert.assertTrue(registerPage.isElementDisplayed(driver, RegisterPageUI.CONFIRM_PASSWORD_INVALID_MESSAGE));
+		registerPage.registerToSystem(emailAddress, password, "123", "dinh", "tam");
+		Assert.assertTrue(registerPage.isConfirmPasswordInvalidMessageDisplayed());
 	}
 	@Test
 	public void Register_06_Valid_Infomation() {
 		registerPage.refreshPage(driver);
-		registerPage.clickToGenderRadioButton();
-		registerPage.enterToFirstNameTextbox("dinh");
-		registerPage.enterToLastNameTextbox("tam");
-		registerPage.enterToEmailTextbox(emailAddress);
-		registerPage.enterToPasswordTextbox(password);
-		registerPage.enterToConfirmPasswordTextbox(password);
-		registerPage.clickToRegisterButton();
+		registerPage.registerToSystem(emailAddress, password, password, "dinh", "tam");
 		Assert.assertTrue(registerPage.isSuccessMessageDisplayed());
 		registerPage.clickToLogoutLink();
 		homePage = new HomePageObject(driver);	

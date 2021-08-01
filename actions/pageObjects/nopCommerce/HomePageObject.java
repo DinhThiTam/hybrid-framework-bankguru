@@ -25,5 +25,22 @@ public class HomePageObject extends BasePage {
 		waitForElementClickable(driver, HomePageUI.LOGIN_LINK);
 		clickToElement(driver, HomePageUI.LOGIN_LINK);
 	}
+	
+	public boolean isLogoutLinkDisplay() {
+		waitForElementInvisible(driver, HomePageUI.LOGIN_LOGOUT_LINK);
+		return isElementDisplayed(driver, HomePageUI.LOGIN_LOGOUT_LINK);
+	}
+	public void clickToLogoutLink() {
+		waitForElementClickable(driver, HomePageUI.LOGIN_LOGOUT_LINK);
+		clickToElement(driver, HomePageUI.LOGIN_LOGOUT_LINK);	
+	}
+	public boolean isToppicTitleDisplay() {
+		waitForElementInvisible(driver, HomePageUI.TOPIC_TITLE);
+		return isElementDisplayed(driver, HomePageUI.TOPIC_TITLE);
+	}
+	public void clickToMyAccountLink() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

@@ -3,13 +3,12 @@ package pageObjects.nopCommerce;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.liveGuru.LoginPageUI;
 import pageUIs.nopCommerce.RegisterPageUI;
 
-public class RegisterPageObject extends BasePage {
+public class CustomerPageObject extends BasePage {
 	private WebDriver driver;
 	
-	public RegisterPageObject (WebDriver driver) {
+	public CustomerPageObject (WebDriver driver) {
 		this.driver = driver;
 	}
 	public void clickToGenderRadioButton() {
@@ -114,85 +113,4 @@ public class RegisterPageObject extends BasePage {
 		enterToConfirmPasswordTextbox(confirmPassword);
 		clickToRegisterButton();
 	}
-	public String getCompanyNameTextbox() {
-		waitForElementVisible(driver, RegisterPageUI.COMPANY_NAME_TEXTBOX);
-		return getElementAttribute(driver, RegisterPageUI.COMPANY_NAME_TEXTBOX, "value");
-	}
-	public String getEmailTextbox() {
-		waitForElementVisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
-		return getElementAttribute(driver, RegisterPageUI.EMAIL_TEXTBOX, "value");
-	}
-
-	public String getLastNameTextbox() {
-		waitForElementVisible(driver, RegisterPageUI.LASTNAME_TEXTBOX);
-		return getElementAttribute(driver, RegisterPageUI.LASTNAME_TEXTBOX, "value");
-	}
-	
-	public String getFirstNameTextbox() {
-		waitForElementVisible(driver, RegisterPageUI.FIRSTNAME_TEXTBOX);
-		return getElementAttribute(driver, RegisterPageUI.FIRSTNAME_TEXTBOX, "value");
-	}
-	
-	public void enterToCompanyNameTextbox(String companyName) {
-		waitForElementVisible(driver, RegisterPageUI.COMPANY_NAME_TEXTBOX);
-		senkeyToElement(driver, RegisterPageUI.COMPANY_NAME_TEXTBOX, companyName );		
-	}
-	public void clickToSaveButton() {
-		waitForElementClickable(driver, RegisterPageUI.SAVE_BUTTON);
-		clickToElement(driver, RegisterPageUI.SAVE_BUTTON);
-		
-	}
-
-	public void clearFirstNameTextbox() {
-		waitForElementInvisible(driver, RegisterPageUI.FIRSTNAME_TEXTBOX);
-		clearTextbox(driver, RegisterPageUI.FIRSTNAME_TEXTBOX);	
-	}
-	
-	public void clearLastNameTextbox() {
-		waitForElementInvisible(driver, RegisterPageUI.LASTNAME_TEXTBOX);
-		clearTextbox(driver, RegisterPageUI.LASTNAME_TEXTBOX);	
-	}
-	
-	public void clearEmailTextbox() {
-		waitForElementInvisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
-		clearTextbox(driver, RegisterPageUI.EMAIL_TEXTBOX);	
-	}
-	
-	public void clearCompanyNameTextbox() {
-		waitForElementInvisible(driver, RegisterPageUI.COMPANY_NAME_TEXTBOX);
-		clearTextbox(driver, RegisterPageUI.COMPANY_NAME_TEXTBOX);	
-	}
-	
-	public void clearAllTextbox() {
-		clearFirstNameTextbox();
-		clearLastNameTextbox();
-		clearEmailTextbox();
-		clearCompanyNameTextbox();
-	}
-	public void clickToGenderFemaleRadioButton() {
-		waitForElementClickable(driver, RegisterPageUI.GENDER_FEMALE_RADIO_BUTTON);
-		clickToElement(driver, RegisterPageUI.GENDER_FEMALE_RADIO_BUTTON);
-		
-	}
-	public String getSelectedBirthmonthDropdown() {
-		return getSelectedItemDropdown(driver, RegisterPageUI.DATE_OF_BIRTHMONTH_DROPDOWN);
-	}
-	public String getSelectedBirthdayDropdown() {
-		return getSelectedItemDropdown(driver, RegisterPageUI.DATE_OF_BIRTHDAY_DROPDOWN);
-	}
-	public String getSelectedBirthyearDropdown() {
-		return getSelectedItemDropdown(driver, RegisterPageUI.DATE_OF_BIRTHYEAR_DROPDOWN);
-	}
-	public void selectToBirthdayDropDown(String itemText) {
-		selectDropdownByText(driver, RegisterPageUI.DATE_OF_BIRTHDAY_DROPDOWN, itemText);	
-	}
-	
-	public void selectToBirthmonthDropDown(String itemText) {
-		selectDropdownByText(driver, RegisterPageUI.DATE_OF_BIRTHMONTH_DROPDOWN, itemText);	
-	}
-	
-	public void selectToBirthyearDropDown(String itemText) {
-		selectDropdownByText(driver, RegisterPageUI.DATE_OF_BIRTHYEAR_DROPDOWN, itemText);		
-	}
-	
 }

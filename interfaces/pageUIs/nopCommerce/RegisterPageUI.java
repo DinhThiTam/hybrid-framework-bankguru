@@ -19,6 +19,13 @@ public class RegisterPageUI {
 	public static final String PASSWORD_EMPTY_MESSAGE = "//span[@id='Password-error' and text() = 'Password is required.']";
 	public static final String CONFIRM_PASSWORD_EMPTY_MESSAGE = "//span[@id='ConfirmPassword-error' and text() = 'Password is required.']";
 	public static final String EMAIL_EMPTY_MESSAGE = "//span[@id='Email-error' and text() = 'Email is required.']";	
+	public static final String GENDER_FEMALE_RADIO_BUTTON = "//input[@id='gender-female']";	
+	public static final String DATE_OF_BIRTHDAY_DROPDOWN = "//select[@name='DateOfBirthDay']";	
+	public static final String DATE_OF_BIRTHMONTH_DROPDOWN = "//select[@name='DateOfBirthMonth']";	
+	public static final String DATE_OF_BIRTHYEAR_DROPDOWN = "//select[@name='DateOfBirthYear']";	
+	public static final String COMPANY_NAME_TEXTBOX = "//input[@id='Company']";	
+	public static final String SAVE_BUTTON = "//button[@id='save-info-button']";	
+	
 	
 	
 }
