@@ -7,4 +7,10 @@ public class HomePageUI {
 	public static final String LOGOUT_LINK = "//a[@class='ico-logout' and text()='Log out']";
 	public static final String TOPIC_TITLE = "//h2[text()='Welcome to our store']";
 	public static final String MY_ACCOUNT_LINK = "//a[@class='ico-account']";
+	public static final String COMPUTER_MENU_LINK = "//ul[@class='top-menu notmobile']//a[text()='Computers ']";
+	public static final String SUB_MENU_LINK = "//ul[@class='top-menu notmobile']//a[text()='Desktops ']";
+	public static final String ITEM_LINK = "//h2[@class='product-title']/a[text()='Build your own computer']";
+	public static final String ADD_REVIEW_LINK = "//a[text()='Add your review']";
+	
+	
 }

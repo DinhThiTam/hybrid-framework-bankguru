@@ -30,5 +30,10 @@ public class MyAccountPageObject extends BasePage {
 		clickToElement(driver, MyAccountPageUI.CUSTOM_INFO_LINK);
 	}
 
+	public void clickToMyProductReviewLink() {
+		waitForElementVisible(driver, MyAccountPageUI.MY_PRODUCT_REVIEW_LINK);
+		clickToElement(driver, MyAccountPageUI.MY_PRODUCT_REVIEW_LINK);
+	}
+
 	
 }

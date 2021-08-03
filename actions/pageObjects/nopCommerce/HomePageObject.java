@@ -46,5 +46,23 @@ public class HomePageObject extends BasePage {
 		scrollToElement(driver, HomePageUI.TOPIC_TITLE);
 		
 	}
+	public void hoverComputerLinkMenu() {
+		waitForElementVisible(driver, HomePageUI.COMPUTER_MENU_LINK);
+		hoverToElement(driver, HomePageUI.COMPUTER_MENU_LINK);
+		
+	}
+	public void clickToDesktopSubMenu() {
+		waitForElementClickable(driver, HomePageUI.SUB_MENU_LINK);
+		clickToElement(driver, HomePageUI.SUB_MENU_LINK);
+	}
+	public void clickToAddReviewLink() {
+		waitForElementClickable(driver, HomePageUI.ADD_REVIEW_LINK);
+		clickToElement(driver, HomePageUI.ADD_REVIEW_LINK);
+	}
+	public void clickToItemLink() {
+		waitForElementClickable(driver, HomePageUI.ITEM_LINK);
+		clickToElement(driver, HomePageUI.ITEM_LINK);
+		
+	}
 
 }

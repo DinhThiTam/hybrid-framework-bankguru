@@ -25,6 +25,8 @@ public class RegisterPageUI {
 	public static final String DATE_OF_BIRTHYEAR_DROPDOWN = "//select[@name='DateOfBirthYear']";	
 	public static final String COMPANY_NAME_TEXTBOX = "//input[@id='Company']";	
 	public static final String SAVE_BUTTON = "//button[@id='save-info-button']";	
+	public static final String SEARCH_LINK = "//ul[@class='list']//a[text()='Search']";	
+	
 	
 	
 	

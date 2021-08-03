@@ -206,5 +206,10 @@ public class RegisterPageObject extends BasePage {
 		enterToCompanyNameTextbox(companyName);
 		clickToSaveButton();	
 	}
+	public void clickToSearchFooterLink() {
+		waitForElementClickable(driver, RegisterPageUI.SEARCH_LINK);
+		clickToElement(driver, RegisterPageUI.SEARCH_LINK);
+		
+	}
 	
 }

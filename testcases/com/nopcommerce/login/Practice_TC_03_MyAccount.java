@@ -1,9 +1,7 @@
 package com.nopcommerce.login;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -17,8 +15,8 @@ import pageObjects.nopCommerce.ChangePasswordPageObject;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
 import pageObjects.nopCommerce.MyAccountPageObject;
+import pageObjects.nopCommerce.ProductReviewPageObject;
 import pageObjects.nopCommerce.RegisterPageObject;
-import pageUIs.nopCommerce.RegisterPageUI;
 
 public class Practice_TC_03_MyAccount extends BaseTest {
 	WebDriver driver;
@@ -59,12 +57,7 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 		registerPage = new RegisterPageObject(driver);
 		registerPage.registerToSystem(emailAddress, password, password, "dinh", "tam");
 		Assert.assertTrue(registerPage.isSuccessMessageDisplayed());
-//		registerPage.clickToLogoutLink();
-//		homePage = new HomePageObject(driver);
-//		homePage.clickToLoginLink();
-//		loginPage = new LoginPageObject(driver);
-//		loginPage.refreshPage(driver);
-//		loginPage.loginToSystem(emailAddress, password);
+		
 		homePage = new HomePageObject(driver);
 		homePage.clickToMyAccountLink();
 		myAccountPage = new MyAccountPageObject(driver);
@@ -118,16 +111,42 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 		loginPage = new LoginPageObject(driver);
 		loginPage.loginToSystem(emailAddress, password);
 		Assert.assertTrue(loginPage.isPasswordInvalidMessageDisplay());
+		
 		loginPage.refreshPage(driver);
 		loginPage.loginToSystem(emailAddress, newPassword);
 		homePage = new HomePageObject(driver);
 		homePage.clickToLogoutLink();
-		
 	}
 
 	@Test
 	public void TC_04_My_Product_View() {
-
+		String titleReview = "Automation";
+		String textReview = "Very good";
+	
+		homePage.clickToLoginLink();
+		loginPage = new LoginPageObject(driver);
+		loginPage.loginToSystem(emailAddress, newPassword);
+		
+		homePage = new HomePageObject(driver);
+		homePage.hoverComputerLinkMenu();
+		homePage.clickToDesktopSubMenu();
+		homePage.clickToItemLink();
+		homePage.clickToAddReviewLink();
+		
+		reviewPage = new ProductReviewPageObject(driver);
+		reviewPage.addReview(titleReview, textReview);
+		Assert.assertEquals(reviewPage.getAddReviewSuccessMessage(),"Product review is successfully added.");
+		
+		homePage = new HomePageObject(driver);
+		homePage.clickToMyAccountLink();
+		
+		myAccountPage = new MyAccountPageObject(driver);
+		myAccountPage.clickToMyProductReviewLink();
+		
+		reviewPage = new ProductReviewPageObject(driver);
+		Assert.assertEquals(reviewPage.getTitleReviewText(), titleReview);
+		Assert.assertEquals(reviewPage.getTextReviewText(), textReview);
+		Assert.assertEquals(reviewPage.getInfoReviewText(), "Build your own computer");	
 	}
 
 	@AfterClass
@@ -147,4 +166,5 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 	MyAccountPageObject myAccountPage;
 	AddressPageObject addressPage;
 	ChangePasswordPageObject changePasswordPage;
+	ProductReviewPageObject reviewPage;
 }
