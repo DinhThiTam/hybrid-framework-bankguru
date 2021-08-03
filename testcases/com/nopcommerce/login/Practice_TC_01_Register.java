@@ -58,32 +58,33 @@ public class Practice_TC_01_Register extends BaseTest {
 	}
 	
 	@Test
-	public void Register_03_Exist_Email() {
-		registerPage.refreshPage(driver);
-		registerPage.registerToSystem("automationfc.vn@gmail.com", password, password, "dinh", "tam");	
+	public void Register_04_Exist_Email() {
+		registerPage = new RegisterPageObject(driver);
+		registerPage.registerToSystem(emailAddress, password, password, "dinh", "tam");	
 		Assert.assertTrue(registerPage.isEmailExistMessageDisplayed());
 	}
 	
 	@Test(description = "Password less than 6 chars")
-	public void Register_04_Valid_Password() {
+	public void Register_05_InValid_Password() {
 		registerPage.refreshPage(driver);
 		registerPage.registerToSystem(emailAddress, "123", "", "dinh", "tam");	
 		Assert.assertTrue(registerPage.isPasswordInvalidMessageDisplayed());
 	}
 	
 	@Test
-	public void Register_05_Not_Match_Password() {
+	public void Register_06_Not_Match_Password() {
 		registerPage.refreshPage(driver);
 		registerPage.registerToSystem(emailAddress, password, "123", "dinh", "tam");
 		Assert.assertTrue(registerPage.isConfirmPasswordInvalidMessageDisplayed());
 	}
 	@Test
-	public void Register_06_Valid_Infomation() {
+	public void Register_03_Valid_Infomation() {
 		registerPage.refreshPage(driver);
 		registerPage.registerToSystem(emailAddress, password, password, "dinh", "tam");
 		Assert.assertTrue(registerPage.isSuccessMessageDisplayed());
 		registerPage.clickToLogoutLink();
-		homePage = new HomePageObject(driver);	
+		homePage = new HomePageObject(driver);
+		homePage.clickToRegisterLink();
 	}
 	
 	@AfterClass

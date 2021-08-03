@@ -1,0 +1,44 @@
+package pageObjects.nopCommerce;
+
+import org.openqa.selenium.WebDriver;
+import commons.BasePage;
+import pageUIs.liveGuru.MyDashboardPageUI;
+import pageUIs.nopCommerce.ChangePasswordPageUI;
+import pageUIs.nopCommerce.LoginPageUI;
+	
+	public class ChangePasswordPageObject extends BasePage {
+	private WebDriver driver;
+	public ChangePasswordPageObject(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public void enterToOldPasswordTextbox(String value) {
+		waitForElementVisible(driver, ChangePasswordPageUI.OLD_PASSWORD_TEXTBOX);
+		senkeyToElement(driver, ChangePasswordPageUI.OLD_PASSWORD_TEXTBOX, value);
+		
+	}
+	public void enterToNewPasswordTextbox(String value) {
+		waitForElementVisible(driver, ChangePasswordPageUI.NEW_PASSWORD_TEXTBOX);
+		senkeyToElement(driver, ChangePasswordPageUI.NEW_PASSWORD_TEXTBOX, value);
+	}
+	public void enterToConfirmPasswordTextbox(String value) {
+		waitForElementVisible(driver, ChangePasswordPageUI.CONFIRM_PASSWORD_TEXTBOX);
+		senkeyToElement(driver, ChangePasswordPageUI.CONFIRM_PASSWORD_TEXTBOX, value);
+	}
+	
+	public void clickToChanePasswordButton() {
+		waitForElementClickable(driver, ChangePasswordPageUI.CHANGE_PASSWORD_BUTTON);
+		clickToElement(driver, ChangePasswordPageUI.CHANGE_PASSWORD_BUTTON);
+	}
+	
+	public boolean isChangePasswordSuccessMessageDisplayed() {
+		waitForElementVisible(driver, ChangePasswordPageUI.CHANGE_PASSWORD_SUCCESS_MESSAGE);
+		return isElementDisplayed(driver, ChangePasswordPageUI.CHANGE_PASSWORD_SUCCESS_MESSAGE);
+	}
+	public void clickToCloseMessageButton() {
+		waitForElementClickable(driver, ChangePasswordPageUI.CLOSE_MESSAGE_BUTTON);
+		clickToElement(driver, ChangePasswordPageUI.CLOSE_MESSAGE_BUTTON);
+	}
+	
+	
+}

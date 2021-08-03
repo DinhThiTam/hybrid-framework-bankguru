@@ -195,4 +195,16 @@ public class RegisterPageObject extends BasePage {
 		selectDropdownByText(driver, RegisterPageUI.DATE_OF_BIRTHYEAR_DROPDOWN, itemText);		
 	}
 	
+	public void customerInfo(String firstName, String lastName, String birthDay, String birthMonth, String birthYear, String emailAddress, String companyName) {
+		clickToGenderFemaleRadioButton();
+		enterToFirstNameTextbox(firstName);
+		enterToLastNameTextbox(lastName);
+		selectToBirthdayDropDown(birthDay);
+		selectToBirthmonthDropDown(birthMonth);
+		selectToBirthyearDropDown(birthYear);
+		enterToEmailTextbox(emailAddress);
+		enterToCompanyNameTextbox(companyName);
+		clickToSaveButton();	
+	}
+	
 }

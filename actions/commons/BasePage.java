@@ -372,10 +372,13 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));	
 	}
 	
+	
 	private Alert alert;
 	private WebDriverWait explicitWait;
 	private long timeout = 30;
 	private Select select;
 	private JavascriptExecutor jsExecutor;
 	private Actions action;
+	
+	
 }

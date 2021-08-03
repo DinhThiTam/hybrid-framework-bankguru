@@ -3,6 +3,7 @@ package pageObjects.nopCommerce;
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
+import pageUIs.nopCommerce.ChangePasswordPageUI;
 import pageUIs.nopCommerce.MyAccountPageUI;
 import pageUIs.nopCommerce.RegisterPageUI;
 
@@ -14,12 +15,20 @@ public class MyAccountPageObject extends BasePage {
 		this.driver = driver;
 	}
 
-	public void clickToCustomerInfoLink() {
-		waitForElementClickable(driver, MyAccountPageUI.MY_ACCOUNT_LINK);
-		clickToElement(driver, MyAccountPageUI.MY_ACCOUNT_LINK);
+	public void clickToChangePasswordButton() {
+		waitForElementClickable(driver, MyAccountPageUI.CHANGE_PASSWORD_LINK);
+		clickToElement(driver, MyAccountPageUI.CHANGE_PASSWORD_LINK);
 	}
 
+	public void clickToAddressLink() {
+		waitForElementClickable(driver, MyAccountPageUI.ADDRESSES_LINK);
+		clickToElementByJS(driver, MyAccountPageUI.ADDRESSES_LINK);
+	}
 
-	
+	public void clickToCustomerInfoLink() {
+		waitForElementClickable(driver, MyAccountPageUI.CUSTOM_INFO_LINK);
+		clickToElement(driver, MyAccountPageUI.CUSTOM_INFO_LINK);
+	}
+
 	
 }

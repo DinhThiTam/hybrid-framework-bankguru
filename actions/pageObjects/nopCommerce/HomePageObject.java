@@ -26,20 +26,24 @@ public class HomePageObject extends BasePage {
 		clickToElement(driver, HomePageUI.LOGIN_LINK);
 	}
 	
-	public boolean isLogoutLinkDisplay() {
-		waitForElementInvisible(driver, HomePageUI.LOGIN_LOGOUT_LINK);
-		return isElementDisplayed(driver, HomePageUI.LOGIN_LOGOUT_LINK);
-	}
 	public void clickToLogoutLink() {
 		waitForElementClickable(driver, HomePageUI.LOGIN_LOGOUT_LINK);
-		clickToElement(driver, HomePageUI.LOGIN_LOGOUT_LINK);	
+		clickToElementByJS(driver, HomePageUI.LOGIN_LOGOUT_LINK);
 	}
 	public boolean isToppicTitleDisplay() {
 		waitForElementInvisible(driver, HomePageUI.TOPIC_TITLE);
 		return isElementDisplayed(driver, HomePageUI.TOPIC_TITLE);
 	}
 	public void clickToMyAccountLink() {
-		// TODO Auto-generated method stub
+		waitForElementClickable(driver, HomePageUI.MY_ACCOUNT_LINK);
+		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
+	}
+	public boolean isLogoutLinkDisplay() {
+		waitForElementInvisible(driver, HomePageUI.LOGIN_LOGOUT_LINK);
+		return isElementDisplayed(driver, HomePageUI.LOGIN_LOGOUT_LINK);
+	}
+	public void scrollToTopicTitle() {
+		scrollToElement(driver, HomePageUI.TOPIC_TITLE);
 		
 	}
 

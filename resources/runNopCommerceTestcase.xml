@@ -6,6 +6,8 @@
 	<test name="Run on FIREFOX">
 	<parameter name = "browser" value = "firefox"/>
 		<classes>
+			<class name="com.nopcommerce.login.Practice_TC_01_Register" />
+			<class name="com.nopcommerce.login.Practice_TC_02_Login" />
 			<class name="com.nopcommerce.login.Practice_TC_03_MyAccount" />
 		</classes>
 	</test>
@@ -13,6 +15,8 @@
 	<test name="Run on CHROME">
 	<parameter name = "browser" value = "chrome"/>
 		<classes>
+			<class name="com.nopcommerce.login.Practice_TC_01_Register" />
+			<class name="com.nopcommerce.login.Practice_TC_02_Login" />
 			<class name="com.nopcommerce.login.Practice_TC_03_MyAccount" />
 		</classes>
 	</test>
@@ -20,6 +24,8 @@
 	<test name="Run on EDGE_CHROMIUM">
 	<parameter name = "browser" value = "edge"/>
 		<classes>
+			<class name="com.nopcommerce.login.Practice_TC_01_Register" />
+			<class name="com.nopcommerce.login.Practice_TC_02_Login" />
 			<class name="com.nopcommerce.login.Practice_TC_03_MyAccount" />
 		</classes>
 	</test>

@@ -12,6 +12,8 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 import commons.BaseTest;
+import pageObjects.nopCommerce.AddressPageObject;
+import pageObjects.nopCommerce.ChangePasswordPageObject;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
 import pageObjects.nopCommerce.MyAccountPageObject;
@@ -20,7 +22,7 @@ import pageUIs.nopCommerce.RegisterPageUI;
 
 public class Practice_TC_03_MyAccount extends BaseTest {
 	WebDriver driver;
-	String emailAddress, password;
+	String emailAddress, password, newPassword, birthDay, birthMonth, birthYear, firstName, lastName, fullName, citySateZip,companyName, stateProvince, countryName, cityName, address1, address2, zipCode, phoneNumber, faxNumber;
 	String projectLocation = System.getProperty("user.dir");
 	BasePage basePage;
 
@@ -30,6 +32,23 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 		driver = getBrowserDriver(browserName, appURL);
 		emailAddress = getRandomEmail();
 		password = "123456";
+		newPassword = "1234567";
+		birthDay = "1";
+		birthMonth = "January";
+		birthYear = "1999";
+		firstName= "Automation" ; 
+		lastName= "FC"; 
+		fullName = firstName + " " + lastName;
+		companyName= "Automation FC";
+		stateProvince= "Other"; 
+		countryName="Viet Nam" ;
+		cityName= "Da Nang";
+		address1="123/04 Le Lai" ;
+		address2= "234/05 Hai Phong"; 
+		zipCode= "550000"; 
+		citySateZip = cityName + ", " + zipCode;
+		phoneNumber= "0123456789"; 
+		faxNumber = "0983970447";
 		driver.manage().window().maximize();
 	}
 
@@ -47,41 +66,67 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 		loginPage.refreshPage(driver);
 		loginPage.loginToSystem(emailAddress, password);
 		homePage = new HomePageObject(driver);
-
 		homePage.clickToMyAccountLink();
 		myAccountPage = new MyAccountPageObject(driver);
 		myAccountPage.clickToCustomerInfoLink();
 		registerPage = new RegisterPageObject(driver);
-		// registerPage.clearAllTextbox();
 
-		registerPage.clickToGenderFemaleRadioButton();
-		registerPage.enterToFirstNameTextbox("Automation");
-		registerPage.enterToLastNameTextbox("FC");
+		registerPage.customerInfo(firstName, lastName, birthDay, birthMonth, birthYear, emailAddress, companyName);
 		
-		registerPage.selectToBirthdayDropDown("1");
-		registerPage.selectToBirthmonthDropDown("January");
-		registerPage.selectToBirthyearDropDown("1999");
-		registerPage.enterToEmailTextbox(emailAddress);
-		registerPage.enterToCompanyNameTextbox("Automation FC");
-		registerPage.clickToSaveButton();
-
-		Assert.assertEquals(registerPage.getFirstNameTextbox(), "Automation");
-		Assert.assertEquals(registerPage.getLastNameTextbox(), "FC");
-		Assert.assertEquals(registerPage.getSelectedBirthdayDropdown(), "1");
-		Assert.assertEquals(registerPage.getSelectedBirthmonthDropdown(), "January");
-		Assert.assertEquals(registerPage.getSelectedBirthyearDropdown(), "1999");
+		Assert.assertEquals(registerPage.getFirstNameTextbox(), firstName);
+		Assert.assertEquals(registerPage.getLastNameTextbox(), lastName);
+		Assert.assertEquals(registerPage.getSelectedBirthdayDropdown(), birthDay);
+		Assert.assertEquals(registerPage.getSelectedBirthmonthDropdown(), birthMonth);
+		Assert.assertEquals(registerPage.getSelectedBirthyearDropdown(), birthYear);
 		Assert.assertEquals(registerPage.getEmailTextbox(), emailAddress);
-		Assert.assertEquals(registerPage.getCompanyNameTextbox(), "Automation FC");
+		Assert.assertEquals(registerPage.getCompanyNameTextbox(), companyName);
 	}
 
 	@Test
 	public void TC_02_Address() {
-
+		myAccountPage = new MyAccountPageObject(driver);
+		myAccountPage.clickToAddressLink();
+		addressPage = new AddressPageObject(driver);
+		addressPage.clickToAddNewLink();
+		
+		addressPage.addNewAddress(firstName, lastName, emailAddress, companyName, countryName, stateProvince, cityName, address1, address2, zipCode, phoneNumber, faxNumber);
+	
+		Assert.assertEquals(addressPage.getToFullNameAddressTextbox(),fullName);
+		Assert.assertEquals(addressPage.getToEmailAddressTextbox(),"Email: " + emailAddress);
+		Assert.assertEquals(addressPage.getToPhoneAddressTextbox(),"Phone number: " + phoneNumber);
+		Assert.assertEquals(addressPage.getToFaxAddressTextbox(),"Fax number: " + faxNumber);
+		Assert.assertEquals(addressPage.getToCompanyAddressTextbox(),companyName);
+		Assert.assertEquals(addressPage.getToAddress1Textbox(),address1);
+		Assert.assertEquals(addressPage.getToAddress2Textbox(),address2);
+		Assert.assertEquals(addressPage.getToCityZipCodeAddressTextbox(),citySateZip);
+		Assert.assertEquals(addressPage.getToCountryAddressTextbox(),countryName);
 	}
 
 	@Test
 	public void TC_03_Change_Password() {
-
+		myAccountPage = new MyAccountPageObject(driver);
+		myAccountPage.clickToChangePasswordButton();
+		changePasswordPage = new ChangePasswordPageObject(driver);
+		
+		changePasswordPage.enterToOldPasswordTextbox(password);
+		changePasswordPage.enterToNewPasswordTextbox(newPassword);
+		changePasswordPage.enterToConfirmPasswordTextbox(newPassword);
+		changePasswordPage.clickToChanePasswordButton();
+		Assert.assertTrue(changePasswordPage.isChangePasswordSuccessMessageDisplayed());
+		changePasswordPage.clickToCloseMessageButton();
+		
+		homePage = new HomePageObject(driver);
+		homePage.clickToLogoutLink();
+		homePage.clickToLoginLink();
+		loginPage = new LoginPageObject(driver);
+		loginPage.loginToSystem(emailAddress, password);
+		Assert.assertTrue(loginPage.isPasswordInvalidMessageDisplay());
+		loginPage.refreshPage(driver);
+		loginPage.loginToSystem(emailAddress, newPassword);
+		homePage = new HomePageObject(driver);
+		homePage.clickToLogoutLink();
+		
+		
 	}
 
 	@Test
@@ -104,4 +149,6 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 	LoginPageObject loginPage;
 	RegisterPageObject registerPage;
 	MyAccountPageObject myAccountPage;
+	AddressPageObject addressPage;
+	ChangePasswordPageObject changePasswordPage;
 }
