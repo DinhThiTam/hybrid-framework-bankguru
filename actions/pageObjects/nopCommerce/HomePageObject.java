@@ -27,8 +27,8 @@ public class HomePageObject extends BasePage {
 	}
 	
 	public void clickToLogoutLink() {
-		waitForElementClickable(driver, HomePageUI.LOGIN_LOGOUT_LINK);
-		clickToElementByJS(driver, HomePageUI.LOGIN_LOGOUT_LINK);
+		waitForElementClickable(driver, HomePageUI.LOGOUT_LINK);
+		clickToElementByJS(driver, HomePageUI.LOGOUT_LINK);
 	}
 	public boolean isToppicTitleDisplay() {
 		waitForElementInvisible(driver, HomePageUI.TOPIC_TITLE);
@@ -39,8 +39,8 @@ public class HomePageObject extends BasePage {
 		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
 	}
 	public boolean isLogoutLinkDisplay() {
-		waitForElementInvisible(driver, HomePageUI.LOGIN_LOGOUT_LINK);
-		return isElementDisplayed(driver, HomePageUI.LOGIN_LOGOUT_LINK);
+		waitForElementInvisible(driver, HomePageUI.LOGOUT_LINK);
+		return isElementDisplayed(driver, HomePageUI.LOGOUT_LINK);
 	}
 	public void scrollToTopicTitle() {
 		scrollToElement(driver, HomePageUI.TOPIC_TITLE);

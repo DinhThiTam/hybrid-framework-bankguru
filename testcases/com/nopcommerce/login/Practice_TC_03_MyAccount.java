@@ -59,12 +59,12 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 		registerPage = new RegisterPageObject(driver);
 		registerPage.registerToSystem(emailAddress, password, password, "dinh", "tam");
 		Assert.assertTrue(registerPage.isSuccessMessageDisplayed());
-		registerPage.clickToLogoutLink();
-		homePage = new HomePageObject(driver);
-		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
-		loginPage.refreshPage(driver);
-		loginPage.loginToSystem(emailAddress, password);
+//		registerPage.clickToLogoutLink();
+//		homePage = new HomePageObject(driver);
+//		homePage.clickToLoginLink();
+//		loginPage = new LoginPageObject(driver);
+//		loginPage.refreshPage(driver);
+//		loginPage.loginToSystem(emailAddress, password);
 		homePage = new HomePageObject(driver);
 		homePage.clickToMyAccountLink();
 		myAccountPage = new MyAccountPageObject(driver);
