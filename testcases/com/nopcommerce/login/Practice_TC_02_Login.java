@@ -85,7 +85,8 @@ public class Practice_TC_02_Login extends BaseTest {
 	public void Login_07_Login_Success() {
 		loginPage.refreshPage(driver);
 		loginPage.loginToSystem(emailAddress, password);
-		homePage = new HomePageObject(driver);	
+		homePage = new HomePageObject(driver);
+		//Assert.assertTrue(homePage.isLogoutLinkDisplay());
 		homePage.clickToLogoutLink();
 	}
 	

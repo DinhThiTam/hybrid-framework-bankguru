@@ -108,10 +108,7 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 		myAccountPage.clickToChangePasswordButton();
 		changePasswordPage = new ChangePasswordPageObject(driver);
 		
-		changePasswordPage.enterToOldPasswordTextbox(password);
-		changePasswordPage.enterToNewPasswordTextbox(newPassword);
-		changePasswordPage.enterToConfirmPasswordTextbox(newPassword);
-		changePasswordPage.clickToChanePasswordButton();
+		changePasswordPage.changePassword(password, newPassword);
 		Assert.assertTrue(changePasswordPage.isChangePasswordSuccessMessageDisplayed());
 		changePasswordPage.clickToCloseMessageButton();
 		
@@ -125,7 +122,6 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 		loginPage.loginToSystem(emailAddress, newPassword);
 		homePage = new HomePageObject(driver);
 		homePage.clickToLogoutLink();
-		
 		
 	}
 

@@ -1,6 +1,8 @@
 package pageObjects.nopCommerce;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
 import commons.BasePage;
 import pageUIs.liveGuru.MyDashboardPageUI;
 import pageUIs.nopCommerce.ChangePasswordPageUI;
@@ -35,6 +37,15 @@ import pageUIs.nopCommerce.LoginPageUI;
 		waitForElementVisible(driver, ChangePasswordPageUI.CHANGE_PASSWORD_SUCCESS_MESSAGE);
 		return isElementDisplayed(driver, ChangePasswordPageUI.CHANGE_PASSWORD_SUCCESS_MESSAGE);
 	}
+	
+	public void changePassword(String password, String newPassword) {
+		
+		enterToOldPasswordTextbox(password);
+		enterToNewPasswordTextbox(newPassword);
+		enterToConfirmPasswordTextbox(newPassword);
+		clickToChanePasswordButton();		
+	}
+	
 	public void clickToCloseMessageButton() {
 		waitForElementClickable(driver, ChangePasswordPageUI.CLOSE_MESSAGE_BUTTON);
 		clickToElement(driver, ChangePasswordPageUI.CLOSE_MESSAGE_BUTTON);
