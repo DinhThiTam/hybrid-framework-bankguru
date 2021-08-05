@@ -44,14 +44,12 @@ public class Practice_TC_02_Login extends BaseTest {
 	
 	@Test
 	public void Login_02_Login_Invalid_Email() {
-		loginPage.refreshPage(driver);
 		loginPage.loginToSystem("123", password);
 		Assert.assertTrue(loginPage.isEmailInvalidMessageDisplay());
 	}
 	
 	@Test
 	public void Login_03_Login_Not_Register_Email() {
-		loginPage.refreshPage(driver);
 		loginPage.loginToSystem("abc@mail.vn", password);
 		loginPage.enterToEmailTextbox(getRandomEmail());
 		Assert.assertTrue(loginPage.isEmailNotRegisterMessageDisplay());
@@ -76,18 +74,15 @@ public class Practice_TC_02_Login extends BaseTest {
 	
 	@Test
 	public void Login_06_Login_Invalid_Password() {
-		loginPage.refreshPage(driver);
 		loginPage.loginToSystem(emailAddress, "123");
 		Assert.assertTrue(loginPage.isPasswordInvalidMessageDisplay());
 	}
 	
 	@Test
 	public void Login_07_Login_Success() {
-		loginPage.refreshPage(driver);
 		loginPage.loginToSystem(emailAddress, password);
 		homePage = new HomePageObject(driver);
-		//Assert.assertTrue(homePage.isLogoutLinkDisplay());
-		homePage.clickToLogoutLink();
+		Assert.assertTrue(homePage.isLogoutLinkDisplay());
 	}
 	
 

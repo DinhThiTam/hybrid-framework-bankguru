@@ -14,7 +14,7 @@ import pageObjects.nopCommerce.AddressPageObject;
 import pageObjects.nopCommerce.ChangePasswordPageObject;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.MyAccountPageObject;
+import pageObjects.nopCommerce.CustomerInfoPageObject;
 import pageObjects.nopCommerce.ProductReviewPageObject;
 import pageObjects.nopCommerce.RegisterPageObject;
 import pageObjects.nopCommerce.SearchPageObject;
@@ -133,7 +133,7 @@ public class Practice_TC_04_Search extends BaseTest {
 	HomePageObject homePage;
 	LoginPageObject loginPage;
 	RegisterPageObject registerPage;
-	MyAccountPageObject myAccountPage;
+	CustomerInfoPageObject myAccountPage;
 	AddressPageObject addressPage;
 	ChangePasswordPageObject changePasswordPage;
 	ProductReviewPageObject reviewPage;

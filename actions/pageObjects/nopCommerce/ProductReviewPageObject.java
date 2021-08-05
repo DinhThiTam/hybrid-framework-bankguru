@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import pageUIs.nopCommerce.ChangePasswordPageUI;
-import pageUIs.nopCommerce.MyAccountPageUI;
+import pageUIs.nopCommerce.CustomerInfoPageUI;
 import pageUIs.nopCommerce.ProductReviewPageUI;
 import pageUIs.nopCommerce.RegisterPageUI;
 
@@ -44,18 +44,18 @@ public class ProductReviewPageObject extends BasePage {
 	}
 
 	public String getTitleReviewText() {
-		// TODO Auto-generated method stub
-		return null;
+		waitForElementVisible(driver, ProductReviewPageUI.REVIEW_TITLE_TEXT);
+		return getElementText(driver, ProductReviewPageUI.REVIEW_TITLE_TEXT);
 	}
 
 	public String getTextReviewText() {
-		// TODO Auto-generated method stub
-		return null;
+		waitForElementVisible(driver, ProductReviewPageUI.REVIEW_TEXT_TEXT);
+		return getElementText(driver, ProductReviewPageUI.REVIEW_TEXT_TEXT);
 	}
 
 	public String getInfoReviewText() {
-		// TODO Auto-generated method stub
-		return null;
+		waitForElementVisible(driver, ProductReviewPageUI.REVIEW_INFO_TEXT);
+		return getElementText(driver, ProductReviewPageUI.REVIEW_INFO_TEXT);
 	}
 
 	

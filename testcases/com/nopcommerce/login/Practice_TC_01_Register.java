@@ -52,7 +52,6 @@ public class Practice_TC_01_Register extends BaseTest {
 	
 	@Test
 	public void Register_02_Invalid_Email() {
-		registerPage.refreshPage(driver);
 		registerPage.registerToSystem("abc@123.456", password, password, "dinh", "tam");	
 		Assert.assertTrue(registerPage.isEmailInvalidMessageDisplayed());
 	}
@@ -66,20 +65,17 @@ public class Practice_TC_01_Register extends BaseTest {
 	
 	@Test(description = "Password less than 6 chars")
 	public void Register_05_InValid_Password() {
-		registerPage.refreshPage(driver);
 		registerPage.registerToSystem(emailAddress, "123", "", "dinh", "tam");	
 		Assert.assertTrue(registerPage.isPasswordInvalidMessageDisplayed());
 	}
 	
 	@Test
 	public void Register_06_Not_Match_Password() {
-		registerPage.refreshPage(driver);
 		registerPage.registerToSystem(emailAddress, password, "123", "dinh", "tam");
 		Assert.assertTrue(registerPage.isConfirmPasswordInvalidMessageDisplayed());
 	}
 	@Test
 	public void Register_03_Valid_Infomation() {
-		registerPage.refreshPage(driver);
 		registerPage.registerToSystem(emailAddress, password, password, "dinh", "tam");
 		Assert.assertTrue(registerPage.isSuccessMessageDisplayed());
 		registerPage.clickToLogoutLink();
