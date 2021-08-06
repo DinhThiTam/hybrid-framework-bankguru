@@ -15,14 +15,11 @@ import commons.BaseTest;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
 import pageObjects.nopCommerce.RegisterPageObject;
-import pageUIs.nopCommerce.HomePageUI;
-import pageUIs.nopCommerce.LoginPageUI;
 
-public class Practice_TC_02_Login extends BaseTest {
+public class Level_06_Register_Login_Page_Generator extends BaseTest{
 	WebDriver driver;
 	String emailAddress, password;
 	String projectLocation = System.getProperty("user.dir");
-	BasePage basePage;
 	
 	@Parameters({"browser","url"})
 	@BeforeClass
@@ -32,55 +29,31 @@ public class Practice_TC_02_Login extends BaseTest {
 		password = "123456";
 		driver.manage().window().maximize();	
 	}
-	
 	@Test
-	public void Login_01_Login_Empty_Data() {
+	public void Login_01_Register_To_System() {
 		homePage = new HomePageObject(driver);
-		loginPage = homePage.clickToLoginLink();
-		loginPage.loginToSystem("", password);
-		Assert.assertTrue(loginPage.isEmailEmptyMessageDisplay());
-	}
-	
-	@Test
-	public void Login_02_Login_Invalid_Email() {
-		loginPage.loginToSystem("123", password);
-		Assert.assertTrue(loginPage.isEmailInvalidMessageDisplay());
-	}
-	
-	@Test
-	public void Login_03_Login_Not_Register_Email() {
-		loginPage.loginToSystem("abc@mail.vn", password);
-		loginPage.enterToEmailTextbox(getRandomEmail());
-		Assert.assertTrue(loginPage.isEmailNotRegisterMessageDisplay());
-	}
-	@Test
-	public void Login_04_Register_Success() {
-		homePage = new HomePageObject(driver);
+		Assert.assertTrue(homePage.isHomePageSliderDisplayed());
 		registerPage = homePage.clickToRegisterLink();
-		registerPage.registerToSystem(emailAddress, password, password, "dinh", "tam");
+		registerPage.clickToGenderRadioButton();
+		registerPage.enterToFirstNameTextbox("dinh");
+		registerPage.enterToLastNameTextbox("tam");
+		registerPage.enterToEmailTextbox(emailAddress);
+		registerPage.enterToPasswordTextbox(password);
+		registerPage.enterToConfirmPasswordTextbox(password);
+		registerPage.clickToRegisterButton();
 		Assert.assertTrue(registerPage.isSuccessMessageDisplayed());
 		homePage = registerPage.clickToLogoutLink();
-		loginPage = homePage.clickToLoginLink();
-	}
-	@Test
-	public void Login_05_Empty_Password() {
-		loginPage.loginToSystem(emailAddress, "");
-		Assert.assertTrue(loginPage.isPasswordEmptyMessageDisplay());
 	}
 	
 	@Test
-	public void Login_06_Login_Invalid_Password() {
-		loginPage.loginToSystem(emailAddress, "123");
-		Assert.assertTrue(loginPage.isPasswordInvalidMessageDisplay());
+	public void Login_02_Login_To_System() {
+		loginPage= homePage.clickToLoginLink();
+		loginPage.enterToEmailTextbox(emailAddress);
+		loginPage.enterToPasswordTextbox(password);
+		homePage= loginPage.clickToLoginButton();
+		Assert.assertTrue(homePage.isHomePageSliderDisplayed());
 	}
 	
-	@Test
-	public void Login_07_Login_Success() {
-		homePage = loginPage.loginToSystem(emailAddress, password);
-		Assert.assertTrue(homePage.isLogoutLinkDisplay());
-	}
-	
-
 	@AfterClass
 	public void cleanBrowser() {
 		driver.quit();

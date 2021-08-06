@@ -15,9 +15,10 @@ import pageUIs.nopCommerce.LoginPageUI;
 		senkeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, emailAddress);
 	}
 
-	public void clickToLoginButton() {
+	public HomePageObject clickToLoginButton() {
 		waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);	
+		return new HomePageObject(driver);
 	}
 
 	public void enterToPasswordTextbox(String password) {
@@ -50,10 +51,11 @@ import pageUIs.nopCommerce.LoginPageUI;
 		return isElementDisplayed(driver, LoginPageUI.LOGIN_PASSWORD_INVALID_MESSAGE);
 	}
 	
-	public void loginToSystem(String emailAddress, String password ) {
+	public HomePageObject loginToSystem(String emailAddress, String password ) {
 		enterToEmailTextbox(emailAddress);
 		enterToPasswordTextbox(password);
 		clickToLoginButton();
+		return new HomePageObject(driver);
 	}
 	
 }

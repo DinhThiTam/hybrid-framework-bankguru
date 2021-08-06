@@ -46,9 +46,10 @@ import pageUIs.nopCommerce.LoginPageUI;
 		clickToChanePasswordButton();		
 	}
 	
-	public void clickToCloseMessageButton() {
+	public HomePageObject clickToCloseMessageButton() {
 		waitForElementClickable(driver, ChangePasswordPageUI.CLOSE_MESSAGE_BUTTON);
 		clickToElement(driver, ChangePasswordPageUI.CLOSE_MESSAGE_BUTTON);
+		return new HomePageObject(driver);
 	}
 	
 	

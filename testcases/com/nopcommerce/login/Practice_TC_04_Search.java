@@ -54,13 +54,11 @@ public class Practice_TC_04_Search extends BaseTest {
 	@Test
 	public void TC_01_Empty_Data() {
 		homePage = new HomePageObject(driver);
-		homePage.clickToRegisterLink();
+		registerPage=homePage.clickToRegisterLink();
 		
-		registerPage = new RegisterPageObject(driver);
 		registerPage.registerToSystem(emailAddress, password, password, firstName, lastName);
 		
-		registerPage.clickToSearchFooterLink();
-		searchPage = new SearchPageObject(driver);
+		searchPage = registerPage.clickToSearchFooterLink();
 		searchPage.enterSearchKeywordTextbox("");
 		searchPage.clickToSearchButton();
 		

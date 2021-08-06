@@ -7,26 +7,27 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
+import commons.BaseTest;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
 import pageObjects.nopCommerce.RegisterPageObject;
 
-public class Level_04_Register_Login_Page_Object {
+public class Level_05_Register_Login_Page_Factory extends BaseTest {
 	WebDriver driver;
 	String emailAddress, password;
 	String projectLocation = System.getProperty("user.dir");
-	BasePage basePage;
 	
+	
+	@Parameters({"browser","url"})
 	@BeforeClass
-	public void initBrowser() {
-	System.setProperty("webdriver.gecko.driver", projectLocation + "\\browserDrivers\\geckodriver.exe");
-	driver = new FirefoxDriver();
-	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	emailAddress = getRandomEmail();
-	password = "123456";
+	public void initBrowser(String browserName, String appURL) {
+		driver = getBrowserDriver(browserName, appURL);
+		emailAddress = getRandomEmail();
+		password = "123456";	
 	}
 	@Test
 	public void Login_01_Register_To_System() {

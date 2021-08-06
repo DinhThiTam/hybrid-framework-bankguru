@@ -15,24 +15,28 @@ public class CustomerInfoPageObject extends BasePage {
 		this.driver = driver;
 	}
 
-	public void clickToChangePasswordButton() {
+	public ChangePasswordPageObject clickToChangePasswordButton() {
 		waitForElementClickable(driver, CustomerInfoPageUI.CHANGE_PASSWORD_LINK);
 		clickToElement(driver, CustomerInfoPageUI.CHANGE_PASSWORD_LINK);
+		return new ChangePasswordPageObject(driver);
 	}
 
-	public void clickToAddressLink() {
+	public AddressPageObject clickToAddressLink() {
 		waitForElementClickable(driver, CustomerInfoPageUI.ADDRESSES_LINK);
 		clickToElementByJS(driver, CustomerInfoPageUI.ADDRESSES_LINK);
+		return new AddressPageObject(driver);
 	}
 
-	public void clickToCustomerInfoLink() {
+	public RegisterPageObject clickToCustomerInfoLink() {
 		waitForElementClickable(driver, CustomerInfoPageUI.CUSTOM_INFO_LINK);
 		clickToElement(driver, CustomerInfoPageUI.CUSTOM_INFO_LINK);
+		return new RegisterPageObject(driver);
 	}
 
-	public void clickToMyProductReviewLink() {
+	public ProductReviewPageObject clickToMyProductReviewLink() {
 		waitForElementVisible(driver, CustomerInfoPageUI.MY_PRODUCT_REVIEW_LINK);
 		clickToElement(driver, CustomerInfoPageUI.MY_PRODUCT_REVIEW_LINK);
+		return new ProductReviewPageObject(driver);
 	}
 
 	

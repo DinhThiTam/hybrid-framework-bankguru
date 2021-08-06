@@ -53,16 +53,13 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 	@Test
 	public void TC_01_Customer_Info() {
 		homePage = new HomePageObject(driver);
-		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		registerPage=homePage.clickToRegisterLink();
 		registerPage.registerToSystem(emailAddress, password, password, "dinh", "tam");
 		Assert.assertTrue(registerPage.isSuccessMessageDisplayed());
 		
 		homePage = new HomePageObject(driver);
-		homePage.clickToMyAccountLink();
-		customerInfoPage = new CustomerInfoPageObject(driver);
-		customerInfoPage.clickToCustomerInfoLink();
-		registerPage = new RegisterPageObject(driver);
+		customerInfoPage = homePage.clickToMyAccountLink();
+		registerPage= customerInfoPage.clickToCustomerInfoLink();
 
 		registerPage.customerInfo(firstName, lastName, birthDay, birthMonth, birthYear, emailAddress, companyName);
 		
@@ -78,8 +75,7 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 	@Test
 	public void TC_02_Address() {
 		customerInfoPage = new CustomerInfoPageObject(driver);
-		customerInfoPage.clickToAddressLink();
-		addressPage = new AddressPageObject(driver);
+		addressPage = customerInfoPage.clickToAddressLink();
 		addressPage.clickToAddNewLink();
 		
 		addressPage.addNewAddress(firstName, lastName, emailAddress, companyName, countryName, stateProvince, cityName, address1, address2, zipCode, phoneNumber, faxNumber);
@@ -98,22 +94,16 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 	@Test
 	public void TC_03_Change_Password() {
 		customerInfoPage = new CustomerInfoPageObject(driver);
-		customerInfoPage.clickToChangePasswordButton();
-		changePasswordPage = new ChangePasswordPageObject(driver);
-		
+		changePasswordPage = customerInfoPage.clickToChangePasswordButton();
 		changePasswordPage.changePassword(password, newPassword);
 		Assert.assertTrue(changePasswordPage.isChangePasswordSuccessMessageDisplayed());
-		changePasswordPage.clickToCloseMessageButton();
-		
-		homePage = new HomePageObject(driver);
+		homePage= changePasswordPage.clickToCloseMessageButton();
 		homePage.clickToLogoutLink();
-		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		loginPage= homePage.clickToLoginLink();
 		loginPage.loginToSystem(emailAddress, password);
 		Assert.assertTrue(loginPage.isPasswordInvalidMessageDisplay());
 		
-		loginPage.loginToSystem(emailAddress, newPassword);
-		homePage = new HomePageObject(driver);
+		homePage = loginPage.loginToSystem(emailAddress, newPassword);
 		Assert.assertTrue(homePage.isLogoutLinkDisplay());
 	}
 
@@ -126,19 +116,14 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 		homePage.hoverComputerLinkMenu();
 		homePage.clickToDesktopSubMenu();
 		homePage.clickToItemLink();
-		homePage.clickToAddReviewLink();
-		
-		reviewPage = new ProductReviewPageObject(driver);
+		reviewPage= homePage.clickToAddReviewLink();
 		reviewPage.addReview(titleReview, textReview);
 		Assert.assertEquals(reviewPage.getAddReviewSuccessMessage(),"Product review is successfully added.");
 		
 		homePage = new HomePageObject(driver);
-		homePage.clickToMyAccountLink();
+		customerInfoPage= homePage.clickToMyAccountLink();
+		reviewPage = customerInfoPage.clickToMyProductReviewLink();
 		
-		customerInfoPage = new CustomerInfoPageObject(driver);
-		customerInfoPage.clickToMyProductReviewLink();
-		
-		reviewPage = new ProductReviewPageObject(driver);
 		Assert.assertEquals(reviewPage.getTitleReviewText(), titleReview);
 		Assert.assertEquals(reviewPage.getTextReviewText(), textReview);
 		Assert.assertEquals(reviewPage.getInfoReviewText(), "Build your own computer");	

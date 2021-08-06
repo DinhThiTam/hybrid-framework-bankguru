@@ -22,9 +22,7 @@ public class Practice_TC_01_Register extends BaseTest {
 	String emailAddress, password;
 	String projectLocation = System.getProperty("user.dir");
 	BasePage basePage;
-	public static Practice_TC_01_Register getRegister() {
-		return new Practice_TC_01_Register();
-	}
+	
 	
 	@Parameters({"browser","url"})
 	@BeforeClass
@@ -37,11 +35,9 @@ public class Practice_TC_01_Register extends BaseTest {
 	
 	@Test
 	public void Register_01_Empty_Data() {
-		//driver.get("https://demo.nopcommerce.com/");
 		homePage = new HomePageObject(driver);
 		Assert.assertTrue(homePage.isHomePageSliderDisplayed());
-		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		registerPage= homePage.clickToRegisterLink();
 		registerPage.registerToSystem("", "", "", "", "");
 		Assert.assertTrue(registerPage.isFirstnameEmptyInvalidMessageDisplayed());
 		Assert.assertTrue(registerPage.isLastnameEmptyInvalidMessageDisplayed());
@@ -58,7 +54,6 @@ public class Practice_TC_01_Register extends BaseTest {
 	
 	@Test
 	public void Register_04_Exist_Email() {
-		registerPage = new RegisterPageObject(driver);
 		registerPage.registerToSystem(emailAddress, password, password, "dinh", "tam");	
 		Assert.assertTrue(registerPage.isEmailExistMessageDisplayed());
 	}
@@ -78,8 +73,7 @@ public class Practice_TC_01_Register extends BaseTest {
 	public void Register_03_Valid_Infomation() {
 		registerPage.registerToSystem(emailAddress, password, password, "dinh", "tam");
 		Assert.assertTrue(registerPage.isSuccessMessageDisplayed());
-		registerPage.clickToLogoutLink();
-		homePage = new HomePageObject(driver);
+		homePage = registerPage.clickToLogoutLink();
 		homePage.clickToRegisterLink();
 	}
 	

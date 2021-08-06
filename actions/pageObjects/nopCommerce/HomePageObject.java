@@ -16,14 +16,16 @@ public class HomePageObject extends BasePage {
 		return isElementDisplayed(driver, HomePageUI.HOMEPAGE_SLIDER);
 	}
 
-	public void clickToRegisterLink() {
+	public RegisterPageObject clickToRegisterLink() {
 		waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
 		clickToElement(driver, HomePageUI.REGISTER_LINK);	
+		return new RegisterPageObject(driver);
 	}
 
-	public void clickToLoginLink() {
+	public LoginPageObject clickToLoginLink() {
 		waitForElementClickable(driver, HomePageUI.LOGIN_LINK);
 		clickToElement(driver, HomePageUI.LOGIN_LINK);
+		return new LoginPageObject(driver);
 	}
 	
 	public void clickToLogoutLink() {
@@ -31,9 +33,10 @@ public class HomePageObject extends BasePage {
 		clickToElementByJS(driver, HomePageUI.LOGOUT_LINK);
 	}
 	
-	public void clickToMyAccountLink() {
+	public CustomerInfoPageObject clickToMyAccountLink() {
 		waitForElementClickable(driver, HomePageUI.MY_ACCOUNT_LINK);
 		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
+		return new CustomerInfoPageObject(driver);
 	}
 	public boolean isLogoutLinkDisplay() {
 		waitForElementVisible(driver, HomePageUI.LOGOUT_LINK);
@@ -49,9 +52,10 @@ public class HomePageObject extends BasePage {
 		waitForElementClickable(driver, HomePageUI.SUB_MENU_LINK);
 		clickToElement(driver, HomePageUI.SUB_MENU_LINK);
 	}
-	public void clickToAddReviewLink() {
+	public ProductReviewPageObject clickToAddReviewLink() {
 		waitForElementClickable(driver, HomePageUI.ADD_REVIEW_LINK);
 		clickToElement(driver, HomePageUI.ADD_REVIEW_LINK);
+		return new ProductReviewPageObject(driver);
 	}
 	public void clickToItemLink() {
 		waitForElementClickable(driver, HomePageUI.ITEM_LINK);
