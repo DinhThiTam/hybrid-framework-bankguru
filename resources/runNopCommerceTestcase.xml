@@ -7,6 +7,7 @@
 		<parameter name="browser" value="firefox" />
 		<classes>
 <!-- 			<class name="com.nopcommerce.login.Level_06_Register_Login_Page_Generator" /> -->
+<!-- 			<class name="com.nopcommerce.login.Level_05_Register_Login_Page_Factory" /> -->
 			<class name="com.nopcommerce.login.Practice_TC_01_Register" />
 			<class name="com.nopcommerce.login.Practice_TC_02_Login" />
 			<class name="com.nopcommerce.login.Practice_TC_03_MyAccount" />
