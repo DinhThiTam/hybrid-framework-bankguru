@@ -62,5 +62,9 @@ public class HomePageObject extends BasePage {
 		clickToElement(driver, HomePageUI.ITEM_LINK);
 		
 	}
+	public NoteBooksPageObject clickToSubNotebooksSubMenu() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

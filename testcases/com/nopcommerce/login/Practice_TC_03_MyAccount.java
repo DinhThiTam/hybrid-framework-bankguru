@@ -95,10 +95,13 @@ public class Practice_TC_03_MyAccount extends BaseTest {
 	public void TC_03_Change_Password() {
 		customerInfoPage = new CustomerInfoPageObject(driver);
 		changePasswordPage = customerInfoPage.clickToChangePasswordButton();
+		
 		changePasswordPage.changePassword(password, newPassword);
 		Assert.assertTrue(changePasswordPage.isChangePasswordSuccessMessageDisplayed());
+		
 		homePage= changePasswordPage.clickToCloseMessageButton();
 		homePage.clickToLogoutLink();
+		
 		loginPage= homePage.clickToLoginLink();
 		loginPage.loginToSystem(emailAddress, password);
 		Assert.assertTrue(loginPage.isPasswordInvalidMessageDisplay());

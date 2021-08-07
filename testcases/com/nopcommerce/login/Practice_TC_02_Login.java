@@ -1,9 +1,9 @@
 package com.nopcommerce.login;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -15,8 +15,7 @@ import commons.BaseTest;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
 import pageObjects.nopCommerce.RegisterPageObject;
-import pageUIs.nopCommerce.HomePageUI;
-import pageUIs.nopCommerce.LoginPageUI;
+
 
 public class Practice_TC_02_Login extends BaseTest {
 	WebDriver driver;

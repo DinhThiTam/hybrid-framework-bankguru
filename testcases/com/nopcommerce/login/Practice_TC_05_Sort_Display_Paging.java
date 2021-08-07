@@ -8,21 +8,24 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import commons.BasePage;
 import commons.BaseTest;
 import pageObjects.nopCommerce.AddressPageObject;
 import pageObjects.nopCommerce.ChangePasswordPageObject;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
+import pageObjects.nopCommerce.NoteBooksPageObject;
 import pageObjects.nopCommerce.CustomerInfoPageObject;
 import pageObjects.nopCommerce.ProductReviewPageObject;
 import pageObjects.nopCommerce.RegisterPageObject;
 import pageObjects.nopCommerce.SearchPageObject;
 
-public class Practice_TC_04_Search extends BaseTest {
+
+public class Practice_TC_05_Sort_Display_Paging extends BaseTest {
 	WebDriver driver;
-	String emailAddress, password, firstName, lastName;
+	String emailAddress, password, newPassword, birthDay, birthMonth, birthYear, firstName, lastName, fullName, citySateZip,companyName, stateProvince, countryName, cityName, address1, address2, zipCode, phoneNumber, faxNumber;
 	String projectLocation = System.getProperty("user.dir");
-	
+	BasePage basePage;
 
 	@Parameters({ "browser", "url" })
 	@BeforeClass
@@ -35,29 +38,23 @@ public class Practice_TC_04_Search extends BaseTest {
 	}
 
 	@Test
-	public void TC_01_Empty_Data() {
+	public void TC_01_Sort_By_Name_A_Z() {
 		homePage = new HomePageObject(driver);
-		registerPage=homePage.clickToRegisterLink();
+		homePage.hoverComputerLinkMenu();
+		noteBooks= homePage.clickToSubNotebooksSubMenu();
+		noteBooks.selectSortByNameAToZDropDown("Name: A to Z");
 		
-		registerPage.registerToSystem(emailAddress, password, password, firstName, lastName);
 		
-		searchPage = registerPage.clickToSearchFooterLink();
-		searchPage.enterSearchKeywordTextbox("");
-		searchPage.clickToSearchButton();
 		
-		Assert.assertTrue(searchPage.isSearchKeywordEmptyMessage());
 	}
 
 	@Test
-	public void TC_02_Data_Not_Exist() {
-		searchPage.enterSearchKeywordTextbox("Macbook Pro 2050");
-		searchPage.clickToSearchButton();
-		
-		Assert.assertTrue(searchPage.isSearchKeywordNotExistMessage());
+	public void TC_02_Sort_By_Name_Z_A() {
+	
 	}
 	
 	@Test
-	public void TC_03_Product_Name_Relative() {
+	public void TC_03_Sort_By_Price_Low_To_Hight() {
 		searchPage.enterSearchKeywordTextbox("Lenovo");
 		searchPage.clickToSearchButton();
 		
@@ -66,7 +63,7 @@ public class Practice_TC_04_Search extends BaseTest {
 		Assert.assertEquals(searchPage.getSizeProductText(), 2);
 	}
 	@Test
-	public void TC_04_Product_Name_Absolute() {
+	public void TC_04_Display_Three_Per_Page() {
 		searchPage.enterSearchKeywordTextbox("Thinkpad X1 Carbon");
 		searchPage.clickToSearchButton();
 		
@@ -75,71 +72,50 @@ public class Practice_TC_04_Search extends BaseTest {
 	}
 	
 	@Test
-	public void TC_05_Parent_Categories() {
+	public void TC_05_Display_Three_Per_Page() {
 		searchPage.enterSearchKeywordTextbox("Apple MacBook Pro");
-		
 		searchPage.checkToAdvancedSearchCheckbox();
 		Assert.assertTrue(searchPage.isAdvancedSearchChecked());
-		
 		searchPage.selectItemCategoryDropdown("Computers");
 		Assert.assertEquals(searchPage.getItemSelected(), "Computers");
-		
 		searchPage.clickToSearchButton();
-		
 		Assert.assertTrue(searchPage.isParentCategoriesDisplayedMessage());
 	}
 	
 	@Test
-	public void TC_06_Product_Sub_Categories() {
+	public void TC_06_Display_Six_Per_Page() {
 		Assert.assertEquals(searchPage.getSearchKeywordTextbox(), "Apple MacBook Pro");
-		
 		Assert.assertTrue(searchPage.isAdvancedSearchChecked());
-		
 		Assert.assertEquals(searchPage.getItemSelected(), "Computers");
-		
 		searchPage.checkToAutomationSearchCheckbox();
 		Assert.assertTrue(searchPage.isAutomationSearchChecked());
-		
 		searchPage.clickToSearchButton();
-		
 		Assert.assertEquals(searchPage.getSizeProductText(), 1);
 		Assert.assertTrue(searchPage.isTitleProduct3Link());
 	}
 	
 	@Test
-	public void TC_07_Incorrect_Manufactuner() {
+	public void TC_07_Display_Nine_Per_Page() {
 		Assert.assertEquals(searchPage.getSearchKeywordTextbox(), "Apple MacBook Pro");
-		
 		Assert.assertTrue(searchPage.isAdvancedSearchChecked());
-		
 		Assert.assertEquals(searchPage.getItemSelected(), "Computers");
-		
 		searchPage.checkToAutomationSearchCheckbox();
 		Assert.assertTrue(searchPage.isAutomationSearchChecked());
-		
 		searchPage.selectItemManufacturerDropdown("HP");
 		Assert.assertEquals(searchPage.getItemManufacturerSelected(), "HP");
-		
 		searchPage.clickToSearchButton();
-		
 		Assert.assertTrue(searchPage.isIncorrectManufactunerMessage());
 	}
 	
 	@Test
 	public void TC_08_Correct_Manufactuner() {
 		Assert.assertEquals(searchPage.getSearchKeywordTextbox(), "Apple MacBook Pro");
-		
 		Assert.assertTrue(searchPage.isAdvancedSearchChecked());
-		
 		Assert.assertEquals(searchPage.getItemSelected(), "Computers");
-		
 		Assert.assertTrue(searchPage.isAutomationSearchChecked());
-		
 		searchPage.selectItemManufacturerDropdown("Apple");
 		Assert.assertEquals(searchPage.getItemManufacturerSelected(), "Apple");
-		
 		searchPage.clickToSearchButton();
-		
 		Assert.assertEquals(searchPage.getSizeProductText(), 1);
 		Assert.assertTrue(searchPage.isTitleProduct3Link());
 	}
@@ -180,4 +156,5 @@ public class Practice_TC_04_Search extends BaseTest {
 	ChangePasswordPageObject changePasswordPage;
 	ProductReviewPageObject reviewPage;
 	SearchPageObject searchPage;
+	NoteBooksPageObject noteBooks;
 }

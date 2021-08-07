@@ -1,6 +1,6 @@
 package pageUIs.nopCommerce;
 
-public class SearchPageUI {
+public class NoteBooksPageUI {
 	public static final String SEARCH_KEYWORD_TEXTBOX= "//input[@id='q']";
 	public static final String SEARCH_BUTTON= "//div[@class='buttons']//button[@type='submit']";
 	public static final String SEARCH_KEYWORD_EMPTY_MESSAGE= "//div[text()='Search term minimum length is 3 characters']";
