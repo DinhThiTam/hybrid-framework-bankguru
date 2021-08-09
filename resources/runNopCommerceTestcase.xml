@@ -11,7 +11,8 @@
 <!-- 			<class name="com.nopcommerce.login.Practice_TC_01_Register" /> -->
 <!-- 			<class name="com.nopcommerce.login.Practice_TC_02_Login" /> -->
 <!-- 			<class name="com.nopcommerce.login.Practice_TC_03_MyAccount" /> -->
-			<class name="com.nopcommerce.login.Practice_TC_04_Search" />
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_04_Search" /> -->
+			<class name="com.nopcommerce.login.Level_08_Register_Login_Page_Dynamic_Locator" />
 		</classes>
 	</test>
 

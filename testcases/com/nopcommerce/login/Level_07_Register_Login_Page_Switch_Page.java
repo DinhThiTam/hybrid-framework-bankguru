@@ -12,12 +12,15 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 import commons.BaseTest;
+import pageObjects.nopCommerce.CustomerInfoPageObject;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
+import pageObjects.nopCommerce.OrderPageObject;
 import pageObjects.nopCommerce.PageGeneratorManager;
 import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.SearchPageObject;
 
-public class Level_06_Register_Login_Page_Generator extends BaseTest{
+public class Level_07_Register_Login_Page_Switch_Page extends BaseTest{
 	WebDriver driver;
 	String emailAddress, password;
 	String projectLocation = System.getProperty("user.dir");
@@ -55,6 +58,39 @@ public class Level_06_Register_Login_Page_Generator extends BaseTest{
 		Assert.assertTrue(homePage.isHomePageSliderDisplayed());
 	}
 	
+	@Test
+	public void Login_03_Open_Page_At_Footer() {
+		//Home -> Search
+		searchPage = (SearchPageObject) homePage.getFooterPageByName(driver, "Search");
+		//Search -> My account
+		customInfoPage = (CustomerInfoPageObject) searchPage.getFooterPageByName(driver, "My account");
+		//My account -> Order
+		orderPage = (OrderPageObject) customInfoPage.getFooterPageByName(driver, "Order");
+		
+		//Order -> My account
+		customInfoPage = (CustomerInfoPageObject) orderPage.getFooterPageByName(driver, "My account");
+		//My acc -> Search
+		searchPage = (SearchPageObject) customInfoPage.getFooterPageByName(driver, "Search");
+		
+		//Search -> Order
+		orderPage = (OrderPageObject) searchPage.getFooterPageByName(driver, "Order");
+	}
+	@Test
+	public void Login_04_Open_Page_At_Footer() {
+		
+		//Order -> My account
+		orderPage.openFooterPageByName(driver, "My account");
+		customInfoPage = PageGeneratorManager.getCustomInfoPage(driver);
+		
+		//My acc -> Search
+		customInfoPage.openFooterPageByName(driver, "Search");
+		searchPage = PageGeneratorManager.getSearchPage(driver);
+		//Search -> Order
+		
+		searchPage.openFooterPageByName(driver, "Search");
+		orderPage = PageGeneratorManager.getOrderPage(driver);
+	}
+	
 	@AfterClass
 	public void cleanBrowser() {
 		driver.quit();
@@ -68,4 +104,7 @@ public class Level_06_Register_Login_Page_Generator extends BaseTest{
 	HomePageObject homePage;
 	LoginPageObject loginPage;
 	RegisterPageObject registerPage;
+	SearchPageObject searchPage;
+	CustomerInfoPageObject customInfoPage;
+	OrderPageObject orderPage;
 }

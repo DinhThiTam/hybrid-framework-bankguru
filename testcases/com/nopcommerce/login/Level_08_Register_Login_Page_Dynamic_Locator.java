@@ -12,12 +12,15 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 import commons.BaseTest;
+import pageObjects.nopCommerce.CustomerInfoPageObject;
 import pageObjects.nopCommerce.HomePageObject;
 import pageObjects.nopCommerce.LoginPageObject;
+import pageObjects.nopCommerce.OrderPageObject;
 import pageObjects.nopCommerce.PageGeneratorManager;
 import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.SearchPageObject;
 
-public class Level_06_Register_Login_Page_Generator extends BaseTest{
+public class Level_08_Register_Login_Page_Dynamic_Locator extends BaseTest{
 	WebDriver driver;
 	String emailAddress, password;
 	String projectLocation = System.getProperty("user.dir");
@@ -55,6 +58,21 @@ public class Level_06_Register_Login_Page_Generator extends BaseTest{
 		Assert.assertTrue(homePage.isHomePageSliderDisplayed());
 	}
 	
+	@Test
+	public void Login_03_Switch_Page_At_Footer() {
+		//Home -> Search
+		searchPage = homePage.openSearchPage(driver);
+		//Search -> My account
+		customInfoPage = searchPage.openCustomerInfoPage(driver);
+		//My account -> Order
+		orderPage = customInfoPage.openOrderPage(driver);
+		
+		//Order -> My account
+		customInfoPage = orderPage.openCustomerInfoPage(driver);
+		//My acc -> Search
+		searchPage = customInfoPage.openSearchPage(driver);
+	}
+	
 	@AfterClass
 	public void cleanBrowser() {
 		driver.quit();
@@ -68,4 +86,7 @@ public class Level_06_Register_Login_Page_Generator extends BaseTest{
 	HomePageObject homePage;
 	LoginPageObject loginPage;
 	RegisterPageObject registerPage;
+	SearchPageObject searchPage;
+	CustomerInfoPageObject customInfoPage;
+	OrderPageObject orderPage;
 }

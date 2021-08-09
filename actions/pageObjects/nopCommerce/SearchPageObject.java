@@ -108,5 +108,6 @@ public class SearchPageObject extends BasePage {
 		selectDropdownByText(driver, SearchPageUI.MANUFACTUNER_DROPDOWN, itemText);
 	}
 
+
 	}
 	
