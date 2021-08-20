@@ -16,15 +16,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageObjects.nopCommerce.CustomerInfoPageObject;
-import pageObjects.nopCommerce.OrderPageObject;
-import pageObjects.nopCommerce.PageGeneratorManager;
-import pageObjects.nopCommerce.SearchPageObject;
-import pageUIs.nopCommerce.BasePageUI;
-import pageUIs.nopCommerce.CustomerInfoPageUI;
-import pageUIs.nopCommerce.HomePageUI;
-import pageUIs.nopCommerce.OrderPageUI;
-import pageUIs.nopCommerce.SearchPageUI;
+import pageObject.admin.nopCommerce.ProductSearchPO;
+import pageObjects.user.nopCommerce.CustomerInfoPageObject;
+import pageObjects.user.nopCommerce.OrderPageObject;
+import pageObjects.user.nopCommerce.PageGeneratorManager;
+import pageObjects.user.nopCommerce.SearchPageObject;
+import pageUIs.admin.nopCommerce.AdminPageUI;
+import pageUIs.admin.nopCommerce.ProductDetailPageUI;
+import pageUIs.user.nopCommerce.BasePageUI;
+import pageUIs.user.nopCommerce.CustomerInfoPageUI;
+import pageUIs.user.nopCommerce.HomePageUI;
+import pageUIs.user.nopCommerce.OrderPageUI;
+import pageUIs.user.nopCommerce.SearchPageUI;
 import sun.security.krb5.internal.PAEncTSEnc;
 
 
@@ -75,6 +78,7 @@ public class BasePage {
 	public void acceptAlert(WebDriver driver) {
 		alert = waitAlertPresence(driver);
 		alert.accept();
+		sleepInsecond(2);
 	}
 
 	public void cancelAlert(WebDriver driver) {
@@ -140,6 +144,10 @@ public class BasePage {
 
 	public WebElement getElement(WebDriver driver, String locator) {
 		return driver.findElement(getByXpath(locator));
+	}
+	
+	public WebElement getElement(WebDriver driver, String locator, String... params) {
+		return driver.findElement(getByXpath(getDynamicLocator(locator, params)));
 	}
 
 	public List<WebElement> getElements(WebDriver driver, String locator) {
@@ -216,6 +224,10 @@ public class BasePage {
 		return getElement(driver, locator).getAttribute(attributeName);
 	}
 	
+	public String getElementAttribute(WebDriver driver, String locator, String attributeName, String... params) {
+		locator = getDynamicLocator(locator, params);
+		return getElement(driver, locator).getAttribute(attributeName);
+	}
 	public String getElementText(WebDriver driver, String locator) {
 		return getElement(driver, locator).getText();
 	}
@@ -225,6 +237,11 @@ public class BasePage {
 	}
 	
 	public String getElementCss(WebDriver driver, String locator, String cssValue) {
+		return getElement(driver, locator).getCssValue(cssValue);
+	}
+	
+	public String getElementCss(WebDriver driver, String locator, String cssValue, String... params) {
+		locator = getDynamicLocator(locator, params);
 		return getElement(driver, locator).getCssValue(cssValue);
 	}
 	
@@ -445,7 +462,7 @@ public class BasePage {
 		clickToElement(driver, BasePageUI.ORDER_PAGE_FOOTER);
 		return PageGeneratorManager.getOrderPage(driver);
 	}
-	
+	//User - Nopcommerce
 	//1 hàm cho 20 page
 	//Case 1 - Page<10
 	public BasePage getFooterPageByName(WebDriver driver, String pageName) {
@@ -468,7 +485,29 @@ public class BasePage {
 		clickToElement(driver, BasePageUI.DYNAMIC_PAGE_FOOTER, pageName);	
 	}
 	
+	//Admin - Nopcommerce
+	public void openSubMenuPageByName(WebDriver driver, String menuPageName, String subMenuPageName) {
+		waitForElementClickable(driver, AdminPageUI.MENU_LINK_BY_NAME, menuPageName);
+		clickToElement(driver, AdminPageUI.MENU_LINK_BY_NAME, menuPageName);
+		
+		waitForElementClickable(driver, AdminPageUI.SUB_MENU_LINK_BY_NAME, subMenuPageName);
+		clickToElement(driver, AdminPageUI.SUB_MENU_LINK_BY_NAME, subMenuPageName);
+	}	
 	
+	public void uploadMultipleFilesAtCardName(WebDriver driver, String cardName, String... fileNames) {
+		String filePath = GlobalConstants.UPLOAD_FOLDER_PATH;
+		String fullFileName = "";
+		for (String file : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		fullFileName = fullFileName.trim();
+		getElement(driver, AdminPageUI.UPLOAD_FILE_BY_CARD_NAME, cardName).sendKeys(fullFileName);
+	}
+	
+	public boolean isMessageDisplayedInEmptyTable(WebDriver driver, String tableName) {
+		waitForElementVisible(driver, AdminPageUI.NO_DATA_MESSAGE_TABLE_NAME, tableName);
+		return isElementDisplayed(driver, AdminPageUI.NO_DATA_MESSAGE_TABLE_NAME, tableName);
+	}
 	private Alert alert;
 	private WebDriverWait explicitWait;
 	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;

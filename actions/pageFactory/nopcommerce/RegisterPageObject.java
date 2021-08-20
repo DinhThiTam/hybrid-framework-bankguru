@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import commons.BasePage;
 import commons.BasePageFactory;
 import pageUIs.liveGuru.LoginPageUI;
-import pageUIs.nopCommerce.RegisterPageUI;
+import pageUIs.user.nopCommerce.RegisterPageUI;
 
 public class RegisterPageObject extends BasePageFactory {
 	private WebDriver driver;

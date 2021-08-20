@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE project>
+<suite name="User_Nop Commerce" parallel="false">
+	<parameter name="url" value="https://demo.nopcommerce.com/" />
+
+	<test name="Run on FIREFOX">
+		<parameter name="browser" value="firefox" />
+		<classes>
+<!-- 			<class name="com.nopcommerce.login.Level_06_Register_Login_Page_Generator" /> -->
+<!-- 			<class name="com.nopcommerce.login.Level_05_Register_Login_Page_Factory" /> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_01_Register" /> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_02_Login" /> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_03_MyAccount" /> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_04_Search" /> -->
+			<class name="com.nopcommerce.login.Level_08_Register_Login_Page_Dynamic_Locator" />
+		</classes>
+	</test>
+
+<!-- 		<test name="Run on CHROME"> -->
+<!-- 		<parameter name="browser" value="firefox" /> -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_01_Register" /> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_02_Login" /> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_03_MyAccount" /> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_04_Search" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+<!-- 	<test name="Run on EDGE_CHROMIUM"> -->
+<!-- 		<parameter name="browser" value="edge" /> -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_01_Register" /> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_02_Login" /> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_03_MyAccount" /> -->
+<!-- 			<class name="com.nopcommerce.login.Practice_TC_04_Search" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+</suite>

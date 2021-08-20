@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import commons.BasePage;
 import commons.BasePageFactory;
 import pageUIs.liveGuru.MyDashboardPageUI;
-import pageUIs.nopCommerce.LoginPageUI;
+import pageUIs.user.nopCommerce.LoginPageUI;
 	
 	public class LoginPageObject extends BasePageFactory {
 	private WebDriver driver;
