@@ -20,7 +20,7 @@ import pageObjects.user.nopCommerce.PageGeneratorManager;
 import pageObjects.user.nopCommerce.RegisterPageObject;
 import pageObjects.user.nopCommerce.SearchPageObject;
 
-public class Level_13_Register_Login_Log_Report extends BaseTest{
+public class Level_13_Register_Login_Log_ReportNG extends BaseTest{
 	WebDriver driver;
 	String emailAddress, password;
 	String projectLocation = System.getProperty("user.dir");
@@ -71,7 +71,7 @@ public class Level_13_Register_Login_Log_Report extends BaseTest{
 		homePage = registerPage.clickToLogoutLink();
 		
 		log.info("User_01_Register - Step 12: Verify  Home Page is displayed ");
-		verifyTrue(homePage.isHomePageSliderDisplayed());
+		verifyFalse(homePage.isHomePageSliderDisplayed());
 	}
 	
 	@Test
