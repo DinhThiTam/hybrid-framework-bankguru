@@ -18,6 +18,9 @@ import pageUIs.user.nopCommerce.LoginPageUI;
 	public HomePageObject clickToLoginButton() {
 		waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);	
+		if(driver.toString().contains("chrome") || driver.toString().contains("edge")) {
+			sleepInsecond(3);
+		}
 		return new HomePageObject(driver);
 	}
 

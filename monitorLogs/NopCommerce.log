@@ -1,0 +1,207 @@
+[INFO ] [2021-08-26 21:53:29,539] Pre-Condition - Open browser 'firefox' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-08-26 21:53:42,170] User_01_Register - Step 01: Verify Home Page is displayed
+[INFO ] [2021-08-26 21:53:42,366]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 21:53:42,372] User_01_Register - Step 02: Click to Register link
+[INFO ] [2021-08-26 21:53:43,950] User_01_Register - Step 03: Click to Male radio button
+[INFO ] [2021-08-26 21:53:44,297] User_01_Register - Step 04: Click to First Name textbox
+[INFO ] [2021-08-26 21:53:44,456] User_01_Register - Step 05: Click to Last Name textbox
+[INFO ] [2021-08-26 21:53:44,600] User_01_Register - Step 06: Click to Email textbox with valuetesting30079@email.com
+[INFO ] [2021-08-26 21:53:44,750] User_01_Register - Step 07: Click to Password textbox with value123456
+[INFO ] [2021-08-26 21:53:44,879] User_01_Register - Step 08: Click to Confirm Password textbox with value123456
+[INFO ] [2021-08-26 21:53:45,008] User_01_Register - Step 09: Click to Register button
+[INFO ] [2021-08-26 21:53:46,542] User_01_Register - Step 10: Verify success message is displayed
+[INFO ] [2021-08-26 21:53:46,634]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 21:53:46,634] User_01_Register - Step 11: Click to Logout link
+[INFO ] [2021-08-26 21:53:49,117] User_01_Register - Step 12: Verify  Home Page is displayed 
+[INFO ] [2021-08-26 21:53:49,234]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 21:53:49,241] User_01_Register - Step 01: Click to Login link
+[INFO ] [2021-08-26 21:53:50,414] User_01_Register - Step 02: Enter to Email textbox with value: testing30079@email.com
+[INFO ] [2021-08-26 21:53:50,599] User_01_Register - Step 03: Enter to Password textbox with value: 123456
+[INFO ] [2021-08-26 21:53:50,811] User_01_Register - Step 04: Click to Login button
+[INFO ] [2021-08-26 21:53:52,512] User_01_Register - Step 05: Verify Home Page is displayed
+[INFO ] [2021-08-26 21:53:52,617]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 21:53:52,621] Post-Condition - Close Browser
+[INFO ] [2021-08-26 22:10:17,290] Pre-Condition - Open browser 'firefox' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-08-26 22:10:34,057] User_01_Register - Step 01: Verify Home Page is displayed
+[INFO ] [2021-08-26 22:10:34,250]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:10:34,253] User_01_Register - Step 02: Click to Register link
+[INFO ] [2021-08-26 22:10:36,385] User_01_Register - Step 03: Click to Male radio button
+[INFO ] [2021-08-26 22:10:37,203] User_01_Register - Step 04: Click to First Name textbox
+[INFO ] [2021-08-26 22:10:37,349] User_01_Register - Step 05: Click to Last Name textbox
+[INFO ] [2021-08-26 22:10:37,499] User_01_Register - Step 06: Click to Email textbox with valuetesting88689@email.com
+[INFO ] [2021-08-26 22:10:37,623] User_01_Register - Step 07: Click to Password textbox with value123456
+[INFO ] [2021-08-26 22:10:37,747] User_01_Register - Step 08: Click to Confirm Password textbox with value123456
+[INFO ] [2021-08-26 22:10:37,861] User_01_Register - Step 09: Click to Register button
+[INFO ] [2021-08-26 22:10:40,416] User_01_Register - Step 10: Verify success message is displayed
+[INFO ] [2021-08-26 22:10:40,515]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:10:40,515] User_01_Register - Step 11: Click to Logout link
+[INFO ] [2021-08-26 22:10:42,485] User_01_Register - Step 12: Verify  Home Page is displayed 
+[INFO ] [2021-08-26 22:10:42,571]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:10:42,576] User_01_Register - Step 01: Click to Login link
+[INFO ] [2021-08-26 22:10:43,366] User_01_Register - Step 02: Enter to Email textbox with value: testing88689@email.com
+[INFO ] [2021-08-26 22:10:43,484] User_01_Register - Step 03: Enter to Password textbox with value: 123456
+[INFO ] [2021-08-26 22:10:43,586] User_01_Register - Step 04: Click to Login button
+[INFO ] [2021-08-26 22:10:44,889] User_01_Register - Step 05: Verify Home Page is displayed
+[INFO ] [2021-08-26 22:10:44,985]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:10:44,988] Post-Condition - Close Browser
+[INFO ] [2021-08-26 22:23:50,670] Pre-Condition - Open browser 'firefox' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-08-26 22:24:03,483] User_01_Register - Step 01: Verify Home Page is displayed
+[INFO ] [2021-08-26 22:24:03,751]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:24:03,851] User_01_Register - Step 02: Click to Register link
+[INFO ] [2021-08-26 22:24:06,041] User_01_Register - Step 03: Click to Male radio button
+[INFO ] [2021-08-26 22:24:06,361] User_01_Register - Step 04: Click to First Name textbox
+[INFO ] [2021-08-26 22:24:06,551] User_01_Register - Step 05: Click to Last Name textbox
+[INFO ] [2021-08-26 22:24:06,677] User_01_Register - Step 06: Click to Email textbox with value: testing93245@email.com
+[INFO ] [2021-08-26 22:24:06,818] User_01_Register - Step 07: Click to Password textbox with value: 123456
+[INFO ] [2021-08-26 22:24:06,930] User_01_Register - Step 08: Click to Confirm Password textbox with value: 123456
+[INFO ] [2021-08-26 22:24:07,049] User_01_Register - Step 09: Click to Register button
+[INFO ] [2021-08-26 22:24:09,184] User_01_Register - Step 10: Verify success message is displayed
+[INFO ] [2021-08-26 22:24:09,284]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:24:09,284] User_01_Register - Step 11: Click to Logout link
+[INFO ] [2021-08-26 22:24:11,642] User_01_Register - Step 12: Verify  Home Page is displayed 
+[INFO ] [2021-08-26 22:24:11,778]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:24:11,784] User_01_Register - Step 01: Click to Login link
+[INFO ] [2021-08-26 22:24:12,379] User_01_Register - Step 02: Enter to Email textbox with value: testing93245@email.com
+[INFO ] [2021-08-26 22:24:12,811] User_01_Register - Step 03: Enter to Password textbox with value: 123456
+[INFO ] [2021-08-26 22:24:12,926] User_01_Register - Step 04: Click to Login button
+[INFO ] [2021-08-26 22:24:14,468] User_01_Register - Step 05: Verify Home Page is displayed
+[INFO ] [2021-08-26 22:24:14,633]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:24:14,635] Post-Condition - Close Browser
+[INFO ] [2021-08-26 22:36:55,080] Pre-Condition - Open browser 'firefox' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-08-26 22:36:55,080] Pre-Condition - Open browser 'chrome' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-08-26 22:36:55,080] Pre-Condition - Open browser 'edge' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-08-26 22:37:06,853] User_01_Register - Step 01: Verify Home Page is displayed
+[INFO ] [2021-08-26 22:37:07,124]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:07,133] User_01_Register - Step 02: Click to Register link
+[INFO ] [2021-08-26 22:37:12,161] User_01_Register - Step 03: Click to Male radio button
+[INFO ] [2021-08-26 22:37:12,354] User_01_Register - Step 04: Click to First Name textbox
+[INFO ] [2021-08-26 22:37:12,549] User_01_Register - Step 01: Verify Home Page is displayed
+[INFO ] [2021-08-26 22:37:12,890]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:12,890] User_01_Register - Step 02: Click to Register link
+[INFO ] [2021-08-26 22:37:12,890] User_01_Register - Step 05: Click to Last Name textbox
+[INFO ] [2021-08-26 22:37:13,551] User_01_Register - Step 06: Click to Email textbox with value: testing49987@email.com
+[INFO ] [2021-08-26 22:37:13,865] User_01_Register - Step 07: Click to Password textbox with value: 123456
+[INFO ] [2021-08-26 22:37:14,180] User_01_Register - Step 08: Click to Confirm Password textbox with value: 123456
+[INFO ] [2021-08-26 22:37:14,570] User_01_Register - Step 09: Click to Register button
+[INFO ] [2021-08-26 22:37:14,774] User_01_Register - Step 03: Click to Male radio button
+[INFO ] [2021-08-26 22:37:15,126] User_01_Register - Step 04: Click to First Name textbox
+[INFO ] [2021-08-26 22:37:15,367] User_01_Register - Step 05: Click to Last Name textbox
+[INFO ] [2021-08-26 22:37:15,678] User_01_Register - Step 06: Click to Email textbox with value: testing12877@email.com
+[INFO ] [2021-08-26 22:37:16,024] User_01_Register - Step 07: Click to Password textbox with value: 123456
+[INFO ] [2021-08-26 22:37:16,170] User_01_Register - Step 08: Click to Confirm Password textbox with value: 123456
+[INFO ] [2021-08-26 22:37:16,324] User_01_Register - Step 09: Click to Register button
+[INFO ] [2021-08-26 22:37:17,485] User_01_Register - Step 10: Verify success message is displayed
+[INFO ] [2021-08-26 22:37:17,589]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:17,589] User_01_Register - Step 11: Click to Logout link
+[INFO ] [2021-08-26 22:37:18,794] User_01_Register - Step 10: Verify success message is displayed
+[INFO ] [2021-08-26 22:37:19,128]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:19,129] User_01_Register - Step 11: Click to Logout link
+[INFO ] [2021-08-26 22:37:22,041] User_01_Register - Step 12: Verify  Home Page is displayed 
+[INFO ] [2021-08-26 22:37:22,079] User_01_Register - Step 12: Verify  Home Page is displayed 
+[INFO ] [2021-08-26 22:37:22,202]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:22,285] User_01_Register - Step 01: Click to Login link
+[INFO ] [2021-08-26 22:37:22,313]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:22,316] User_01_Register - Step 01: Click to Login link
+[INFO ] [2021-08-26 22:37:23,822] User_01_Register - Step 02: Enter to Email textbox with value: testing12877@email.com
+[INFO ] [2021-08-26 22:37:24,088] User_01_Register - Step 03: Enter to Password textbox with value: 123456
+[INFO ] [2021-08-26 22:37:24,350] User_01_Register - Step 04: Click to Login button
+[INFO ] [2021-08-26 22:37:25,579] User_01_Register - Step 05: Verify Home Page is displayed
+[INFO ] [2021-08-26 22:37:25,822]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:25,824] Post-Condition - Close Browser
+[INFO ] [2021-08-26 22:37:27,393] User_01_Register - Step 02: Enter to Email textbox with value: testing49987@email.com
+[INFO ] [2021-08-26 22:37:27,732] User_01_Register - Step 03: Enter to Password textbox with value: 123456
+[INFO ] [2021-08-26 22:37:28,031] User_01_Register - Step 04: Click to Login button
+[INFO ] [2021-08-26 22:37:29,605] User_01_Register - Step 01: Verify Home Page is displayed
+[INFO ] [2021-08-26 22:37:29,747]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:29,747] User_01_Register - Step 02: Click to Register link
+[INFO ] [2021-08-26 22:37:34,217] User_01_Register - Step 05: Verify Home Page is displayed
+[INFO ] [2021-08-26 22:37:34,321]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:34,323] Post-Condition - Close Browser
+[INFO ] [2021-08-26 22:37:34,928] User_01_Register - Step 03: Click to Male radio button
+[INFO ] [2021-08-26 22:37:35,663] User_01_Register - Step 04: Click to First Name textbox
+[INFO ] [2021-08-26 22:37:36,004] User_01_Register - Step 05: Click to Last Name textbox
+[INFO ] [2021-08-26 22:37:36,249] User_01_Register - Step 06: Click to Email textbox with value: testing82865@email.com
+[INFO ] [2021-08-26 22:37:36,626] User_01_Register - Step 07: Click to Password textbox with value: 123456
+[INFO ] [2021-08-26 22:37:36,937] User_01_Register - Step 08: Click to Confirm Password textbox with value: 123456
+[INFO ] [2021-08-26 22:37:37,218] User_01_Register - Step 09: Click to Register button
+[INFO ] [2021-08-26 22:37:38,996] User_01_Register - Step 10: Verify success message is displayed
+[INFO ] [2021-08-26 22:37:39,087]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:39,088] User_01_Register - Step 11: Click to Logout link
+[INFO ] [2021-08-26 22:37:41,590] User_01_Register - Step 12: Verify  Home Page is displayed 
+[INFO ] [2021-08-26 22:37:41,713]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:41,717] User_01_Register - Step 01: Click to Login link
+[INFO ] [2021-08-26 22:37:45,984] User_01_Register - Step 02: Enter to Email textbox with value: testing82865@email.com
+[INFO ] [2021-08-26 22:37:46,276] User_01_Register - Step 03: Enter to Password textbox with value: 123456
+[INFO ] [2021-08-26 22:37:46,464] User_01_Register - Step 04: Click to Login button
+[INFO ] [2021-08-26 22:37:51,406] User_01_Register - Step 05: Verify Home Page is displayed
+[INFO ] [2021-08-26 22:37:51,510]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-26 22:37:51,512] Post-Condition - Close Browser
+[INFO ] [2021-08-27 11:14:58,388] Pre-Condition - Open browser 'firefox' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-08-27 11:14:58,388] Pre-Condition - Open browser 'chrome' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-08-27 11:14:58,388] Pre-Condition - Open browser 'edge' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-08-27 11:15:09,513] User_01_Register - Step 01: Verify Home Page is displayed
+[INFO ] [2021-08-27 11:15:10,024]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:10,029] User_01_Register - Step 02: Click to Register link
+[INFO ] [2021-08-27 11:15:13,742] User_01_Register - Step 01: Verify Home Page is displayed
+[INFO ] [2021-08-27 11:15:14,049]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:14,049] User_01_Register - Step 02: Click to Register link
+[INFO ] [2021-08-27 11:15:15,743] User_01_Register - Step 03: Click to Male radio button
+[INFO ] [2021-08-27 11:15:16,182] User_01_Register - Step 04: Click to First Name textbox
+[INFO ] [2021-08-27 11:15:17,004] User_01_Register - Step 05: Click to Last Name textbox
+[INFO ] [2021-08-27 11:15:17,217] User_01_Register - Step 06: Click to Email textbox with value: testing52428@email.com
+[INFO ] [2021-08-27 11:15:17,637] User_01_Register - Step 07: Click to Password textbox with value: 123456
+[INFO ] [2021-08-27 11:15:17,974] User_01_Register - Step 08: Click to Confirm Password textbox with value: 123456
+[INFO ] [2021-08-27 11:15:18,192] User_01_Register - Step 09: Click to Register button
+[INFO ] [2021-08-27 11:15:19,327] User_01_Register - Step 03: Click to Male radio button
+[INFO ] [2021-08-27 11:15:20,675] User_01_Register - Step 10: Verify success message is displayed
+[INFO ] [2021-08-27 11:15:20,834]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:20,834] User_01_Register - Step 11: Click to Logout link
+[INFO ] [2021-08-27 11:15:21,139] User_01_Register - Step 01: Verify Home Page is displayed
+[INFO ] [2021-08-27 11:15:21,365] User_01_Register - Step 04: Click to First Name textbox
+[INFO ] [2021-08-27 11:15:21,400]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:21,400] User_01_Register - Step 02: Click to Register link
+[INFO ] [2021-08-27 11:15:22,252] User_01_Register - Step 05: Click to Last Name textbox
+[INFO ] [2021-08-27 11:15:22,802] User_01_Register - Step 06: Click to Email textbox with value: testing37550@email.com
+[INFO ] [2021-08-27 11:15:23,224] User_01_Register - Step 07: Click to Password textbox with value: 123456
+[INFO ] [2021-08-27 11:15:23,505] User_01_Register - Step 03: Click to Male radio button
+[INFO ] [2021-08-27 11:15:23,829] User_01_Register - Step 08: Click to Confirm Password textbox with value: 123456
+[INFO ] [2021-08-27 11:15:23,948] User_01_Register - Step 04: Click to First Name textbox
+[INFO ] [2021-08-27 11:15:23,999] User_01_Register - Step 12: Verify  Home Page is displayed 
+[INFO ] [2021-08-27 11:15:24,133]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:24,146] User_01_Register - Step 01: Click to Login link
+[INFO ] [2021-08-27 11:15:24,191] User_01_Register - Step 09: Click to Register button
+[INFO ] [2021-08-27 11:15:24,215] User_01_Register - Step 05: Click to Last Name textbox
+[INFO ] [2021-08-27 11:15:24,409] User_01_Register - Step 06: Click to Email textbox with value: testing2439@email.com
+[INFO ] [2021-08-27 11:15:24,700] User_01_Register - Step 07: Click to Password textbox with value: 123456
+[INFO ] [2021-08-27 11:15:25,071] User_01_Register - Step 08: Click to Confirm Password textbox with value: 123456
+[INFO ] [2021-08-27 11:15:25,219] User_01_Register - Step 09: Click to Register button
+[INFO ] [2021-08-27 11:15:27,235] User_01_Register - Step 10: Verify success message is displayed
+[INFO ] [2021-08-27 11:15:27,391]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:27,391] User_01_Register - Step 11: Click to Logout link
+[INFO ] [2021-08-27 11:15:27,628] User_01_Register - Step 10: Verify success message is displayed
+[INFO ] [2021-08-27 11:15:27,799]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:27,799] User_01_Register - Step 11: Click to Logout link
+[INFO ] [2021-08-27 11:15:28,841] User_01_Register - Step 02: Enter to Email textbox with value: testing52428@email.com
+[INFO ] [2021-08-27 11:15:29,113] User_01_Register - Step 03: Enter to Password textbox with value: 123456
+[INFO ] [2021-08-27 11:15:29,297] User_01_Register - Step 04: Click to Login button
+[INFO ] [2021-08-27 11:15:30,166] User_01_Register - Step 12: Verify  Home Page is displayed 
+[INFO ] [2021-08-27 11:15:30,283]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:30,287] User_01_Register - Step 01: Click to Login link
+[INFO ] [2021-08-27 11:15:30,312] User_01_Register - Step 12: Verify  Home Page is displayed 
+[INFO ] [2021-08-27 11:15:30,460]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:30,463] User_01_Register - Step 01: Click to Login link
+[INFO ] [2021-08-27 11:15:31,752] User_01_Register - Step 02: Enter to Email textbox with value: testing2439@email.com
+[INFO ] [2021-08-27 11:15:31,935] User_01_Register - Step 03: Enter to Password textbox with value: 123456
+[INFO ] [2021-08-27 11:15:32,066] User_01_Register - Step 04: Click to Login button
+[INFO ] [2021-08-27 11:15:33,014] User_01_Register - Step 05: Verify Home Page is displayed
+[INFO ] [2021-08-27 11:15:33,158]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:33,161] Post-Condition - Close Browser
+[INFO ] [2021-08-27 11:15:34,258] User_01_Register - Step 05: Verify Home Page is displayed
+[INFO ] [2021-08-27 11:15:34,500]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:34,502] Post-Condition - Close Browser
+[INFO ] [2021-08-27 11:15:34,707] User_01_Register - Step 02: Enter to Email textbox with value: testing37550@email.com
+[INFO ] [2021-08-27 11:15:35,059] User_01_Register - Step 03: Enter to Password textbox with value: 123456
+[INFO ] [2021-08-27 11:15:35,300] User_01_Register - Step 04: Click to Login button
+[INFO ] [2021-08-27 11:15:40,929] User_01_Register - Step 05: Verify Home Page is displayed
+[INFO ] [2021-08-27 11:15:41,050]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-08-27 11:15:41,052] Post-Condition - Close Browser
