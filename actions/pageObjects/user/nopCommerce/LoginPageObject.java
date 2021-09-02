@@ -60,5 +60,10 @@ import pageUIs.user.nopCommerce.LoginPageUI;
 		clickToLoginButton();
 		return new HomePageObject(driver);
 	}
+	public HomePageObject openHomePage() {
+		waitForElementClickable(driver, LoginPageUI.HOMEPAGE_IMAGE);
+		clickToElement(driver, LoginPageUI.HOMEPAGE_IMAGE);
+		return new HomePageObject(driver);
+	}
 	
 }

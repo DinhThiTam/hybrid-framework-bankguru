@@ -1,6 +1,7 @@
 package commons;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
@@ -11,6 +12,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -189,6 +191,7 @@ public class BaseTest {
 	@BeforeTest
 	
 	public void deleteAllFileInFolder() {
+
 		log.info("--------START delete file in folder---------");
 		try {
 			String workingDir = System.getProperty("user.dir");
@@ -205,4 +208,65 @@ public class BaseTest {
 		}
 		log.info("--------END delete file in folder---------");
 	}
-}
+	
+	protected void cleanBrowserAndDriver() {
+		String cmd = "";
+		try {
+			
+			//Executable driver(gecko, chromedriver.exe..
+			// Quit driver executable file in Task Manager
+			// Get ra tên của OS và convert qua chữ thường
+						String osName = System.getProperty("os.name").toLowerCase();
+						log.info("OS name = " + osName);
+						// Khai báo 1 biến command line để thực thi
+						
+						
+						if (driver.toString().toLowerCase().contains("chrome")) {
+							if (osName.toLowerCase().contains("windows")) {
+								cmd = "taskkill /F /FI \"IMAGENAME eq chromedriver*\"";
+							} else {	
+								cmd = "pkill chromedriver";
+							}
+						} else if (driver.toString().toLowerCase().contains("internetexplorer")) {
+							if (osName.toLowerCase().contains("window")) {
+								cmd = "taskkill /F /FI \"IMAGENAME eq IEDriverServer*\"";
+							}
+						} else if (driver.toString().toLowerCase().contains("firefox")) {
+							if (osName.toLowerCase().contains("windows")) {
+								cmd = "taskkill /F /FI \"IMAGENAME eq geckodriver*\"";
+							} else {
+								cmd = "pkill geckodriver";
+								
+							}
+						} else if (driver.toString().toLowerCase().contains("edge")) {
+							if (osName.toLowerCase().contains("windows")) {
+								cmd = "taskkill /F /FI \"IMAGENAME eq msedgedriver*\"";
+								
+							} else {
+								cmd = "pkill msedgedriver";
+							}
+						}
+						//Browser
+						if(driver!=null) {
+							//IE browser
+							driver.manage().deleteAllCookies();
+							driver.quit();
+						}
+						
+		} catch (Exception e) {
+			log.info(e.getMessage());
+		}finally {
+			try {
+				Process process = Runtime.getRuntime().exec(cmd);
+				process.waitFor();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	}
+

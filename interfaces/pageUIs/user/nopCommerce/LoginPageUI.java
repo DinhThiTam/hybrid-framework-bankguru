@@ -9,4 +9,5 @@ public class LoginPageUI {
 	public static final String LOGIN_EMAIL_NOT_REGISTER_MESSAGE = "//div[text()='Login was unsuccessful. Please correct the errors and try again.']//li[text()='No customer account found']";
 	public static final String LOGIN_PASSWORD_EMPTY_MESSAGE = "//div[text()='Login was unsuccessful. Please correct the errors and try again.']//li[text()='The credentials provided are incorrect']";
 	public static final String LOGIN_PASSWORD_INVALID_MESSAGE = "//div[text()='Login was unsuccessful. Please correct the errors and try again.']//li[text()='The credentials provided are incorrect']";
+	public static final String HOMEPAGE_IMAGE = "//img[@alt='nopCommerce demo store']";
 }

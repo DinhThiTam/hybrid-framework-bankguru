@@ -1,18 +1,16 @@
 package com.nopcommerce.user;
 
-import static org.testng.Assert.assertTrue;
-
+import java.lang.reflect.Method;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import commons.BasePage;
+//import com.relevantcodes.extentreports.LogStatus;
+
 import commons.BaseTest;
 import pageObjects.user.nopCommerce.CustomerInfoPageObject;
 import pageObjects.user.nopCommerce.HomePageObject;
@@ -21,8 +19,9 @@ import pageObjects.user.nopCommerce.OrderPageObject;
 import pageObjects.user.nopCommerce.PageGeneratorManager;
 import pageObjects.user.nopCommerce.RegisterPageObject;
 import pageObjects.user.nopCommerce.SearchPageObject;
+//import reportConfig.ExtentTestManager;
 
-public class Level_13_Register_Login_Log_ReportNG extends BaseTest{
+public class Level_13_Register_Login_Log_ExtentReport_V3_V4 extends BaseTest{
 	WebDriver driver;
 	String emailAddress, password;
 	String projectLocation = System.getProperty("user.dir");
@@ -30,7 +29,6 @@ public class Level_13_Register_Login_Log_ReportNG extends BaseTest{
 	@Parameters({"browser","url"})
 	@BeforeClass
 	public void initBrowser(String browserName, String appURL) {
-		log.info("Pre-Condition - Open browser '"+ browserName + "' and navigate '" + appURL + "'");
 		
 		driver = getBrowserDriver(browserName, appURL);
 		emailAddress = getRandomEmail();
@@ -73,7 +71,7 @@ public class Level_13_Register_Login_Log_ReportNG extends BaseTest{
 		homePage = registerPage.clickToLogoutLink();
 		
 		log.info("User_01_Register - Step 12: Verify  Home Page is displayed ");
-		verifyTrue(homePage.isHomePageSliderDisplayed());
+		verifyFalse(homePage.isHomePageSliderDisplayed());
 	}
 	
 	@Test
@@ -95,11 +93,10 @@ public class Level_13_Register_Login_Log_ReportNG extends BaseTest{
 	}
 	
 	
-	@Parameters({"browser"})
-	@AfterClass(alwaysRun=true)
-	public void cleanBrowser(String browserName) {
-		log.info("Post-Condition - Close Browser - " + browserName + "");
-		cleanBrowserAndDriver();
+	
+	@AfterClass
+	public void cleanBrowser() {
+		driver.quit();
 	}
 	
 	public String getRandomEmail() {
