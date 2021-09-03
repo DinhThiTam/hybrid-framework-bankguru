@@ -30,6 +30,7 @@ import pageUIs.user.nopCommerce.BasePageUI;
 import pageUIs.user.nopCommerce.CustomerInfoPageUI;
 import pageUIs.user.nopCommerce.HomePageUI;
 import pageUIs.user.nopCommerce.OrderPageUI;
+import pageUIs.user.nopCommerce.RegisterPageUI;
 import pageUIs.user.nopCommerce.SearchPageUI;
 import sun.security.krb5.internal.PAEncTSEnc;
 
@@ -532,6 +533,27 @@ public class BasePage {
 	public void openFooterPageByName(WebDriver driver, String pageName) {
 		waitForElementClickable(driver, BasePageUI.DYNAMIC_PAGE_FOOTER, pageName);
 		clickToElement(driver, BasePageUI.DYNAMIC_PAGE_FOOTER, pageName);	
+	}
+	
+	public void clickToHeaderLinkByText(WebDriver driver, String headerText) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_PAGE_HEADER, headerText);
+		clickToElement(driver, BasePageUI.DYNAMIC_PAGE_HEADER, headerText);	
+	}
+	
+	public void clickToRadioButtonByID(WebDriver driver, String genderID) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_GENDER_RADIO, genderID);
+		clickToElement(driver, BasePageUI.DYNAMIC_GENDER_RADIO, genderID);	
+	}
+	
+	public void enterToTextboxByID(WebDriver driver,String textboxID, String value) {
+		waitForElementVisible(driver, BasePageUI.DYNAMIC_TEXTBOX, textboxID);
+		senkeyToElement(driver, BasePageUI.DYNAMIC_TEXTBOX, value, textboxID);
+	}
+	
+	public void clickToButtonByText(WebDriver driver, String buttonID) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_BUTTON, buttonID);
+		clickToElement(driver, BasePageUI.DYNAMIC_BUTTON, buttonID);
+		
 	}
 	
 	//Admin - Nopcommerce

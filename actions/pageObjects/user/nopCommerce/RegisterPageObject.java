@@ -20,13 +20,11 @@ public class RegisterPageObject extends BasePage {
 	public void enterToFirstNameTextbox(String firstName) {
 		waitForElementVisible(driver, RegisterPageUI.FIRSTNAME_TEXTBOX);
 		senkeyToElement(driver, RegisterPageUI.FIRSTNAME_TEXTBOX, firstName);
-		
 	}
-
+	
 	public void enterToLastNameTextbox(String lastName) {
 		waitForElementVisible(driver, RegisterPageUI.LASTNAME_TEXTBOX);
 		senkeyToElement(driver, RegisterPageUI.LASTNAME_TEXTBOX, lastName);
-		
 	}
 
 	public void enterToEmailTextbox(String emailAddress) {
@@ -198,7 +196,7 @@ public class RegisterPageObject extends BasePage {
 	
 	public void customerInfo(String firstName, String lastName, String birthDay, String birthMonth, String birthYear, String emailAddress, String companyName) {
 		clickToGenderFemaleRadioButton();
-		enterToFirstNameTextbox(firstName);
+		//enterToFirstNameTextbox(firstName);
 		enterToLastNameTextbox(lastName);
 		selectToBirthdayDropDown(birthDay);
 		selectToBirthmonthDropDown(birthMonth);
@@ -212,5 +210,7 @@ public class RegisterPageObject extends BasePage {
 		clickToElement(driver, RegisterPageUI.SEARCH_LINK);
 		return new SearchPageObject(driver);
 	}
+	
+	
 	
 }
