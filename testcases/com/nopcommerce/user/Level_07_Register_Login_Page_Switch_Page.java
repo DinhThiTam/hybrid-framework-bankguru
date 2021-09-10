@@ -75,21 +75,21 @@ public class Level_07_Register_Login_Page_Switch_Page extends BaseTest{
 		//Search -> Order
 		orderPage = (OrderPageObject) searchPage.getFooterPageByName(driver, "Order");
 	}
-	@Test
-	public void Login_04_Open_Page_At_Footer() {
-		
-		//Order -> My account
-		orderPage.openFooterPageByName(driver, "My account");
-		customInfoPage = PageGeneratorManager.getCustomInfoPage(driver);
-		
-		//My acc -> Search
-		customInfoPage.openFooterPageByName(driver, "Search");
-		searchPage = PageGeneratorManager.getSearchPage(driver);
-		//Search -> Order
-		
-		searchPage.openFooterPageByName(driver, "Search");
-		orderPage = PageGeneratorManager.getOrderPage(driver);
-	}
+//	@Test
+//	public void Login_04_Open_Page_At_Footer() {
+//		
+//		//Order -> My account
+//		orderPage.openFooterPageByName(driver, "My account");
+//		customInfoPage = PageGeneratorManager.getCustomInfoPage(driver);
+//		
+//		//My acc -> Search
+//		customInfoPage.openFooterPageByName(driver, "Search");
+//		searchPage = PageGeneratorManager.getSearchPage(driver);
+//		//Search -> Order
+//		
+//		searchPage.openFooterPageByName(driver, "Search");
+//		orderPage = PageGeneratorManager.getOrderPage(driver);
+//	}
 	
 	@AfterClass
 	public void cleanBrowser() {

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import pageUIs.liveGuru.LoginPageUI;
+import pageUIs.user.nopCommerce.BasePageUI;
 import pageUIs.user.nopCommerce.RegisterPageUI;
 
 public class RegisterPageObject extends BasePage {
@@ -210,7 +211,8 @@ public class RegisterPageObject extends BasePage {
 		clickToElement(driver, RegisterPageUI.SEARCH_LINK);
 		return new SearchPageObject(driver);
 	}
-	
-	
+	public void enterToDropdownByName(WebDriver driver, String itemText, String dropdownName) {
+		selectDropdownByText(driver, RegisterPageUI.DYNAMIC_DROPDOWN, itemText, dropdownName);
+	}
 	
 }

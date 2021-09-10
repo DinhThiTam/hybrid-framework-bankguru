@@ -1429,3 +1429,67 @@ Session ID: 7c115466-2926-4bdd-afb8-9e800e9a6ca9
 [INFO ] [2021-09-03 19:59:18,140]  -------------------------- PASSED -------------------------- 
 [INFO ] [2021-09-03 19:59:18,145] Post-Condition - Close Browser - firefox
 [INFO ] [2021-09-03 19:59:18,145] OS name = windows 10
+[INFO ] [2021-09-03 20:56:36,510] --------START delete file in folder---------
+[INFO ] [2021-09-03 20:56:36,513] --------END delete file in folder---------
+[INFO ] [2021-09-03 20:56:36,537] Pre-Condition - Open browser 'firefox' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-03 20:56:53,242] User_01_Register - Step 01: Verify Home Page is displayed
+[INFO ] [2021-09-03 20:56:53,448]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-03 20:56:53,450] User_01_Register - Step 02: Click to Register link
+[INFO ] [2021-09-03 20:56:54,967] User_01_Register - Step 03: Click to Male radio button
+[INFO ] [2021-09-03 20:56:55,301] User_01_Register - Step 04: Click to First Name textbox
+[INFO ] [2021-09-03 20:56:55,462] User_01_Register - Step 05: Click to Last Name textbox
+[INFO ] [2021-09-03 20:56:55,579] User_01_Register - Step 06: Click to Day dropdown
+[INFO ] [2021-09-03 20:56:55,887] User_01_Register - Step 06: Click to Month dropdown
+[INFO ] [2021-09-03 20:56:56,169] User_01_Register - Step 07: Click to Year dropdown
+[INFO ] [2021-09-03 20:56:56,481] User_01_Register - Step 08: Click to Email textbox with value: testing41559@email.com
+[INFO ] [2021-09-03 20:56:56,642] User_01_Register - Step 09: Click to Password textbox with value: 123456
+[INFO ] [2021-09-03 20:56:56,799] User_01_Register - Step 10: Click to Confirm Password textbox with value: 123456
+[INFO ] [2021-09-03 20:56:56,941] User_01_Register - Step 11: Click to Register button
+[INFO ] [2021-09-03 20:56:58,531] User_01_Register - Step 12: Verify success message is displayed
+[INFO ] [2021-09-03 20:56:58,643]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-03 20:56:58,643] User_01_Register - Step 13: Click to Logout link
+[INFO ] [2021-09-03 20:57:01,101] User_01_Register - Step 14: Verify  Home Page is displayed 
+[INFO ] [2021-09-03 20:57:01,226]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-03 20:57:01,234] User_01_Register - Step 01: Click to Login link
+[INFO ] [2021-09-03 20:57:01,775] User_01_Register - Step 02: Enter to Email textbox with value: testing41559@email.com
+[INFO ] [2021-09-03 20:57:01,920] User_01_Register - Step 03: Enter to Password textbox with value: 123456
+[INFO ] [2021-09-03 20:57:02,066] User_01_Register - Step 04: Click to Login button
+[INFO ] [2021-09-03 20:57:04,473] User_01_Register - Step 05: Verify Home Page is displayed
+[INFO ] [2021-09-03 20:57:04,595]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-03 20:57:04,598] Post-Condition - Close Browser - firefox
+[INFO ] [2021-09-03 20:57:04,598] OS name = windows 10
+[INFO ] [2021-09-10 12:10:20,783] --------START delete file in folder---------
+[INFO ] [2021-09-10 12:10:20,786] --------END delete file in folder---------
+[INFO ] [2021-09-10 12:10:20,798] Pre-Condition - Open browser 'firefox' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-10 12:10:26,458] Post-Condition - Close Browser - firefox
+[INFO ] [2021-09-10 12:10:26,458] OS name = windows 10
+[INFO ] [2021-09-10 12:10:26,459] 
+[INFO ] [2021-09-10 12:10:49,443] --------START delete file in folder---------
+[INFO ] [2021-09-10 12:10:49,446] --------END delete file in folder---------
+[INFO ] [2021-09-10 12:10:49,461] Pre-Condition - Open browser 'firefox' and navigate 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-10 12:11:00,379] User_01_Register - Step 01: Verify Home Page is displayed
+[INFO ] [2021-09-10 12:11:00,963]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-10 12:11:00,968] User_01_Register - Step 02: Click to Register link
+[INFO ] [2021-09-10 12:11:02,669] User_01_Register - Step 03: Click to Male radio button
+[INFO ] [2021-09-10 12:11:03,009] User_01_Register - Step 04: Click to First Name textbox
+[INFO ] [2021-09-10 12:11:03,191] User_01_Register - Step 05: Click to Last Name textbox
+[INFO ] [2021-09-10 12:11:03,333] User_01_Register - Step 06: Click to Day dropdown
+[INFO ] [2021-09-10 12:11:03,664] User_01_Register - Step 06: Click to Month dropdown
+[INFO ] [2021-09-10 12:11:03,950] User_01_Register - Step 07: Click to Year dropdown
+[INFO ] [2021-09-10 12:11:04,281] User_01_Register - Step 08: Click to Email textbox with value: testing12944@email.com
+[INFO ] [2021-09-10 12:11:04,437] User_01_Register - Step 09: Click to Password textbox with value: 123456
+[INFO ] [2021-09-10 12:11:04,570] User_01_Register - Step 10: Click to Confirm Password textbox with value: 123456
+[INFO ] [2021-09-10 12:11:04,696] User_01_Register - Step 11: Click to Register button
+[INFO ] [2021-09-10 12:11:06,366] User_01_Register - Step 12: Verify success message is displayed
+[INFO ] [2021-09-10 12:11:06,479]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-10 12:11:06,480] User_01_Register - Step 13: Click to Logout link
+[INFO ] [2021-09-10 12:11:07,700] User_01_Register - Step 14: Verify  Home Page is displayed 
+[INFO ] [2021-09-10 12:11:07,833]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-10 12:11:07,843] User_01_Register - Step 01: Click to Login link
+[INFO ] [2021-09-10 12:11:09,183] User_01_Register - Step 02: Enter to Email textbox with value: testing12944@email.com
+[INFO ] [2021-09-10 12:11:09,398] User_01_Register - Step 03: Enter to Password textbox with value: 123456
+[INFO ] [2021-09-10 12:11:09,541] User_01_Register - Step 04: Click to Login button
+[INFO ] [2021-09-10 12:11:11,183] User_01_Register - Step 05: Verify Home Page is displayed
+[INFO ] [2021-09-10 12:11:11,378]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-10 12:11:11,381] Post-Condition - Close Browser - firefox
+[INFO ] [2021-09-10 12:11:11,381] OS name = windows 10
