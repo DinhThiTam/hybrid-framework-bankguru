@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import commons.BaseTest;
+import commons.GlobalConstants;
 import pageObject.hrm.AddEmployeePO;
 import pageObject.hrm.DashboardPO;
 import pageObject.hrm.EmployeeListPO;
@@ -22,7 +23,7 @@ import pageObject.hrm.PersonalDetailsPO;
 
 public class Level_16_Live_Coding extends BaseTest{
 	String projectLocation = System.getProperty("user.dir");
-	String employeeID, statusValue;
+	String employeeID, statusValue, empUsername, empPassword, userName, password, firstName, lastName, fullName, avatarFilePath; 
 	
 	@Parameters({"browser","url"})
 	@BeforeClass
@@ -32,13 +33,17 @@ public class Level_16_Live_Coding extends BaseTest{
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 		
 		statusValue = "Enable";
+		empUsername = "dinhtam123";
+		empPassword = "dinhtam123";
+		userName = "Admin";
+		password = "admin123";
+		firstName = "Dinh";
+		lastName = "Tam";
+		fullName = firstName + " " + lastName;
+		avatarFilePath = GlobalConstants.UPLOAD_FOLDER_PATH + "Adobe.jpg";
 		
 		log.info("Pre-Condition - Step 02: Login with Admin role");
-		loginPage.enterToTextboxByID(driver, "Admin", "txtUsername");
-		loginPage.enterToTextboxByID(driver, "admin123", "txtPassword");
-		loginPage.clickToButtonByID(driver, "btnLogin");
-		
-		dashboardPage = PageGeneratorManager.getDashboardPage(driver);
+		dashboardPage = loginPage.loginToSystemHRM(driver, userName, password);
 	}
 	@Test
 	public void Employee_01_Add_New_Employee() {
@@ -51,10 +56,10 @@ public class Level_16_Live_Coding extends BaseTest{
 		addEmployeePage = PageGeneratorManager.getAddEmployeePage(driver);
 				
 		log.info("Add_New - Step 03: Enter valid info to 'First Name' textbox");
-		addEmployeePage.enterToTextboxByID(driver, "Dinh", "firstName");
+		addEmployeePage.enterToTextboxByID(driver, firstName, "firstName");
 		
 		log.info("Add_New - Step 04: Enter valid info to 'Last Name' textbox");
-		addEmployeePage.enterToTextboxByID(driver, "Tam", "lastName");
+		addEmployeePage.enterToTextboxByID(driver, lastName, "lastName");
 		
 		log.info("Add_New - Step 05: Get value of 'Employee ID' textbox");
 		employeeID = addEmployeePage.getValueInTextboxByID(driver, "employeeId");
@@ -63,13 +68,13 @@ public class Level_16_Live_Coding extends BaseTest{
 		addEmployeePage.clickToCheckboxByLabel(driver, "Create Login Details");
 		
 		log.info("Add_New - Step 07: Enter valid info to 'Username' textbox");
-		addEmployeePage.enterToTextboxByID(driver, "dinhtam123", "user_name");
+		addEmployeePage.enterToTextboxByID(driver, empUsername, "user_name");
 		
 		log.info("Add_New - Step 08: Enter valid info to 'Password' textbox");
-		addEmployeePage.enterToTextboxByID(driver, "dinhtam123", "user_password");
+		addEmployeePage.enterToTextboxByID(driver, empPassword, "user_password");
 		
 		log.info("Add_New - Step 09: Enter valid info to 'Confirm password' textbox");
-		addEmployeePage.enterToTextboxByID(driver, "dinhtam123", "re_password");;
+		addEmployeePage.enterToTextboxByID(driver, empPassword, "re_password");;
 		
 		log.info("Add_New - Step 10: Select '" + statusValue + "' value in 'Status' dropndow");
 		addEmployeePage.selectItemInDropdownByID(driver, "Enabled", "status");
@@ -81,24 +86,47 @@ public class Level_16_Live_Coding extends BaseTest{
 		log.info("Add_New - Step 12: Open 'Employee List' page");
 		personalPage.openSubMenuPage(driver, "PIM", "Employee List");
 		employeePage = PageGeneratorManager.getEmployeeListPage(driver);
-		employeePage.sleepInsecond(5);
+		verifyTrue(employeePage.isJQueryAjaxLoadedSuccess(driver));
 		
 		log.info("Add_New - Step 13: Enter valid info to 'Employee Name' textbox");
-		employeePage.enterToTextboxByID(driver, "Dinh Tam", "empsearch_employee_name_empName");
-		employeePage.sleepInsecond(5);
+		verifyTrue(employeePage.isJQueryAjaxLoadedSuccess(driver));
+		employeePage.enterToTextboxByID(driver, fullName, "empsearch_employee_name_empName");
 		
 		log.info("Add_New - Step 14: Click to 'Search' button");
 		employeePage.clickToButtonByID(driver, "searchBtn");
-		employeePage.sleepInsecond(5);
+		verifyTrue(employeePage.isJQueryAjaxLoadedSuccess(driver));
 		
 		log.info("Add_New - Step 15: Verify Employee Information displayed at 'Result Table'");
 		verifyEquals(employeePage.getValueInTableIDAtColumnNameAndRowIndex(driver, "resultTable", "1", "Id"), employeeID);
-		verifyEquals(employeePage.getValueInTableIDAtColumnNameAndRowIndex(driver, "resultTable", "1", "First (& Middle) Name"), "Dinh");
-		verifyEquals(employeePage.getValueInTableIDAtColumnNameAndRowIndex(driver, "resultTable", "1", "Last Name"), "Tam");
+		verifyEquals(employeePage.getValueInTableIDAtColumnNameAndRowIndex(driver, "resultTable", "1", "First (& Middle) Name"), firstName);
+		verifyEquals(employeePage.getValueInTableIDAtColumnNameAndRowIndex(driver, "resultTable", "1", "Last Name"),lastName);
 	}
 	
 	@Test
 	public void Employee_02_Upload_Avatar() {
+		log.info("Upload_Avatar_02 - Step 01: Login with Employee role");
+		loginPage = employeePage.clickToLogoutLink(driver);
+		dashboardPage = loginPage.loginToSystemHRM(driver, empUsername, empPassword);
+		
+		log.info("Upload_Avatar_02 - Step 02: Open 'Personal Details' Page");
+		dashboardPage.openMenuPage(driver, "My Info");
+		personalPage = PageGeneratorManager.getPersonalDetailsPage(driver);
+		
+		log.info("Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image");
+		personalPage.clickToChangePhotoImage();
+		
+		log.info("Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image ");
+		personalPage.uploadImage(driver, avatarFilePath);
+		
+		log.info("Upload_Avatar_02 - Step 03: Click to Upload button");
+		personalPage.clickToButtonByID(driver, "btnSave");
+		personalPage.isJQueryAjaxLoadedSuccess(driver);
+		
+		log.info("Upload_Avatar_02 - Step 03: Verify new Avarta is display");
+		verifyTrue(personalPage.isUploadMessageSuccessDisplayed());
+		verifyTrue(personalPage.isNewAvaterImageDisplayed());
+		
+		
 		
 	}
 	

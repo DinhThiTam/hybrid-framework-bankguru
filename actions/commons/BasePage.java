@@ -19,6 +19,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObject.hrm.DashboardPO;
+import pageObject.hrm.LoginPO;
 import pageObjects.user.nopCommerce.CustomerInfoPageObject;
 import pageObjects.user.nopCommerce.OrderPageObject;
 import pageObjects.user.nopCommerce.PageGeneratorManager;
@@ -444,7 +446,7 @@ public class BasePage {
 	}
 
 	public boolean areJQueryAndJSLoadedSuccess(WebDriver driver) {
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		jsExecutor = (JavascriptExecutor) driver;
 
 		ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
@@ -466,6 +468,18 @@ public class BasePage {
 		};
 
 		return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
+	}
+	
+	public boolean isJQueryAjaxLoadedSuccess(WebDriver driver) {
+		explicitWait = new WebDriverWait(driver, longTimeout);
+		jsExecutor = (JavascriptExecutor) driver;
+		ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
+			@Override
+			public Boolean apply(WebDriver driver) {
+				return (Boolean) jsExecutor.executeScript("return (window.jQuery != null) && (jQuery.active === 0);");
+			}
+		};
+		return explicitWait.until(jQueryLoad);
 	}
 
 	public String getElementValidationMessage(WebDriver driver, String locator) {
@@ -561,6 +575,7 @@ public class BasePage {
 		clickToElement(driver, AdminPageUI.SUB_MENU_LINK_BY_NAME, subMenuPageName);
 	}	
 	
+	
 	public void uploadMultipleFilesAtCardName(WebDriver driver, String cardName, String... fileNames) {
 		String filePath = GlobalConstants.UPLOAD_FOLDER_PATH;
 		String fullFileName = "";
@@ -618,6 +633,8 @@ public class BasePage {
 	public void openMenuPage(WebDriver driver, String menuPageName) {
 		waitForElementClickable(driver, HRMBasePageUI.MENU_BY_PAGE_NAME, menuPageName);
 		clickToElement(driver, HRMBasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+		
+		isJQueryAjaxLoadedSuccess(driver);
 	}
 	
 	public void openSubMenuPage(WebDriver driver, String menuPageName, String subMenuPageName) {
@@ -626,6 +643,8 @@ public class BasePage {
 		
 		waitForElementVisible(driver, HRMBasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
 		clickToElement(driver, HRMBasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+		
+		isJQueryAjaxLoadedSuccess(driver);
 	}
 	
 	public void openChildSubMenuPage(WebDriver driver, String menuPageName, String subMenuPageName, String childSubMenuPageName) {
@@ -637,6 +656,8 @@ public class BasePage {
 		
 		waitForElementClickable(driver, HRMBasePageUI.MENU_BY_PAGE_NAME, childSubMenuPageName);
 		clickToElement(driver, HRMBasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+		
+		isJQueryAjaxLoadedSuccess(driver);
 	}
 	
 	public String getValueInTextboxByID(WebDriver driver, String getValueID) {
@@ -677,8 +698,30 @@ public class BasePage {
 		return getSelectedItemDropdown(driver, HRMBasePageUI.DROPDOWN_BY_ID, dropdownID);
 	}
 	
+	public LoginPO clickToLogoutLink(WebDriver driver) {
+		waitForElementClickable(driver, HRMBasePageUI.USER_ICON_LINK);
+		clickToElement(driver, HRMBasePageUI.USER_ICON_LINK);
+		
+		waitForElementClickable(driver, HRMBasePageUI.LOGOUT_LINK);
+		clickToElement(driver, HRMBasePageUI.LOGOUT_LINK);
+		
+		return new LoginPO(driver);
+	}
 	
+	public DashboardPO loginToSystemHRM(WebDriver driver, String userName, String password) {
+		waitForElementVisible(driver, HRMBasePageUI.USERNAME_TEXTBOX);
+		senkeyToElement(driver, HRMBasePageUI.USERNAME_TEXTBOX, userName);
+		senkeyToElement(driver, HRMBasePageUI.PASSWORD_TEXTBOX, password);
+		clickToElement(driver, HRMBasePageUI.LOGIN_BUTTON);
+		
+		return new DashboardPO(driver);
+	}
 	
+	public void uploadImage(WebDriver driver,String filePath) {
+		getElement(driver, HRMBasePageUI.UPLOAD_FILE).sendKeys(filePath);
+	}
+	
+
 	private Alert alert;
 	private WebDriverWait explicitWait;
 	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;

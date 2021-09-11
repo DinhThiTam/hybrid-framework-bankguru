@@ -11,6 +11,14 @@ public class HRMBasePageUI {
 	public static final String TABLE_ROW_BY_COLUMN_INDEX_AND_ROW_INDEX = "//table[@id='%s']/tbody/tr[%s]/td[%s]";
 	
 	
+	public static final String USER_ICON_LINK = "//a[@id='welcome']";
+	public static final String LOGOUT_LINK = "//div[@id='welcome-menu']//a[text()='Logout']";
+	public static final String USERNAME_TEXTBOX = "//input[@id='txtUsername']";
+	public static final String PASSWORD_TEXTBOX = "//input[@id='txtPassword']";
+	public static final String LOGIN_BUTTON = "//input[@id='btnLogin']";
+	public static final String UPLOAD_FILE = "//input[@type='file']";
+	
+	
 	
 	
 }
