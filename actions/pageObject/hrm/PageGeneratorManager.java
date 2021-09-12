@@ -29,9 +29,9 @@ public class PageGeneratorManager extends BasePage {
 		
 		return new EmployeeListPO(driver);
 	}
-	public static PersonalDetailsPO getPersonalDetailsPage(WebDriver driver) {
+	public static MyInfoPO getMyInfoPage(WebDriver driver) {
 
-		return new PersonalDetailsPO(driver);
+		return new MyInfoPO(driver);
 	}
 	
 

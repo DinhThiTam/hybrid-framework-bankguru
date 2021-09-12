@@ -29,6 +29,7 @@ import pageUIs.admin.nopCommerce.AdminPageUI;
 
 import pageUIs.user.nopCommerce.BasePageUI;
 import pageUIs.hrm.HRMBasePageUI;
+import pageUIs.hrm.MyInfoPageUI;
 
 
 
@@ -343,8 +344,16 @@ public class BasePage {
 		return getElement(driver, locator).isEnabled();
 	}
 	
+	public boolean isElementEnabled(WebDriver driver, String locator, String...params) {
+		return getElement(driver, getDynamicLocator(locator, params)).isEnabled();
+	}
+	
 	public boolean isElementSelected(WebDriver driver, String locator) {
 		return getElement(driver, locator).isSelected();
+	}
+	
+	public boolean isElementSelected(WebDriver driver, String locator, String...params) {
+		return getElement(driver, getDynamicLocator(locator, params)).isSelected();
 	}
 	
 	public WebDriver switchToIframeByElement(WebDriver driver, String locator) {
@@ -680,11 +689,22 @@ public class BasePage {
 		selectDropdownByText(driver, HRMBasePageUI.DROPDOWN_BY_ID, value, dropdownID);
 	}
 	
+	public String getSelectItemInDropdownByID(WebDriver driver, String dropdownID) {
+		waitForElementVisible(driver, HRMBasePageUI.DROPDOWN_BY_ID, dropdownID);
+		return getSelectedItemDropdown(driver, HRMBasePageUI.DROPDOWN_BY_ID, dropdownID);
+	}
+	
 	public String getValueInTableIDAtColumnNameAndRowIndex(WebDriver driver, String tableID, String rowIndex, String headerName) {
 		int columnIndex = getSizeElements(driver, HRMBasePageUI.TABLE_HEADER_BY_ID_AND_NAME, tableID,headerName) + 1;
 		waitForElementVisible(driver, HRMBasePageUI.TABLE_ROW_BY_COLUMN_INDEX_AND_ROW_INDEX, tableID, rowIndex, String.valueOf(columnIndex));
 		return getElementText(driver, HRMBasePageUI.TABLE_ROW_BY_COLUMN_INDEX_AND_ROW_INDEX, tableID, rowIndex, String.valueOf(columnIndex));
 	}
+	
+	public boolean isSelectedItemInRadio(WebDriver driver, String radioLabel) {
+		waitForElementVisible(driver, HRMBasePageUI.RADIO_BUTTON_BY_LABEL, radioLabel);
+		return isElementSelected(driver, HRMBasePageUI.RADIO_BUTTON_BY_LABEL, radioLabel);
+	}
+	
 	
 	/**
 	 * Get selected text item in dropdown
@@ -693,10 +713,6 @@ public class BasePage {
 	 * @param dropdownID
 	 * @return selected text in dropdown
 	 */
-	public String getSelectItemInDropdownByID(WebDriver driver, String dropdownID) {
-		waitForElementVisible(driver,HRMBasePageUI.DROPDOWN_BY_ID, dropdownID);
-		return getSelectedItemDropdown(driver, HRMBasePageUI.DROPDOWN_BY_ID, dropdownID);
-	}
 	
 	public LoginPO clickToLogoutLink(WebDriver driver) {
 		waitForElementClickable(driver, HRMBasePageUI.USER_ICON_LINK);
@@ -721,7 +737,17 @@ public class BasePage {
 		getElement(driver, HRMBasePageUI.UPLOAD_FILE).sendKeys(filePath);
 	}
 	
-
+	public boolean isMessageSuccessDisplayed(WebDriver driver,String messageSuccess) {
+		waitForElementVisible(driver, HRMBasePageUI.SUCCESS_MESSAGE, messageSuccess);
+		return isElementDisplayed(driver, HRMBasePageUI.SUCCESS_MESSAGE, messageSuccess);
+	}
+	
+	public boolean isFieldEnableByName(WebDriver driver,String fieldID) {
+		waitForElementVisible(driver, HRMBasePageUI.ANY_FIELD_BY_ID, fieldID);
+		return isElementEnabled(driver, HRMBasePageUI.ANY_FIELD_BY_ID, fieldID);
+	}
+	
+	
 	private Alert alert;
 	private WebDriverWait explicitWait;
 	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
