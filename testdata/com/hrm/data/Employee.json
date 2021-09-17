@@ -1,0 +1,11 @@
+{
+	"firstname":"Tam",
+	"lastname":"Dinh",
+	"fullname": "Tam Dinh",
+	"username": "dttam.cntt@gmail.com",
+	"password":"dinhtam123",
+	"ContactDetail": {
+		"editFirstName":"Tue",
+		"editLastName":"Henry"
+	}
+}
