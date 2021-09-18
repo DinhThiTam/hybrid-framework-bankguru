@@ -16,6 +16,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import reportConfig.VerificationFailures;
 
 public class BaseTest {
 	private WebDriver driver;
