@@ -40,7 +40,6 @@ public class ProductReviewPageObject extends BasePage {
 	public String getAddReviewSuccessMessage() {
 		waitForElementVisible(driver, ProductReviewPageUI.REVIEW_SUCCESS_MESSAGE);
 		return getElementText(driver, ProductReviewPageUI.REVIEW_SUCCESS_MESSAGE);
-		
 	}
 
 	public String getTitleReviewText() {

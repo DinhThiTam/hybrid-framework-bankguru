@@ -42,21 +42,22 @@ public class Level_18_Sort extends BaseTest{
 	}
 	
 	@Test
-	public void Sort_0_Name_Descending() {
+	public void Sort_02_Name_Descending() {
 		log.info("Sort_01 - Step 02: Select item in sort dropdown");
-		inventoryPage.selectItemInSortDropdown("Name (A to Z)");
+		inventoryPage.selectItemInSortDropdown("Name (Z to A)");
+	
 		verifyTrue(inventoryPage.isProductNameSortDescending());
 	}
 	
 	@Test
-	public void Sort_01_Price_Ascending() {
+	public void Sort_03_Price_Ascending() {
 		log.info("Sort_01 - Step 02: Select item in sort dropdown");
 		inventoryPage.selectItemInSortDropdown("Price (low to high)");
 		verifyTrue(inventoryPage.isPriceSortAscending());
 	}
 	
 	@Test
-	public void Sort_01_Price_Descending() {
+	public void Sort_04_Price_Descending() {
 		log.info("Sort_01 - Step 02: Select item in sort dropdown");
 		inventoryPage.selectItemInSortDropdown("Price (high to low)");
 		verifyTrue(inventoryPage.isPriceSortDescending());

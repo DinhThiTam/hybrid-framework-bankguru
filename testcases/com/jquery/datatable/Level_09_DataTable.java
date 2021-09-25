@@ -13,8 +13,6 @@ import commons.BaseTest;
 import pageObject.jQuery.HomePageObject;
 import pageObject.jQuery.PageGeneratorManager;
 
-
-
 public class Level_09_DataTable extends BaseTest{
 	WebDriver driver;
 	String emailAddress, password;
@@ -26,7 +24,7 @@ public class Level_09_DataTable extends BaseTest{
 		driver = getBrowserDriver(browserName, appURL);
 		homePage = PageGeneratorManager.getHomePage(driver);
 	}
-	//@Test
+	@Test
 	public void Table_01_Paging() {
 		homePage.openPageByNumber("15");
 		homePage.sleepInsecond(3 );
@@ -37,7 +35,7 @@ public class Level_09_DataTable extends BaseTest{
 		Assert.assertTrue(homePage.isPageActiveByNumber("5"));
 	}
 	
-	//@Test
+	@Test
 	public void Table_02_Actions() {
 		homePage.inputToHeaderTextboxByName("Females","34300");
 		homePage.sleepInsecond(3);

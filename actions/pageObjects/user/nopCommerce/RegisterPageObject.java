@@ -143,32 +143,6 @@ public class RegisterPageObject extends BasePage {
 		
 	}
 
-	public void clearFirstNameTextbox() {
-		waitForElementInvisible(driver, RegisterPageUI.FIRSTNAME_TEXTBOX);
-		clearTextbox(driver, RegisterPageUI.FIRSTNAME_TEXTBOX);	
-	}
-	
-	public void clearLastNameTextbox() {
-		waitForElementInvisible(driver, RegisterPageUI.LASTNAME_TEXTBOX);
-		clearTextbox(driver, RegisterPageUI.LASTNAME_TEXTBOX);	
-	}
-	
-	public void clearEmailTextbox() {
-		waitForElementInvisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
-		clearTextbox(driver, RegisterPageUI.EMAIL_TEXTBOX);	
-	}
-	
-	public void clearCompanyNameTextbox() {
-		waitForElementInvisible(driver, RegisterPageUI.COMPANY_NAME_TEXTBOX);
-		clearTextbox(driver, RegisterPageUI.COMPANY_NAME_TEXTBOX);	
-	}
-	
-	public void clearAllTextbox() {
-		clearFirstNameTextbox();
-		clearLastNameTextbox();
-		clearEmailTextbox();
-		clearCompanyNameTextbox();
-	}
 	public void clickToGenderFemaleRadioButton() {
 		waitForElementClickable(driver, RegisterPageUI.GENDER_FEMALE_RADIO_BUTTON);
 		clickToElement(driver, RegisterPageUI.GENDER_FEMALE_RADIO_BUTTON);
