@@ -8,8 +8,12 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
@@ -45,8 +49,8 @@ public class BaseTest {
 //		BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
 //		if (browser==BROWSER.FIREFOX) {
 //			WebDriverManager.firefoxdriver().setup();
-//			//Check driver version hiện tại là bao nhiêu
-//			//Tải về
+//			//Check driver version hiá»‡n táº¡i lÃ  bao nhiÃªu
+//			//Táº£i vá»�
 //			//Init browser 
 //			//System.setProperty("webdriver.gecko.driver", projectLocation + "\\browserDrivers\\geckodriver.exe");
 //			//System.setProperty("webdriver.gecko.driver", projectLocation + getDirectorySlash("browserDrivers")+ "geckodriver.exe");
@@ -76,17 +80,44 @@ public class BaseTest {
 		BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
 		if (browser==BROWSER.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
-			//System.setProperty("webdriver.gecko.driver", projectLocation + "\\browserDrivers\\geckodriver.exe");
+			//add extensions
+//			FirefoxProfile profile = new FirefoxProfile();
+//			File extensionsFile = new File(GlobalConstants.PROJECT_PATH + File.separator + "browserExtensions" + File.separator + "to_google_translate-4.2.0-fx.xpi");
+//			profile.addExtension(extensionsFile);
+//			
+//			FirefoxOptions options = new FirefoxOptions();
+//			options.setProfile(profile);
+//			driver = new FirefoxDriver(options);
+			//warning log console
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.PROJECT_PATH + File.separator + "monitorLogs" + File.separator + "Firefox.log");
+			
 			driver = new FirefoxDriver();
-			System.out.println("Driver init at BaseTest" + driver.toString());
 		} else if (browser==BROWSER.CHROME) {
 			WebDriverManager.chromedriver().setup();
-			//System.setProperty("webdriver.chrome.driver", projectLocation + "\\browserDrivers\\chromedriver.exe");
 			driver = new ChromeDriver();
+			
 		} else if (browser==BROWSER.EDGE) {
-			//System.setProperty("webdriver.edge.driver", projectLocation + "\\browserDrivers\\msedgedriver.exe");
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
+			
+		} else if (browser==BROWSER.SAFARI) {
+			driver = new SafariDriver();
+			
+		} else if (browser==BROWSER.H_CHROME) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.setHeadless(true);
+			options.addArguments("window-size=1920x1080");
+			driver = new ChromeDriver(options);
+			
+		} else if (browser==BROWSER.H_FIREFOX) {
+			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new FirefoxOptions();
+			options.setHeadless(true);
+			options.addArguments("window-size=1920x1080");
+			driver = new FirefoxDriver(options);
+
 		} else {
 			throw new RuntimeException("Please enter browser correct");
 		}
@@ -139,7 +170,7 @@ public class BaseTest {
 		} catch (Throwable e) {
 			pass = false;
 
-			// Add lỗi vào ReportNG
+			// Add lá»—i vÃ o ReportNG
 			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);
 		}
@@ -216,10 +247,10 @@ public class BaseTest {
 			
 			//Executable driver(gecko, chromedriver.exe..
 			// Quit driver executable file in Task Manager
-			// Get ra tên của OS và convert qua chữ thường
+			// Get ra tÃªn cá»§a OS vÃ  convert qua chá»¯ thÆ°á»�ng
 						String osName = System.getProperty("os.name").toLowerCase();
 						log.info("OS name = " + osName);
-						// Khai báo 1 biến command line để thực thi
+						// Khai bÃ¡o 1 biáº¿n command line Ä‘á»ƒ thá»±c thi
 						
 						
 						if (driver.toString().toLowerCase().contains("chrome")) {
