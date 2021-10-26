@@ -165,11 +165,21 @@ public class BasePage {
 	}
 
 	public void clickToElement(WebDriver driver, String locator) {
+		if(driver.toString().contains("internet explorer")) {
+			clickToElementByJS(driver, locator);
+			sleepInsecond(2);
+		} else {
 		getElement(driver, locator).click();
+		}
 	}
 	
 	public void clickToElement(WebDriver driver, String locator, String... params) {
+		if(driver.toString().contains("internet explorer")) {
+			clickToElementByJS(driver, getDynamicLocator(locator, params));
+			sleepInsecond(2);
+		} else {
 		getElement(driver, getDynamicLocator(locator, params)).click();
+		}		
 	}
 
 	public void senkeyToElement(WebDriver driver, String locator, String value) {
@@ -729,6 +739,11 @@ public class BasePage {
 		senkeyToElement(driver, HRMBasePageUI.USERNAME_TEXTBOX, userName);
 		senkeyToElement(driver, HRMBasePageUI.PASSWORD_TEXTBOX, password);
 		clickToElement(driver, HRMBasePageUI.LOGIN_BUTTON);
+		
+		if (driver.toString().contains("internet explorer")) {
+			sleepInsecond(3);
+			
+		}
 		
 		return new DashboardPO(driver);
 	}
