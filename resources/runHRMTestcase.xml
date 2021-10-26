@@ -9,12 +9,12 @@
 		<listener class-name="reportConfig.ReportNGListener" />
 	</listeners>
 
-	<test name="Run on FIREFOX">
-		<parameter name="browser" value="firefox" />
-		<classes>
-			<class name="com.hrm.employee.Level_16_Live_Coding" />
-		</classes>
-	</test>
+<!-- 	<test name="Run on FIREFOX"> -->
+<!-- 		<parameter name="browser" value="firefox" /> -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.hrm.employee.Level_16_Live_Coding" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
 	
 <!-- 	<test name="Run on Headless Chrome"> -->
 <!-- 		<parameter name="browser" value="h_firefox" /> -->
@@ -29,6 +29,14 @@
 <!-- 			<class name="com.hrm.employee.Level_16_Live_Coding" /> -->
 <!-- 		</classes> -->
 <!-- 	</test> -->
+
+	<test name="Run on IE">
+		<parameter name="browser" value="ie" />
+		<classes>
+			<class name="com.hrm.employee.Level_16_Live_Coding" />
+		</classes>
+	</test>
+	
 
 
 </suite>

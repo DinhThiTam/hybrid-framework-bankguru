@@ -13,6 +13,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -94,8 +95,21 @@ public class BaseTest {
 			
 			driver = new FirefoxDriver();
 		} else if (browser==BROWSER.CHROME) {
+			//Latest official
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			
+			//Older version
+			//WebDriverManager.chromedriver().driverVersion("90.0.4430.24").setup();
+			
+			ChromeOptions options = new ChromeOptions();
+			options.setExperimentalOption("useAutomationExtension", false);
+			options.addArguments("--disable-notifications");
+			options.addArguments("--disable-infobars");
+			driver = new ChromeDriver(options);
+			
+		} else if (browser==BROWSER.IE) {
+			WebDriverManager.iedriver().arch32().driverVersion("3.141.59").setup();
+			driver = new InternetExplorerDriver();
 			
 		} else if (browser==BROWSER.EDGE) {
 			WebDriverManager.edgedriver().setup();
