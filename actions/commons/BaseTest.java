@@ -38,6 +38,10 @@ public class BaseTest {
 		CHROME, FIREFOX, IE, SAFARI, EDGE_LEGACY, EDGE, H_CHROME, H_FIREFOX; 
 	}
 	
+	private enum ENVIRONMENT {
+		DEV, TESTING, STAGING, PRODUCT; 
+	}
+	
 	private enum OS {
 		WINDOWS, MAC_OSX, LINUX;
 	}
@@ -102,9 +106,11 @@ public class BaseTest {
 			//WebDriverManager.chromedriver().driverVersion("90.0.4430.24").setup();
 			
 			ChromeOptions options = new ChromeOptions();
-			options.setExperimentalOption("useAutomationExtension", false);
-			options.addArguments("--disable-notifications");
-			options.addArguments("--disable-infobars");
+			options.addExtensions(new File(GlobalConstants.PROJECT_PATH + File.separator + "browserExtensions" + File.separator + "extension_1_6_0_0.crx"));
+			
+//			options.setExperimentalOption("useAutomationExtension", false);
+//			options.addArguments("--disable-notifications");
+//			options.addArguments("--disable-infobars");
 			driver = new ChromeDriver(options);
 			
 		} else if (browser==BROWSER.IE) {
@@ -138,8 +144,24 @@ public class BaseTest {
 		
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+//		driver.get(getEnvironmentValue(appURL));
 		driver.get(appURL);
 		return driver;
+	}
+	
+	private String getEnvironmentValue(String environmentName) {
+		String envUrl = null;
+		ENVIRONMENT environment = ENVIRONMENT.valueOf(environmentName.toUpperCase());
+		if(environment==ENVIRONMENT.DEV) {
+			envUrl = "https://demo.guru99.com/v1";	
+		}else if (environment==ENVIRONMENT.TESTING) {
+			envUrl = "https://demo.guru99.com/v2";
+		}else if (environment==ENVIRONMENT.STAGING) {
+			envUrl = "https://demo.guru99.com/v3";
+		}else if (environment==ENVIRONMENT.STAGING) {
+			envUrl = "https://demo.guru99.com/v4";
+		}
+		return envUrl;
 	}
 	
 	public WebDriver getWebDriver() {

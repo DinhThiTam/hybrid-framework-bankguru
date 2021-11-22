@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -22,8 +23,9 @@ import pageObject.hrm.DashboardPO;
 import pageObject.hrm.EmployeeListPO;
 import pageObject.hrm.LoginPO;
 import pageObject.hrm.PageGeneratorManager;
+import retryConfig.RetryListener;
 import pageObject.hrm.MyInfoPO;
-
+//@Listeners(RetryListener.class)
 public class Level_20_Data_Test_IV_Data_Driven extends BaseTest{
 	String projectLocation = System.getProperty("user.dir");
 	String employeeID, statusValue, empUsername, empPassword, userName, password, firstName, lastName, fullName, avatarFilePath; 

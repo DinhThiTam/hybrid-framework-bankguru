@@ -165,6 +165,7 @@ public class BasePage {
 	}
 
 	public void clickToElement(WebDriver driver, String locator) {
+		highlightElement(driver, locator);
 		if(driver.toString().contains("internet explorer")) {
 			clickToElementByJS(driver, locator);
 			sleepInsecond(2);
@@ -174,6 +175,7 @@ public class BasePage {
 	}
 	
 	public void clickToElement(WebDriver driver, String locator, String... params) {
+		highlightElement(driver, locator, params);
 		if(driver.toString().contains("internet explorer")) {
 			clickToElementByJS(driver, getDynamicLocator(locator, params));
 			sleepInsecond(2);
@@ -183,12 +185,14 @@ public class BasePage {
 	}
 
 	public void senkeyToElement(WebDriver driver, String locator, String value) {
+		highlightElement(driver, locator);
 		getElement(driver, locator).clear();
 		getElement(driver, locator).sendKeys(value);
 	}
 	
 	public void senkeyToElement(WebDriver driver, String locator, String value, String...params) {
 		locator = getDynamicLocator(locator, params);
+		highlightElement(driver, locator);
 		getElement(driver, locator).clear();
 		getElement(driver, locator).sendKeys(value);
 	}
@@ -295,12 +299,14 @@ public class BasePage {
 	
 	public void checkTheCheckboxOrRadio(WebDriver driver, String locator, String... params) {
 		locator = getDynamicLocator(locator, params);
+		highlightElement(driver, locator);
 		if (!isElementSelected(driver, locator)) {
 			getElement(driver, locator).click();
 		}
 	}
 	
 	public void uncheckTheCheckbox(WebDriver driver, String locator) {
+		highlightElement(driver, locator);
 		if (isElementSelected(driver, locator)) {
 			getElement(driver, locator).click();
 		}
@@ -439,7 +445,19 @@ public class BasePage {
 		jsExecutor = (JavascriptExecutor) driver;
 		WebElement element = getElement(driver, locator);
 		String originalStyle = element.getAttribute("style");
-		jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", "border: 2px solid red; border-style: dashed;");
+		String hightlightStyle = "border: 2px solid red; border-style: dashed;";
+		jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", hightlightStyle);
+		sleepInsecond(1);
+		jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", originalStyle);
+	}
+	
+	public void highlightElement(WebDriver driver, String locator, String... params) {
+		jsExecutor = (JavascriptExecutor) driver;
+		locator = getDynamicLocator(locator, params);
+		WebElement element = getElement(driver, locator);
+		String originalStyle = element.getAttribute("style");
+		String hightlightStyle = "border: 2px solid red; border-style: dashed;";
+		jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", hightlightStyle);
 		sleepInsecond(1);
 		jsExecutor.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])", element, "style", originalStyle);
 	}

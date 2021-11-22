@@ -1,24 +1,8 @@
-1635086670195	geckodriver	INFO	Listening on 127.0.0.1:2863
-1635086670949	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\DTTAM~1\\AppData\\Local\\Temp\\rust_mozprofileeG55cy"
-1635086671717	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\DT TAM\\AppData\\Local\\Temp\\rust_mozprofileeG55cy\\search.json.mozlz4", (void 0)))
-1635086677747	Marionette	INFO	Listening on port 65329
-1635086677937	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-1635086689899	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:238:19
-TimedPromise@chrome://remote/content/marionette/sync.js:223:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
-send@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:81476
-ajax@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:77295
-k._evalUrl@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:79350
-Ie@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:48088
-append@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:49520
-html/<@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:50612
-_@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:31840
-html@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:50290
-success@https://opensource-demo.orangehrmlive.com/index.php/dashboard:1250:36
-c@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:27742
-fireWith@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:28487
-l@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:78789
-o/<@https://opensource-demo.orangehrmlive.com/webres_6051af48107ce6.31500353/js/jquery/jquery-3.4.1.min.js:2:81117
+1637595834836	geckodriver	INFO	Listening on 127.0.0.1:7113
+1637595835631	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\DTTAM~1\\AppData\\Local\\Temp\\rust_mozprofileo5oW6E"
+1637595836821	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\DT TAM\\AppData\\Local\\Temp\\rust_mozprofileo5oW6E\\search.json.mozlz4", (void 0)))
+1637595841123	Marionette	INFO	Listening on port 61036
+1637595841457	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1637596166676	Marionette	INFO	Stopped listening on port 61036
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
