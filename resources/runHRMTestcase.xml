@@ -12,7 +12,7 @@
 	<test name="Run on FIREFOX">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.hrm.employee.Level_20_Data_Test_IV_Data_Driven" />
+			<class name="com.hrm.employee.Level_22_Database_UI" />
 		</classes>
 	</test>
 	
