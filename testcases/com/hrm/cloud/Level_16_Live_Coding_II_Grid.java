@@ -1,4 +1,4 @@
-package com.hrm.employee;
+package com.hrm.cloud;
 
 import static org.testng.Assert.assertTrue;
 
@@ -21,7 +21,7 @@ import pageObject.hrm.LoginPO;
 import pageObject.hrm.PageGeneratorManager;
 import pageObject.hrm.MyInfoPO;
 
-public class Level_16_Live_Coding extends BaseTest{
+public class Level_16_Live_Coding_II_Grid extends BaseTest{
 	String projectLocation = System.getProperty("user.dir");
 	String employeeID, statusValue, empUsername, empPassword, userName, password, firstName, lastName, fullName, avatarFilePath; 
 	String editEmpFirstName, editEmpLastName, licenseExpiryDate, editEmpGender, maritalStatus;

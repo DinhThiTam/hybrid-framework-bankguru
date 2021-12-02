@@ -1,4 +1,4 @@
-package com.hrm.employee;
+package com.hrm.cloud;
 
 import static org.testng.Assert.assertTrue;
 
@@ -21,16 +21,16 @@ import pageObject.hrm.LoginPO;
 import pageObject.hrm.PageGeneratorManager;
 import pageObject.hrm.MyInfoPO;
 
-public class Level_16_Live_Coding extends BaseTest{
+public class Level_16_Live_Coding_I_Local extends BaseTest{
 	String projectLocation = System.getProperty("user.dir");
 	String employeeID, statusValue, empUsername, empPassword, userName, password, firstName, lastName, fullName, avatarFilePath; 
 	String editEmpFirstName, editEmpLastName, licenseExpiryDate, editEmpGender, maritalStatus;
 	
-	@Parameters({"browser","url", "ipAddress", "portNumber"})
+	@Parameters({"browser","url"})
 	@BeforeClass
-	public void initBrowser(String browserName, String appURL, String ipAddress, String portNumber) {
+	public void initBrowser(String browserName, String appURL) {
 		log.info("Pre-Condition - Step 01: Open browser '"+ browserName + "' and navigate '" + appURL + "'");
-		driver = getBrowserDriver(browserName, appURL, ipAddress, portNumber);
+		driver = getBrowserDriver(browserName, appURL);
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 		
 		statusValue = "Enable";
