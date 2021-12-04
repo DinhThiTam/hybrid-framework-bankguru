@@ -21,7 +21,7 @@ import pageObject.hrm.LoginPO;
 import pageObject.hrm.PageGeneratorManager;
 import pageObject.hrm.MyInfoPO;
 
-public class Level_16_Live_Coding_III_BrowserStack extends BaseTest{
+public class Level_16_Live_Coding_IV_Saucelab extends BaseTest{
 	String projectLocation = System.getProperty("user.dir");
 	String employeeID, statusValue, empUsername, empPassword, userName, password, firstName, lastName, fullName, avatarFilePath; 
 	String editEmpFirstName, editEmpLastName, licenseExpiryDate, editEmpGender, maritalStatus;

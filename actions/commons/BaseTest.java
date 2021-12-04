@@ -236,6 +236,50 @@ public class BaseTest {
 		return driver;
 	}
 	
+	public WebDriver getBrowserDriverBrowserstack(String browserName, String appURL, String osName, String osVersion) {
+
+		DesiredCapabilities capability = new DesiredCapabilities();
+		capability.setCapability("os", osName);
+		capability.setCapability("os_version", osVersion);
+		capability.setCapability("browser", browserName);
+		capability.setCapability("browser_version", "latest");
+		capability.setCapability("browserstack.debug", "true");
+		capability.setCapability("resolution", "1920x1080");
+		capability.setCapability("project", "HRM");
+		capability.setCapability("name", "Run on " + osName + "|" + osVersion + "|" + browserName);
+	
+		try {
+			driver = new RemoteWebDriver(new URL(GlobalConstants.URL), capability);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+//		driver.get(getEnvironmentValue(appURL));
+		driver.get(appURL);
+		return driver;
+	}
+	public WebDriver getBrowserDriverSaucelabs(String browserName, String appURL, String osName) {
+
+		DesiredCapabilities capability = new DesiredCapabilities();
+		capability.setCapability("platformName", osName);
+		capability.setCapability("browserName", browserName);
+		capability.setCapability("name", "Run on " + osName + "|" +  "|" + browserName);
+	
+		try {
+			driver = new RemoteWebDriver(new URL(GlobalConstants.SAUCELAB_URL), capability);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+//		driver.get(getEnvironmentValue(appURL));
+		driver.get(appURL);
+		return driver;
+	}	
+	
 	private String getEnvironmentValue(String environmentName) {
 		String envUrl = null;
 		ENVIRONMENT environment = ENVIRONMENT.valueOf(environmentName.toUpperCase());
