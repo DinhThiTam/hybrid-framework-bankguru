@@ -26,11 +26,11 @@ public class Level_16_Live_Coding_IV_Saucelab extends BaseTest{
 	String employeeID, statusValue, empUsername, empPassword, userName, password, firstName, lastName, fullName, avatarFilePath; 
 	String editEmpFirstName, editEmpLastName, licenseExpiryDate, editEmpGender, maritalStatus;
 	
-	@Parameters({"browser","url", "osName", "osVersion"})
+	@Parameters({"browser","url", "osName"})
 	@BeforeClass
-	public void initBrowser(String browserName, String appURL, String osName, String osVersion) {
+	public void initBrowser(String browserName, String appURL, String osName) {
 		log.info("Pre-Condition - Step 01: Open browser '"+ browserName + "' and navigate '" + appURL + "'");
-		driver = getBrowserDriverBrowserstack(browserName, appURL, osName, osVersion);
+		driver = getBrowserDriverSaucelabs(browserName, appURL, osName);
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 		
 		statusValue = "Enable";

@@ -24,7 +24,6 @@ public class GlobalConstants {
 	
 	public static final String SAUCELAB_USERNAME = "oauth-dinhtamk53thb-ca7cf";
 	public static final String SAUCELAB_ACCESS_KEY = "7436ff62-7c4c-4131-98f8-312df034ae37";
-	public static final String SAUCELAB_URL = "https://" + SAUCELAB_USERNAME + ":" + SAUCELAB_ACCESS_KEY
-			+ "@ondemand.us-west-1.saucelabs.com:443/wd/hub";
+	public static final String SAUCELAB_URL = "https://" + SAUCELAB_USERNAME + ":" + SAUCELAB_ACCESS_KEY + "@ondemand.us-west-1.saucelabs.com:443/wd/hub";
 
 }

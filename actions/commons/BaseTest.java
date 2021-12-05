@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
@@ -262,10 +264,20 @@ public class BaseTest {
 	}
 	public WebDriver getBrowserDriverSaucelabs(String browserName, String appURL, String osName) {
 
-		DesiredCapabilities capability = new DesiredCapabilities();
+		DesiredCapabilities capability = new DesiredCapabilities();	
 		capability.setCapability("platformName", osName);
 		capability.setCapability("browserName", browserName);
-		capability.setCapability("name", "Run on " + osName + "|" +  "|" + browserName);
+		capability.setCapability("browserVersion", "latest");
+		capability.setCapability("name", "Run on" + osName + " | " + browserName);
+		
+		Map<String, Object> sauceOptions = new HashMap<>();
+		if (osName.contains("Windows")) {
+			sauceOptions.put("screenResolution", "1920x1080");
+		}else {
+			capability.setCapability("resolution", "1920x1440");
+		}
+		capability.setCapability("sauce:options", sauceOptions);
+		
 	
 		try {
 			driver = new RemoteWebDriver(new URL(GlobalConstants.SAUCELAB_URL), capability);

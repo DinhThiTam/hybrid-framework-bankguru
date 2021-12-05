@@ -1493,3 +1493,572 @@ Session ID: 7c115466-2926-4bdd-afb8-9e800e9a6ca9
 [INFO ] [2021-09-10 12:11:11,378]  -------------------------- PASSED -------------------------- 
 [INFO ] [2021-09-10 12:11:11,381] Post-Condition - Close Browser - firefox
 [INFO ] [2021-09-10 12:11:11,381] OS name = windows 10
+[INFO ] [2021-12-04 08:35:39,177] --------START delete file in folder---------
+[INFO ] [2021-12-04 08:35:39,180] --------END delete file in folder---------
+[INFO ] [2021-12-04 08:35:39,201] Pre-Condition - Step 01: Open browser 'Chrome' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-04 08:35:48,653] Pre-Condition - Step 02: Login with Admin role
+[INFO ] [2021-12-04 08:35:59,817] Add_New - Step 01: Open 'Employee List' page
+[INFO ] [2021-12-04 08:36:07,900] Add_New - Step 02: Click to 'Add' button
+[INFO ] [2021-12-04 08:36:11,145] Add_New - Step 03: Enter valid info to 'First Name' textbox
+[INFO ] [2021-12-04 08:36:14,239] Add_New - Step 04: Enter valid info to 'Last Name' textbox
+[INFO ] [2021-12-04 08:36:17,016] Add_New - Step 05: Get value of 'Employee ID' textbox
+[INFO ] [2021-12-04 08:36:17,770] Add_New - Step 06: Click to 'Create Login Details' checkbox
+[INFO ] [2021-12-04 08:36:20,802] Add_New - Step 07: Enter valid info to 'Username' textbox
+[INFO ] [2021-12-04 08:36:24,723] Add_New - Step 08: Enter valid info to 'Password' textbox
+[INFO ] [2021-12-04 08:36:27,925] Add_New - Step 09: Enter valid info to 'Confirm password' textbox
+[INFO ] [2021-12-04 08:36:31,017] Add_New - Step 10: Select 'Enable' value in 'Status' dropndow
+[INFO ] [2021-12-04 08:36:32,472] Add_New - Step 11: Click to 'Save' button
+[INFO ] [2021-12-04 08:36:36,544] Add_New - Step 12: Open 'Employee List' page
+[INFO ] [2021-12-04 08:36:48,780]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:36:48,781] Add_New - Step 13: Enter valid info to 'Employee Name' textbox
+[INFO ] [2021-12-04 08:36:49,030]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:36:52,849] Add_New - Step 14: Click to 'Search' button
+[INFO ] [2021-12-04 08:36:57,119]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:36:57,119] Add_New - Step 15: Verify Employee Information displayed at 'Result Table'
+[INFO ] [2021-12-04 08:36:58,425]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-12-04 08:36:59,576]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:37:00,717]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:37:00,728] Add_New - Step 01: Open 'Employee List' page
+[INFO ] [2021-12-04 08:37:09,462] Add_New - Step 02: Click to 'Add' button
+[INFO ] [2021-12-04 08:37:12,521] Add_New - Step 03: Enter valid info to 'First Name' textbox
+[INFO ] [2021-12-04 08:37:16,091] Add_New - Step 04: Enter valid info to 'Last Name' textbox
+[INFO ] [2021-12-04 08:37:19,907] Add_New - Step 05: Get value of 'Employee ID' textbox
+[INFO ] [2021-12-04 08:37:20,630] Add_New - Step 06: Click to 'Create Login Details' checkbox
+[INFO ] [2021-12-04 08:37:23,562] Add_New - Step 07: Enter valid info to 'Username' textbox
+[INFO ] [2021-12-04 08:37:26,346] Add_New - Step 08: Enter valid info to 'Password' textbox
+[INFO ] [2021-12-04 08:37:29,383] Add_New - Step 09: Enter valid info to 'Confirm password' textbox
+[INFO ] [2021-12-04 08:37:32,243] Add_New - Step 10: Select 'Enable' value in 'Status' dropndow
+[INFO ] [2021-12-04 08:37:33,889] Add_New - Step 11: Click to 'Save' button
+[INFO ] [2021-12-04 08:37:38,559] Add_New - Step 12: Open 'Employee List' page
+[INFO ] [2021-12-04 08:37:47,568]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:37:47,569] Add_New - Step 13: Enter valid info to 'Employee Name' textbox
+[INFO ] [2021-12-04 08:37:47,748]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:37:51,249] Add_New - Step 14: Click to 'Search' button
+[INFO ] [2021-12-04 08:37:55,733]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:37:55,738] Add_New - Step 15: Verify Employee Information displayed at 'Result Table'
+[INFO ] [2021-12-04 08:37:59,080]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-12-04 08:38:00,916]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:38:02,466]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:38:02,471] Add_New - Step 01: Open 'Employee List' page
+[INFO ] [2021-12-04 08:38:11,095] Add_New - Step 02: Click to 'Add' button
+[INFO ] [2021-12-04 08:38:14,374] Add_New - Step 03: Enter valid info to 'First Name' textbox
+[INFO ] [2021-12-04 08:38:17,338] Add_New - Step 04: Enter valid info to 'Last Name' textbox
+[INFO ] [2021-12-04 08:38:22,764] Add_New - Step 05: Get value of 'Employee ID' textbox
+[INFO ] [2021-12-04 08:38:23,717] Add_New - Step 06: Click to 'Create Login Details' checkbox
+[INFO ] [2021-12-04 08:38:27,171] Add_New - Step 07: Enter valid info to 'Username' textbox
+[INFO ] [2021-12-04 08:38:31,301] Add_New - Step 08: Enter valid info to 'Password' textbox
+[INFO ] [2021-12-04 08:38:34,255] Add_New - Step 09: Enter valid info to 'Confirm password' textbox
+[INFO ] [2021-12-04 08:38:37,343] Add_New - Step 10: Select 'Enable' value in 'Status' dropndow
+[INFO ] [2021-12-04 08:38:39,379] Add_New - Step 11: Click to 'Save' button
+[INFO ] [2021-12-04 08:38:43,874] Add_New - Step 12: Open 'Employee List' page
+[INFO ] [2021-12-04 08:38:52,164]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:38:52,165] Add_New - Step 13: Enter valid info to 'Employee Name' textbox
+[INFO ] [2021-12-04 08:38:52,422]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:38:55,639] Add_New - Step 14: Click to 'Search' button
+[INFO ] [2021-12-04 08:39:01,066]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:39:01,066] Add_New - Step 15: Verify Employee Information displayed at 'Result Table'
+[INFO ] [2021-12-04 08:39:02,033]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-12-04 08:39:02,922]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:39:03,787]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:39:03,802] Upload_Avatar_02 - Step 01: Login with Employee role
+[INFO ] [2021-12-04 08:39:22,776] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
+[INFO ] [2021-12-04 08:39:28,176] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
+[INFO ] [2021-12-04 08:39:32,041] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
+[INFO ] [2021-12-04 08:39:32,417] Upload_Avatar_02 - Step 01: Login with Employee role
+[INFO ] [2021-12-04 08:39:48,766] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
+[INFO ] [2021-12-04 08:39:52,416] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
+[INFO ] [2021-12-04 08:39:55,743] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
+[INFO ] [2021-12-04 08:39:56,110] Upload_Avatar_02 - Step 01: Login with Employee role
+[INFO ] [2021-12-04 08:40:10,401] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
+[INFO ] [2021-12-04 08:40:15,087] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
+[INFO ] [2021-12-04 08:40:18,496] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
+[INFO ] [2021-12-04 08:40:18,877] Personal Details - Step 01: Open 'Personal Details' form 
+[INFO ] [2021-12-04 08:40:22,487] Personal Details - Step 02: Verify all fields disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:40:23,256]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:23,968]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:24,655]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:25,322]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:26,079]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:26,755]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:27,485]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:28,210]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:28,934]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:29,670]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:29,671] Personal Details - Step 03: Click to 'Edit' button
+[INFO ] [2021-12-04 08:40:32,673] Personal Details - Step 04: Verify 'Employee Id' field disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:40:33,504]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:33,504] Personal Details - Step 06: Verify 'SSN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:40:34,177]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:34,178] Personal Details - Step 07: Verify 'SIN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:40:34,893]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:34,893] Personal Details - Step 08: Verify 'Date of Birth' disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:40:35,581]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:35,581] Personal Details - Step 09: Enter 'First Name' textbox
+[INFO ] [2021-12-04 08:40:39,171] Personal Details - Step 10: Enter 'Last Name' textbox
+[INFO ] [2021-12-04 08:40:43,517] Personal Details - Step 11: Enter 'License Expiry Date' textbox
+[INFO ] [2021-12-04 08:40:46,314] Personal Details - Step 12: Select 'Gender' radio button
+[INFO ] [2021-12-04 08:40:49,615] Personal Details - Step 13: Select 'Marital Status' dropdown
+[INFO ] [2021-12-04 08:40:51,252] Personal Details - Step 14: Click to 'Save' button
+[INFO ] [2021-12-04 08:40:55,787] Personal Details - Step 15: Verify success message is displayed
+[INFO ] [2021-12-04 08:40:56,817]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:56,817] Personal Details - Step 16: Verify 'First Name' textbox is updated success
+[INFO ] [2021-12-04 08:40:57,621]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:57,622] Personal Details - Step 16: Verify 'Last Name' textbox is updated success
+[INFO ] [2021-12-04 08:40:58,651]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:58,651] Personal Details - Step 11: Verify 'License Expiry Date' textbox is updated success
+[INFO ] [2021-12-04 08:40:59,450]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:40:59,451] Personal Details - Step 12: Verify 'Gender' radio button is updated success 
+[INFO ] [2021-12-04 08:41:00,563]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:00,563] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-04 08:41:02,337]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:02,337] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-04 08:41:03,278]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-12-04 08:41:03,287] Personal Details - Step 01: Open 'Personal Details' form 
+[INFO ] [2021-12-04 08:41:07,901] Personal Details - Step 02: Verify all fields disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:41:09,909]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:10,622]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:12,492]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:14,043]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:15,770]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:16,572]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:17,443]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:18,227]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:18,915]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:19,660]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:19,660] Personal Details - Step 03: Click to 'Edit' button
+[INFO ] [2021-12-04 08:41:22,347] Personal Details - Step 04: Verify 'Employee Id' field disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:41:23,048]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:23,048] Personal Details - Step 06: Verify 'SSN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:41:23,828]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:23,828] Personal Details - Step 07: Verify 'SIN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:41:24,524]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:24,524] Personal Details - Step 08: Verify 'Date of Birth' disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:41:25,226]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:25,226] Personal Details - Step 09: Enter 'First Name' textbox
+[INFO ] [2021-12-04 08:41:28,018] Personal Details - Step 10: Enter 'Last Name' textbox
+[INFO ] [2021-12-04 08:41:31,134] Personal Details - Step 11: Enter 'License Expiry Date' textbox
+[INFO ] [2021-12-04 08:41:34,262] Personal Details - Step 12: Select 'Gender' radio button
+[INFO ] [2021-12-04 08:41:37,208] Personal Details - Step 13: Select 'Marital Status' dropdown
+[INFO ] [2021-12-04 08:41:40,166] Personal Details - Step 14: Click to 'Save' button
+[INFO ] [2021-12-04 08:41:44,508] Personal Details - Step 15: Verify success message is displayed
+[INFO ] [2021-12-04 08:41:45,204]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:45,205] Personal Details - Step 16: Verify 'First Name' textbox is updated success
+[INFO ] [2021-12-04 08:41:46,257]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:46,258] Personal Details - Step 16: Verify 'Last Name' textbox is updated success
+[INFO ] [2021-12-04 08:41:47,496]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:47,496] Personal Details - Step 11: Verify 'License Expiry Date' textbox is updated success
+[INFO ] [2021-12-04 08:41:48,164]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:48,164] Personal Details - Step 12: Verify 'Gender' radio button is updated success 
+[INFO ] [2021-12-04 08:41:48,855]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:48,855] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-04 08:41:50,472]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:50,472] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-04 08:41:51,229]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-12-04 08:41:51,233] Personal Details - Step 01: Open 'Personal Details' form 
+[INFO ] [2021-12-04 08:41:54,870] Personal Details - Step 02: Verify all fields disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:41:55,652]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:56,320]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:57,007]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:57,692]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:58,429]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:59,150]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:41:59,829]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:00,602]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:01,293]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:02,058]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:02,058] Personal Details - Step 03: Click to 'Edit' button
+[INFO ] [2021-12-04 08:42:06,288] Personal Details - Step 04: Verify 'Employee Id' field disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:42:07,270]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:07,271] Personal Details - Step 06: Verify 'SSN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:42:08,033]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:08,033] Personal Details - Step 07: Verify 'SIN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:42:08,988]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:08,989] Personal Details - Step 08: Verify 'Date of Birth' disable at 'Personal Details' form
+[INFO ] [2021-12-04 08:42:09,698]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:09,698] Personal Details - Step 09: Enter 'First Name' textbox
+[INFO ] [2021-12-04 08:42:12,847] Personal Details - Step 10: Enter 'Last Name' textbox
+[INFO ] [2021-12-04 08:42:15,642] Personal Details - Step 11: Enter 'License Expiry Date' textbox
+[INFO ] [2021-12-04 08:42:18,606] Personal Details - Step 12: Select 'Gender' radio button
+[INFO ] [2021-12-04 08:42:21,135] Personal Details - Step 13: Select 'Marital Status' dropdown
+[INFO ] [2021-12-04 08:42:22,641] Personal Details - Step 14: Click to 'Save' button
+[INFO ] [2021-12-04 08:42:26,496] Personal Details - Step 15: Verify success message is displayed
+[INFO ] [2021-12-04 08:42:27,270]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:27,270] Personal Details - Step 16: Verify 'First Name' textbox is updated success
+[INFO ] [2021-12-04 08:42:27,970]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:27,970] Personal Details - Step 16: Verify 'Last Name' textbox is updated success
+[INFO ] [2021-12-04 08:42:28,713]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:28,713] Personal Details - Step 11: Verify 'License Expiry Date' textbox is updated success
+[INFO ] [2021-12-04 08:42:29,506]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:29,506] Personal Details - Step 12: Verify 'Gender' radio button is updated success 
+[INFO ] [2021-12-04 08:42:30,184]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:30,184] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-04 08:42:32,868]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-04 08:42:32,869] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-04 08:42:33,786]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-12-04 08:42:33,808] Post-Condition - Close Browser - Chrome
+[INFO ] [2021-12-04 08:42:33,808] OS name = windows 10
+[INFO ] [2021-12-05 07:51:36,232] --------START delete file in folder---------
+[INFO ] [2021-12-05 07:51:36,235] --------END delete file in folder---------
+[INFO ] [2021-12-05 07:51:36,256] Pre-Condition - Step 01: Open browser 'Firefox' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 07:51:48,712] Post-Condition - Close Browser - Firefox
+[INFO ] [2021-12-05 07:51:48,713] OS name = windows 10
+[INFO ] [2021-12-05 07:51:48,714] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 07:51:48,867] --------START delete file in folder---------
+[INFO ] [2021-12-05 07:51:48,868] --------END delete file in folder---------
+[INFO ] [2021-12-05 07:51:48,869] Pre-Condition - Step 01: Open browser 'Chrome' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 07:51:48,944] Post-Condition - Close Browser - Chrome
+[INFO ] [2021-12-05 07:51:48,945] OS name = windows 10
+[INFO ] [2021-12-05 07:51:48,946] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 07:55:56,383] --------START delete file in folder---------
+[INFO ] [2021-12-05 07:55:56,385] --------END delete file in folder---------
+[INFO ] [2021-12-05 07:55:56,413] Pre-Condition - Step 01: Open browser 'Firefox' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 07:55:59,282] Post-Condition - Close Browser - Firefox
+[INFO ] [2021-12-05 07:55:59,282] OS name = windows 10
+[INFO ] [2021-12-05 07:55:59,283] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 07:55:59,429] --------START delete file in folder---------
+[INFO ] [2021-12-05 07:55:59,430] --------END delete file in folder---------
+[INFO ] [2021-12-05 07:55:59,434] Pre-Condition - Step 01: Open browser 'Chrome' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 07:56:00,995] Post-Condition - Close Browser - Chrome
+[INFO ] [2021-12-05 07:56:00,997] OS name = windows 10
+[INFO ] [2021-12-05 07:56:00,999] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:01:15,801] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:01:15,804] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:01:15,822] Pre-Condition - Step 01: Open browser 'Firefox' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:01:18,745] Post-Condition - Close Browser - Firefox
+[INFO ] [2021-12-05 08:01:18,746] OS name = windows 10
+[INFO ] [2021-12-05 08:01:18,746] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:01:18,886] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:01:18,887] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:01:18,888] Pre-Condition - Step 01: Open browser 'Chrome' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:01:20,335] Post-Condition - Close Browser - Chrome
+[INFO ] [2021-12-05 08:01:20,336] OS name = windows 10
+[INFO ] [2021-12-05 08:01:20,337] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:03:07,703] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:03:07,706] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:03:07,727] Pre-Condition - Step 01: Open browser 'Firefox' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:03:10,486] Post-Condition - Close Browser - Firefox
+[INFO ] [2021-12-05 08:03:10,487] OS name = windows 10
+[INFO ] [2021-12-05 08:03:10,487] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:03:10,613] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:03:10,614] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:03:10,615] Pre-Condition - Step 01: Open browser 'Chrome' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:03:12,037] Post-Condition - Close Browser - Chrome
+[INFO ] [2021-12-05 08:03:12,039] OS name = windows 10
+[INFO ] [2021-12-05 08:03:12,039] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:11:26,573] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:11:26,575] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:11:26,590] Pre-Condition - Step 01: Open browser 'Firefox' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:11:29,902] Post-Condition - Close Browser - Firefox
+[INFO ] [2021-12-05 08:11:29,902] OS name = windows 10
+[INFO ] [2021-12-05 08:11:29,903] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:11:30,055] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:11:30,056] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:11:30,058] Pre-Condition - Step 01: Open browser 'Chrome' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:11:31,570] Post-Condition - Close Browser - Chrome
+[INFO ] [2021-12-05 08:11:31,571] OS name = windows 10
+[INFO ] [2021-12-05 08:11:31,572] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:13:34,149] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:13:34,151] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:13:34,164] Pre-Condition - Step 01: Open browser 'Firefox' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:13:39,337] Post-Condition - Close Browser - Firefox
+[INFO ] [2021-12-05 08:13:39,342] OS name = windows 10
+[INFO ] [2021-12-05 08:13:39,342] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:13:39,496] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:13:39,497] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:13:39,499] Pre-Condition - Step 01: Open browser 'Chrome' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:13:41,413] Post-Condition - Close Browser - Chrome
+[INFO ] [2021-12-05 08:13:41,414] OS name = windows 10
+[INFO ] [2021-12-05 08:13:41,415] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:14:45,039] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:14:45,041] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:14:45,055] Pre-Condition - Step 01: Open browser 'Firefox' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:14:47,684] Post-Condition - Close Browser - Firefox
+[INFO ] [2021-12-05 08:14:47,685] OS name = windows 10
+[INFO ] [2021-12-05 08:14:47,685] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:14:47,805] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:14:47,806] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:14:47,808] Pre-Condition - Step 01: Open browser 'Chrome' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:14:50,400] Post-Condition - Close Browser - Chrome
+[INFO ] [2021-12-05 08:14:50,400] OS name = windows 10
+[INFO ] [2021-12-05 08:14:50,401] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:19:18,094] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:19:18,096] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:19:18,111] Pre-Condition - Step 01: Open browser 'Firefox' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:19:33,364] Pre-Condition - Step 02: Login with Admin role
+[INFO ] [2021-12-05 08:19:52,264] Add_New - Step 01: Open 'Employee List' page
+[INFO ] [2021-12-05 08:20:07,452] Add_New - Step 02: Click to 'Add' button
+[INFO ] [2021-12-05 08:20:13,042] Add_New - Step 03: Enter valid info to 'First Name' textbox
+[INFO ] [2021-12-05 08:20:18,430] Add_New - Step 04: Enter valid info to 'Last Name' textbox
+[INFO ] [2021-12-05 08:20:25,214] Add_New - Step 05: Get value of 'Employee ID' textbox
+[INFO ] [2021-12-05 08:20:27,003] Add_New - Step 06: Click to 'Create Login Details' checkbox
+[INFO ] [2021-12-05 08:20:32,062] Add_New - Step 07: Enter valid info to 'Username' textbox
+[INFO ] [2021-12-05 08:20:39,666] Add_New - Step 08: Enter valid info to 'Password' textbox
+[INFO ] [2021-12-05 08:20:46,598] Add_New - Step 09: Enter valid info to 'Confirm password' textbox
+[INFO ] [2021-12-05 08:20:50,654] Add_New - Step 10: Select 'Enable' value in 'Status' dropndow
+[INFO ] [2021-12-05 08:20:53,110] Add_New - Step 11: Click to 'Save' button
+[INFO ] [2021-12-05 08:20:58,388] Add_New - Step 12: Open 'Employee List' page
+[INFO ] [2021-12-05 08:21:07,010]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:21:07,012] Add_New - Step 13: Enter valid info to 'Employee Name' textbox
+[INFO ] [2021-12-05 08:21:07,266]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:21:11,189] Add_New - Step 14: Click to 'Search' button
+[INFO ] [2021-12-05 08:21:15,428]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:21:15,428] Add_New - Step 15: Verify Employee Information displayed at 'Result Table'
+[INFO ] [2021-12-05 08:21:17,018]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:21:18,357]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:21:19,742]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:21:19,756] Upload_Avatar_02 - Step 01: Login with Employee role
+[INFO ] [2021-12-05 08:21:43,570] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
+[INFO ] [2021-12-05 08:21:49,123] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
+[INFO ] [2021-12-05 08:21:56,320] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
+[INFO ] [2021-12-05 08:21:57,109] Upload_Avatar_02 - Step 01: Login with Employee role
+[INFO ] [2021-12-05 08:22:19,003] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
+[INFO ] [2021-12-05 08:22:24,241] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
+[INFO ] [2021-12-05 08:22:32,663] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
+[INFO ] [2021-12-05 08:22:33,582] Upload_Avatar_02 - Step 01: Login with Employee role
+[INFO ] [2021-12-05 08:22:55,179] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
+[INFO ] [2021-12-05 08:23:00,793] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
+[INFO ] [2021-12-05 08:23:05,332] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
+[INFO ] [2021-12-05 08:23:05,971] Personal Details - Step 01: Open 'Personal Details' form 
+[INFO ] [2021-12-05 08:23:11,390] Personal Details - Step 02: Verify all fields disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:23:13,233]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:15,727]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:17,621]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:19,038]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:20,618]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:23,146]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:24,402]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:25,687]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:26,931]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:29,028]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:29,029] Personal Details - Step 03: Click to 'Edit' button
+[INFO ] [2021-12-05 08:23:34,131] Personal Details - Step 04: Verify 'Employee Id' field disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:23:36,883]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:36,883] Personal Details - Step 06: Verify 'SSN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:23:37,977]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:37,978] Personal Details - Step 07: Verify 'SIN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:23:39,165]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:39,166] Personal Details - Step 08: Verify 'Date of Birth' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:23:40,287]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:23:40,288] Personal Details - Step 09: Enter 'First Name' textbox
+[INFO ] [2021-12-05 08:23:46,462] Personal Details - Step 10: Enter 'Last Name' textbox
+[INFO ] [2021-12-05 08:23:53,865] Personal Details - Step 11: Enter 'License Expiry Date' textbox
+[INFO ] [2021-12-05 08:23:58,216] Personal Details - Step 12: Select 'Gender' radio button
+[INFO ] [2021-12-05 08:24:03,815] Personal Details - Step 13: Select 'Marital Status' dropdown
+[INFO ] [2021-12-05 08:24:06,554] Personal Details - Step 14: Click to 'Save' button
+[INFO ] [2021-12-05 08:24:13,917] Personal Details - Step 15: Verify success message is displayed
+[INFO ] [2021-12-05 08:24:15,443]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:24:15,444] Personal Details - Step 16: Verify 'First Name' textbox is updated success
+[INFO ] [2021-12-05 08:24:16,517]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:24:16,517] Personal Details - Step 16: Verify 'Last Name' textbox is updated success
+[INFO ] [2021-12-05 08:24:17,996]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:24:17,996] Personal Details - Step 11: Verify 'License Expiry Date' textbox is updated success
+[INFO ] [2021-12-05 08:24:21,630]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:24:21,630] Personal Details - Step 12: Verify 'Gender' radio button is updated success 
+[INFO ] [2021-12-05 08:24:22,697]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:24:22,697] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-05 08:24:25,064]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:24:25,064] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-05 08:24:26,196]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:24:26,246] Post-Condition - Close Browser - Firefox
+[INFO ] [2021-12-05 08:24:26,247] OS name = windows 10
+[INFO ] [2021-12-05 08:24:28,083] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:24:28,085] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:24:28,087] Pre-Condition - Step 01: Open browser 'Chrome' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:24:32,012] Post-Condition - Close Browser - Chrome
+[INFO ] [2021-12-05 08:24:32,013] OS name = windows 10
+[INFO ] [2021-12-05 08:24:32,013] Cannot invoke "Object.toString()" because "this.driver" is null
+[INFO ] [2021-12-05 08:26:11,425] --------START delete file in folder---------
+[INFO ] [2021-12-05 08:26:11,428] --------END delete file in folder---------
+[INFO ] [2021-12-05 08:26:11,453] Pre-Condition - Step 01: Open browser 'Chrome' and navigate 'https://opensource-demo.orangehrmlive.com/'
+[INFO ] [2021-12-05 08:26:22,232] Pre-Condition - Step 02: Login with Admin role
+[INFO ] [2021-12-05 08:26:40,449] Add_New - Step 01: Open 'Employee List' page
+[INFO ] [2021-12-05 08:26:51,418] Add_New - Step 02: Click to 'Add' button
+[INFO ] [2021-12-05 08:26:55,675] Add_New - Step 03: Enter valid info to 'First Name' textbox
+[INFO ] [2021-12-05 08:27:01,294] Add_New - Step 04: Enter valid info to 'Last Name' textbox
+[INFO ] [2021-12-05 08:27:06,002] Add_New - Step 05: Get value of 'Employee ID' textbox
+[INFO ] [2021-12-05 08:27:07,084] Add_New - Step 06: Click to 'Create Login Details' checkbox
+[INFO ] [2021-12-05 08:27:11,135] Add_New - Step 07: Enter valid info to 'Username' textbox
+[INFO ] [2021-12-05 08:27:15,290] Add_New - Step 08: Enter valid info to 'Password' textbox
+[INFO ] [2021-12-05 08:27:19,852] Add_New - Step 09: Enter valid info to 'Confirm password' textbox
+[INFO ] [2021-12-05 08:27:27,389] Add_New - Step 10: Select 'Enable' value in 'Status' dropndow
+[INFO ] [2021-12-05 08:27:29,473] Add_New - Step 11: Click to 'Save' button
+[INFO ] [2021-12-05 08:27:34,787] Add_New - Step 12: Open 'Employee List' page
+[INFO ] [2021-12-05 08:27:46,690]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:27:46,692] Add_New - Step 13: Enter valid info to 'Employee Name' textbox
+[INFO ] [2021-12-05 08:27:46,924]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:27:50,759] Add_New - Step 14: Click to 'Search' button
+[INFO ] [2021-12-05 08:27:55,013]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:27:55,014] Add_New - Step 15: Verify Employee Information displayed at 'Result Table'
+[INFO ] [2021-12-05 08:28:55,611] Add_New - Step 01: Open 'Employee List' page
+[INFO ] [2021-12-05 08:29:04,524] Add_New - Step 02: Click to 'Add' button
+[INFO ] [2021-12-05 08:29:08,853] Add_New - Step 03: Enter valid info to 'First Name' textbox
+[INFO ] [2021-12-05 08:29:14,488] Add_New - Step 04: Enter valid info to 'Last Name' textbox
+[INFO ] [2021-12-05 08:29:18,426] Add_New - Step 05: Get value of 'Employee ID' textbox
+[INFO ] [2021-12-05 08:29:19,969] Add_New - Step 06: Click to 'Create Login Details' checkbox
+[INFO ] [2021-12-05 08:29:25,318] Add_New - Step 07: Enter valid info to 'Username' textbox
+[INFO ] [2021-12-05 08:29:29,970] Add_New - Step 08: Enter valid info to 'Password' textbox
+[INFO ] [2021-12-05 08:29:34,935] Add_New - Step 09: Enter valid info to 'Confirm password' textbox
+[INFO ] [2021-12-05 08:29:38,750] Add_New - Step 10: Select 'Enable' value in 'Status' dropndow
+[INFO ] [2021-12-05 08:29:41,272] Add_New - Step 11: Click to 'Save' button
+[INFO ] [2021-12-05 08:29:47,723] Add_New - Step 12: Open 'Employee List' page
+[INFO ] [2021-12-05 08:29:58,703]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:29:58,703] Add_New - Step 13: Enter valid info to 'Employee Name' textbox
+[INFO ] [2021-12-05 08:29:58,949]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:30:05,396] Add_New - Step 14: Click to 'Search' button
+[INFO ] [2021-12-05 08:30:10,064]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:30:10,064] Add_New - Step 15: Verify Employee Information displayed at 'Result Table'
+[INFO ] [2021-12-05 08:31:10,583] Add_New - Step 01: Open 'Employee List' page
+[INFO ] [2021-12-05 08:31:20,258] Add_New - Step 02: Click to 'Add' button
+[INFO ] [2021-12-05 08:31:24,343] Add_New - Step 03: Enter valid info to 'First Name' textbox
+[INFO ] [2021-12-05 08:31:28,162] Add_New - Step 04: Enter valid info to 'Last Name' textbox
+[INFO ] [2021-12-05 08:31:32,070] Add_New - Step 05: Get value of 'Employee ID' textbox
+[INFO ] [2021-12-05 08:31:33,146] Add_New - Step 06: Click to 'Create Login Details' checkbox
+[INFO ] [2021-12-05 08:31:36,363] Add_New - Step 07: Enter valid info to 'Username' textbox
+[INFO ] [2021-12-05 08:31:40,199] Add_New - Step 08: Enter valid info to 'Password' textbox
+[INFO ] [2021-12-05 08:31:44,518] Add_New - Step 09: Enter valid info to 'Confirm password' textbox
+[INFO ] [2021-12-05 08:31:48,864] Add_New - Step 10: Select 'Enable' value in 'Status' dropndow
+[INFO ] [2021-12-05 08:31:50,967] Add_New - Step 11: Click to 'Save' button
+[INFO ] [2021-12-05 08:31:55,005] Add_New - Step 12: Open 'Employee List' page
+[INFO ] [2021-12-05 08:32:03,999]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:32:04,000] Add_New - Step 13: Enter valid info to 'Employee Name' textbox
+[INFO ] [2021-12-05 08:32:04,245]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:32:08,104] Add_New - Step 14: Click to 'Search' button
+[INFO ] [2021-12-05 08:32:13,206]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:32:13,207] Add_New - Step 15: Verify Employee Information displayed at 'Result Table'
+[INFO ] [2021-12-05 08:33:13,760] Upload_Avatar_02 - Step 01: Login with Employee role
+[INFO ] [2021-12-05 08:33:35,530] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
+[INFO ] [2021-12-05 08:33:39,870] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
+[INFO ] [2021-12-05 08:33:44,097] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
+[INFO ] [2021-12-05 08:33:44,706] Upload_Avatar_02 - Step 01: Login with Employee role
+[INFO ] [2021-12-05 08:34:03,802] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
+[INFO ] [2021-12-05 08:34:08,719] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
+[INFO ] [2021-12-05 08:34:13,401] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
+[INFO ] [2021-12-05 08:34:14,023] Upload_Avatar_02 - Step 01: Login with Employee role
+[INFO ] [2021-12-05 08:34:35,462] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
+[INFO ] [2021-12-05 08:34:39,823] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
+[INFO ] [2021-12-05 08:34:43,628] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
+[INFO ] [2021-12-05 08:34:44,226] Personal Details - Step 01: Open 'Personal Details' form 
+[INFO ] [2021-12-05 08:34:48,220] Personal Details - Step 02: Verify all fields disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:34:49,940]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:34:51,054]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:34:52,619]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:34:53,657]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:34:56,363]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:34:57,854]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:34:58,884]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:00,333]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:01,483]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:02,658]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:02,658] Personal Details - Step 03: Click to 'Edit' button
+[INFO ] [2021-12-05 08:35:06,153] Personal Details - Step 04: Verify 'Employee Id' field disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:35:07,218]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:07,218] Personal Details - Step 06: Verify 'SSN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:35:08,251]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:08,251] Personal Details - Step 07: Verify 'SIN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:35:09,274]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:09,275] Personal Details - Step 08: Verify 'Date of Birth' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:35:10,293]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:10,293] Personal Details - Step 09: Enter 'First Name' textbox
+[INFO ] [2021-12-05 08:35:14,116] Personal Details - Step 10: Enter 'Last Name' textbox
+[INFO ] [2021-12-05 08:35:18,001] Personal Details - Step 11: Enter 'License Expiry Date' textbox
+[INFO ] [2021-12-05 08:35:22,660] Personal Details - Step 12: Select 'Gender' radio button
+[INFO ] [2021-12-05 08:35:26,002] Personal Details - Step 13: Select 'Marital Status' dropdown
+[INFO ] [2021-12-05 08:35:28,074] Personal Details - Step 14: Click to 'Save' button
+[INFO ] [2021-12-05 08:35:32,241] Personal Details - Step 15: Verify success message is displayed
+[INFO ] [2021-12-05 08:35:33,367]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:33,368] Personal Details - Step 16: Verify 'First Name' textbox is updated success
+[INFO ] [2021-12-05 08:35:34,519]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:34,520] Personal Details - Step 16: Verify 'Last Name' textbox is updated success
+[INFO ] [2021-12-05 08:35:35,586]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:35,587] Personal Details - Step 11: Verify 'License Expiry Date' textbox is updated success
+[INFO ] [2021-12-05 08:35:40,056]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:40,057] Personal Details - Step 12: Verify 'Gender' radio button is updated success 
+[INFO ] [2021-12-05 08:35:41,808]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:41,808] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-05 08:35:44,810]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:44,810] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-05 08:35:46,046]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-12-05 08:35:46,055] Personal Details - Step 01: Open 'Personal Details' form 
+[INFO ] [2021-12-05 08:35:51,146] Personal Details - Step 02: Verify all fields disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:35:52,391]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:55,070]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:56,285]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:57,483]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:35:58,809]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:00,090]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:02,798]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:03,879]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:04,988]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:06,152]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:06,152] Personal Details - Step 03: Click to 'Edit' button
+[INFO ] [2021-12-05 08:36:09,748] Personal Details - Step 04: Verify 'Employee Id' field disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:36:10,796]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:10,797] Personal Details - Step 06: Verify 'SSN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:36:11,851]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:11,851] Personal Details - Step 07: Verify 'SIN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:36:12,898]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:12,898] Personal Details - Step 08: Verify 'Date of Birth' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:36:13,985]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:13,985] Personal Details - Step 09: Enter 'First Name' textbox
+[INFO ] [2021-12-05 08:36:18,033] Personal Details - Step 10: Enter 'Last Name' textbox
+[INFO ] [2021-12-05 08:36:23,036] Personal Details - Step 11: Enter 'License Expiry Date' textbox
+[INFO ] [2021-12-05 08:36:31,442] Personal Details - Step 12: Select 'Gender' radio button
+[INFO ] [2021-12-05 08:36:36,379] Personal Details - Step 13: Select 'Marital Status' dropdown
+[INFO ] [2021-12-05 08:36:39,988] Personal Details - Step 14: Click to 'Save' button
+[INFO ] [2021-12-05 08:36:44,772] Personal Details - Step 15: Verify success message is displayed
+[INFO ] [2021-12-05 08:36:45,857]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:45,857] Personal Details - Step 16: Verify 'First Name' textbox is updated success
+[INFO ] [2021-12-05 08:36:47,019]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:47,020] Personal Details - Step 16: Verify 'Last Name' textbox is updated success
+[INFO ] [2021-12-05 08:36:48,073]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:48,073] Personal Details - Step 11: Verify 'License Expiry Date' textbox is updated success
+[INFO ] [2021-12-05 08:36:49,131]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:49,132] Personal Details - Step 12: Verify 'Gender' radio button is updated success 
+[INFO ] [2021-12-05 08:36:50,570]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:50,571] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-05 08:36:52,869]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:36:52,869] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-05 08:36:53,979]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-12-05 08:36:53,986] Personal Details - Step 01: Open 'Personal Details' form 
+[INFO ] [2021-12-05 08:36:59,144] Personal Details - Step 02: Verify all fields disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:37:01,774]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:02,817]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:03,883]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:05,493]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:06,580]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:07,789]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:08,865]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:10,007]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:11,076]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:12,139]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:12,140] Personal Details - Step 03: Click to 'Edit' button
+[INFO ] [2021-12-05 08:37:15,742] Personal Details - Step 04: Verify 'Employee Id' field disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:37:16,794]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:16,794] Personal Details - Step 06: Verify 'SSN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:37:17,823]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:17,824] Personal Details - Step 07: Verify 'SIN Number' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:37:18,835]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:18,836] Personal Details - Step 08: Verify 'Date of Birth' disable at 'Personal Details' form
+[INFO ] [2021-12-05 08:37:21,366]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:21,367] Personal Details - Step 09: Enter 'First Name' textbox
+[INFO ] [2021-12-05 08:37:27,011] Personal Details - Step 10: Enter 'Last Name' textbox
+[INFO ] [2021-12-05 08:37:31,916] Personal Details - Step 11: Enter 'License Expiry Date' textbox
+[INFO ] [2021-12-05 08:37:36,939] Personal Details - Step 12: Select 'Gender' radio button
+[INFO ] [2021-12-05 08:37:40,864] Personal Details - Step 13: Select 'Marital Status' dropdown
+[INFO ] [2021-12-05 08:37:43,700] Personal Details - Step 14: Click to 'Save' button
+[INFO ] [2021-12-05 08:37:49,199] Personal Details - Step 15: Verify success message is displayed
+[INFO ] [2021-12-05 08:37:51,192]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:51,192] Personal Details - Step 16: Verify 'First Name' textbox is updated success
+[INFO ] [2021-12-05 08:37:54,502]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:54,502] Personal Details - Step 16: Verify 'Last Name' textbox is updated success
+[INFO ] [2021-12-05 08:37:55,901]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:55,901] Personal Details - Step 11: Verify 'License Expiry Date' textbox is updated success
+[INFO ] [2021-12-05 08:37:57,496]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:57,497] Personal Details - Step 12: Verify 'Gender' radio button is updated success 
+[INFO ] [2021-12-05 08:37:58,923]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:37:58,924] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-05 08:38:01,342]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-12-05 08:38:01,342] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
+[INFO ] [2021-12-05 08:38:02,395]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-12-05 08:38:02,422] Post-Condition - Close Browser - Chrome
+[INFO ] [2021-12-05 08:38:02,422] OS name = windows 10

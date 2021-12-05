@@ -9,19 +9,17 @@
 		<listener class-name="retryConfig.RetryListener" />
 	</listeners>
 
-	<test name="Run on FIREFOX">
-		<parameter name="browser" value="Firefox" />
-		<parameter name="osName" value="Windows" />
-		<parameter name="osVersion" value="10" />
-		<classes>
-			<class name="com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab" />
-		</classes>
-	</test>
+<!-- 	<test name="Run on FIREFOX"> -->
+<!-- 		<parameter name="browser" value="Firefox" /> -->
+<!-- 		<parameter name="osName" value="macOS 11.00" /> -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
 	
-		<test name="Run on CHROM">
+		<test name="Run on CHROME">
 		<parameter name="browser" value="Chrome" />
-		<parameter name="osName" value="OS X" />
-		<parameter name="osVersion" value="Big Sur" />
+		<parameter name="osName" value="Windows 10" />
 		<classes>
 			<class name="com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab" />
 		</classes>
