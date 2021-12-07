@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.server.handler.GetCurrentUrl;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import commons.BaseTest;
@@ -14,13 +15,13 @@ import environmentConfig.Environment;
 public class Level_21_Multiple_Environment extends BaseTest{
 	Environment environment;
 	
-	@Parameters({"browser","url"})
+	@Parameters({"envName","serverName","browser","ipAddress", "portNumber", "osName", "osVersion"})
 	@BeforeClass
-	public void initBrowser(String browserName, String appURL) {
-		ConfigFactory.setProperty("env", appURL);
+	public void initBrowser(@Optional("local")String envName, @Optional("dev")String serverName, @Optional("firefox")String browserName, @Optional("localhost")String ipAddress, @Optional("4444")String portNumber, @Optional("Windows")String osName, @Optional("94")String osVersion) {
+		log.info("Pre-Condition - Step 01: Open browser '"+ browserName + "' and navigate '" + serverName + "'");
+		ConfigFactory.setProperty("env", "serverName");
 		environment = ConfigFactory.create(Environment.class);
-		
-		driver = getBrowserDriver(browserName, environment.applicationUrl());
+		driver = getBrowserDriver(envName, environment.applicationUrl(), browserName, ipAddress, portNumber, osName, osVersion);
 		System.out.println(driver.getCurrentUrl());
 	}
 	@Test
@@ -76,11 +77,11 @@ public class Level_21_Multiple_Environment extends BaseTest{
 	}
 
 	
-	@Parameters({"browser"})
+	@Parameters({"envName", "browser"})
 	@AfterClass(alwaysRun=true)
-	public void cleanBrowser(String browserName) {
+	public void cleanBrowser(@Optional("local")String envName, String browserName) {
 		log.info("Post-Condition - Close Browser - " + browserName + "");
-		cleanBrowserAndDriver();
+		cleanBrowserAndDriver(envName);
 	}
 	WebDriver driver;
 }

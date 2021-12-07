@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import commons.BaseTest;
@@ -246,11 +247,11 @@ public class Level_20_Data_Test_II_TestNG_XML extends BaseTest{
 	}
 
 	
-	@Parameters({"browser"})
+	@Parameters({"envName", "browser"})
 	@AfterClass(alwaysRun=true)
-	public void cleanBrowser(String browserName) {
+	public void cleanBrowser(@Optional("local")String envName, String browserName) {
 		log.info("Post-Condition - Close Browser - " + browserName + "");
-		cleanBrowserAndDriver();
+		cleanBrowserAndDriver(envName);
 	}
 	WebDriver driver;
 	LoginPO loginPage;

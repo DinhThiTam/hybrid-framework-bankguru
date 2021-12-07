@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <suite name="HRM">
-	<parameter name="url" value="https://opensource-demo.orangehrmlive.com/" />
+	<parameter name="evnName" value="grid" />
+	<parameter name="serverName" value="dev" />
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
@@ -14,7 +15,7 @@
 		<parameter name="ipAddress" value="192.168.1.8" />
 		<parameter name="portNumber" value="6666" />
 		<classes>
-			<class name="com.hrm.cloud.Level_16_Live_Coding_II_Grid" />
+			<class name="com.hrm.cloud.Level_16_Live_Coding_V_All" />
 		</classes>
 	</test>
 	

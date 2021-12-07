@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <suite name="HRM">
-	<parameter name="url" value="https://opensource-demo.orangehrmlive.com/" />
+	<parameter name="envName" value="saucelab" />
+	<parameter name="serverName" value="dev" />
 	<listeners>
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
@@ -21,7 +22,7 @@
 		<parameter name="browser" value="Chrome" />
 		<parameter name="osName" value="Windows 10" />
 		<classes>
-			<class name="com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab" />
+			<class name="com.hrm.cloud.Level_16_Live_Coding_V_All" />
 		</classes>
 	</test>
 

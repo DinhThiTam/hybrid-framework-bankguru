@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import commons.BaseTest;
@@ -53,11 +54,11 @@ public class Level_22_Database_UI extends BaseTest {
 				
 	}
 
-	@Parameters({ "browser" })
-	@AfterClass(alwaysRun = true)
-	public void cleanBrowser(String browserName) {
+	@Parameters({"envName", "browser"})
+	@AfterClass(alwaysRun=true)
+	public void cleanBrowser(@Optional("local")String envName, String browserName) {
 		log.info("Post-Condition - Close Browser - " + browserName + "");
-		cleanBrowserAndDriver();
+		cleanBrowserAndDriver(envName);
 	}
 
 	WebDriver driver;

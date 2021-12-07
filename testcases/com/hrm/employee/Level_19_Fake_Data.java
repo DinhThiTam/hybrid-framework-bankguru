@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Sleeper;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -29,11 +30,11 @@ public class Level_19_Fake_Data extends BaseTest{
 	String projectLocation = System.getProperty("user.dir");
 	String employeeID, statusValue, empUsername, empPassword, userName, password, firstName, lastName, fullName, avatarFilePath; 
 	String editEmpFirstName, editEmpLastName, licenseExpiryDate, editEmpGender, maritalStatus;
-	@Parameters({"browser","url"})
+	@Parameters({"envName","serverName","browser","ipAddress", "portNumber", "osName", "osVersion"})
 	@BeforeClass
-	public void initBrowser(String browserName, String appURL) {
-		log.info("Pre-Condition - Step 01: Open browser '"+ browserName + "' and navigate '" + appURL + "'");
-		driver = getBrowserDriver(browserName, appURL);
+	public void initBrowser(@Optional("local")String envName, @Optional("dev")String serverName, @Optional("firefox")String browserName, @Optional("localhost")String ipAddress, @Optional("4444")String portNumber, @Optional("Windows")String osName, @Optional("94")String osVersion) {
+		log.info("Pre-Condition - Step 01: Open browser '"+ browserName + "' and navigate '" + serverName + "'");
+		driver = getBrowserDriver(envName, serverName, browserName, ipAddress, portNumber, osName, osVersion);
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 		fakeData = DataUtil.getData();
 		
@@ -250,12 +251,11 @@ public class Level_19_Fake_Data extends BaseTest{
 		
 	}
 
-	
-	@Parameters({"browser"})
+	@Parameters({"envName", "browser"})
 	@AfterClass(alwaysRun=true)
-	public void cleanBrowser(String browserName) {
+	public void cleanBrowser(@Optional("local")String envName, String browserName) {
 		log.info("Post-Condition - Close Browser - " + browserName + "");
-		cleanBrowserAndDriver();
+		cleanBrowserAndDriver(envName);
 	}
 	WebDriver driver;
 	LoginPO loginPage;
