@@ -31,7 +31,7 @@ import factoryEnvironment.BrowserStackFactory;
 import factoryEnvironment.GridFactory;
 import factoryEnvironment.LocalFactory;
 import factoryEnvironment.SauceLabFactory;
-import factoryEnvironment.ServerName;
+import factoryEnvironment.ServerNameList;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import reportConfig.VerificationFailures;
 
@@ -116,14 +116,14 @@ public class BaseTest {
 		
 	private String getServerName(String serverName) {
 		String envUrl = null;
-		ServerName environment = ServerName.valueOf(serverName.toUpperCase());
-		if(environment==ServerName.DEV) {
+		ServerNameList environment = ServerNameList.valueOf(serverName.toUpperCase());
+		if(environment==ServerNameList.DEV) {
 			envUrl = "https://opensource-demo.orangehrmlive.com/";	
-		}else if (environment==ServerName.TESTING) {
+		}else if (environment==ServerNameList.TESTING) {
 			envUrl = "https://opensource-demo.orangehrmlive.com/";
-		}else if (environment==ServerName.STAGING) {
+		}else if (environment==ServerNameList.STAGING) {
 			envUrl = "https://opensource-demo.orangehrmlive.com/";
-		}else if (environment==ServerName.STAGING) {
+		}else if (environment==ServerNameList.STAGING) {
 			envUrl = "https://opensource-demo.orangehrmlive.com/";
 		}
 		return envUrl;

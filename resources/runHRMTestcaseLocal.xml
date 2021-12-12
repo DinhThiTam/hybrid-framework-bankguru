@@ -10,8 +10,15 @@
 		<listener class-name="retryConfig.RetryListener" />
 	</listeners>
 
-	<test name="Run on FIREFOX">
-		<parameter name="browser" value="firefox" />
+<!-- 	<test name="Run on FIREFOX"> -->
+<!-- 		<parameter name="browser" value="firefox" /> -->
+<!-- 		<classes> -->
+<!-- 			<class name="com.hrm.cloud.Level_16_Live_Coding_V_All" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+	
+	<test name="Run on CHROME">
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.hrm.cloud.Level_16_Live_Coding_V_All" />
 		</classes>

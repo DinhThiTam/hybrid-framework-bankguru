@@ -1,5 +1,5 @@
 package factoryEnvironment;
 
-public enum ServerName {
+public enum ServerNameList {
 	DEV, TESTING, STAGING, PRODUCT; 
 }

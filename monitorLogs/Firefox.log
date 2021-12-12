@@ -1,7 +1,20 @@
-1638463261524	geckodriver	INFO	Listening on 127.0.0.1:44690
-1638463262200	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\DTTAM~1\\AppData\\Local\\Temp\\rust_mozprofilesEMEUa"
-1638463263333	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\DT TAM\\AppData\\Local\\Temp\\rust_mozprofilesEMEUa\\search.json.mozlz4", (void 0)))
-1638463269068	Marionette	INFO	Listening on port 60039
-1638463269214	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-1638463335810	Marionette	INFO	Stopped listening on port 60039
+1639336292507	geckodriver	INFO	Listening on 127.0.0.1:48279
+1639336294066	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\DTTAM~1\\AppData\\Local\\Temp\\rust_mozprofile7kz8Eb"
+1639336295486	Marionette	INFO	Marionette enabled
+WARNING: content window passed to PrivateBrowsingUtils.isWindowPrivate. Use isContentWindowPrivate instead (but only for frame scripts).
+pbu_isWindowPrivate@resource://gre/modules/PrivateBrowsingUtils.jsm:27:11
+isBrowserPrivate@resource://gre/modules/PrivateBrowsingUtils.jsm:47:19
+loadURI@resource://gre/modules/RemoteWebNavigation.jsm:90:51
+loadURI/<@chrome://global/content/elements/browser-custom-element.js:809:28
+_wrapURIChangeCall@chrome://global/content/elements/browser-custom-element.js:738:9
+loadURI@chrome://global/content/elements/browser-custom-element.js:808:12
+loadURI@chrome://mozapps/content/extensions/aboutaddons.js:2491:18
+render/<@chrome://mozapps/content/extensions/aboutaddons.js:2470:14
+render@chrome://mozapps/content/extensions/aboutaddons.js:2429:11
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\DT TAM\\AppData\\Local\\Temp\\rust_mozprofile7kz8Eb\\search.json.mozlz4", (void 0)))
+1639336300454	Marionette	INFO	Listening on port 49393
+1639336300532	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1639336373892	Marionette	INFO	Stopped listening on port 49393
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

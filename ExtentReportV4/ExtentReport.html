@@ -46,7 +46,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Dec 5, 2021 08:38:03 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 12, 2021 11:16:36 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -129,15 +129,15 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_01_Add_New_Employee</span>
-						<span class='test-time'>Dec 5, 2021 08:31:10 AM</span>
+						<span class='test-name'>Employee_02_Upload_Avatar</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:31:10 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 6m 53s+96ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+832ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -151,14 +151,10 @@
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //table[@id='resultTable']/tbody/tr[1]/td[2] (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at commons.BasePage.waitForElementVisible(BasePage.java:544)
-	at commons.BasePage.getValueInTableIDAtColumnNameAndRowIndex(BasePage.java:727)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_01_Add_New_Employee(Level_16_Live_Coding_IV_Saucelab.java:107)
+						<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.EmployeeListPO.clickToLogoutLink(org.openqa.selenium.WebDriver)" because "this.employeePage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_02_Upload_Avatar(Level_16_Live_Coding_V_All.java:116)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -184,33 +180,6 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='resultTable']/tbody/tr[1]/td[2]"}
-  (Session info: chrome=96.0.4664.45)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-*** Element info: {Using=xpath, value=//table[@id='resultTable']/tbody/tr[1]/td[2]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 28 more
 </textarea>
 					
 				</td>
@@ -222,15 +191,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_02_Upload_Avatar</span>
-						<span class='test-time'>Dec 5, 2021 08:34:14 AM</span>
+						<span class='test-name'>Employee_01_Add_New_Employee</span>
+						<span class='test-time'>Dec 12, 2021 11:15:34 AM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:34:14 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 3m 49s+676ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:15:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 1s+925ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -244,29 +213,14 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : D:\TAM\Auto test\AutomationFC\Pet Project\hybriddemo\hybrid_framework_bankguru\uploadFiles\Adobe.jpg
-  (Session info: chrome=96.0.4664.45)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
-	at commons.BasePage.uploadImage(BasePage.java:770)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_02_Upload_Avatar(Level_16_Live_Coding_IV_Saucelab.java:126)
+						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id='mainMenu']//a[string()='PIM'] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at commons.BasePage.waitForElementClickable(BasePage.java:569)
+	at commons.BasePage.openSubMenuPage(BasePage.java:678)
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_01_Add_New_Employee(Level_16_Live_Coding_V_All.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -292,6 +246,36 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='mainMenu']//a[string()='PIM']"}
+  (Session info: chrome=96.0.4664.93)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-EIC3NR5', ip: '172.28.144.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\DTTAM~1\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ef752643dc9b3031dbd74b788fd4ef8
+*** Element info: {Using=xpath, value=//div[@id='mainMenu']//a[string()='PIM']}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
 </textarea>
 					
 				</td>
@@ -304,14 +288,14 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>Employee_03_Personal_Details</span>
-						<span class='test-time'>Dec 5, 2021 08:36:53 AM</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:36:53 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+713ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+822ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -325,17 +309,10 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">java.lang.AssertionError: expected [0269] but found [0261]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:387)
-	at commons.BaseTest.verifyEquals(BaseTest.java:399)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_03_Personal_Details(Level_16_Live_Coding_IV_Saucelab.java:206)
+						<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.MyInfoPO.openTabMenuByName(String)" because "this.myInfoPage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_03_Personal_Details(Level_16_Live_Coding_V_All.java:141)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -373,14 +350,14 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				<li class='test displayed active  skip' status='skip' bdd='false' test-id='4'>
 					<div class='test-heading'>
 						<span class='test-name'>Employee_02_Upload_Avatar</span>
-						<span class='test-time'>Dec 5, 2021 08:33:44 AM</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:33:44 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 4m 18s+996ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+866ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -394,37 +371,18 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='skip'>
 				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : D:\TAM\Auto test\AutomationFC\Pet Project\hybriddemo\hybrid_framework_bankguru\uploadFiles\Adobe.jpg
-  (Session info: chrome=96.0.4664.45)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
-	at commons.BasePage.uploadImage(BasePage.java:770)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_02_Upload_Avatar(Level_16_Live_Coding_IV_Saucelab.java:126)
+						<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.EmployeeListPO.clickToLogoutLink(org.openqa.selenium.WebDriver)" because "this.employeePage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_02_Upload_Avatar(Level_16_Live_Coding_V_All.java:116)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 	at org.testng.TestRunner.privateRun(TestRunner.java:648)
@@ -453,15 +411,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  skip' status='skip' bdd='false' test-id='5'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_02_Upload_Avatar</span>
-						<span class='test-time'>Dec 5, 2021 08:33:13 AM</span>
+						<span class='test-name'>Employee_01_Add_New_Employee</span>
+						<span class='test-time'>Dec 12, 2021 11:13:34 AM</span>
 						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:33:13 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 4m 49s+945ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:13:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 2s+55ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -475,29 +433,14 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='skip'>
 				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : D:\TAM\Auto test\AutomationFC\Pet Project\hybriddemo\hybrid_framework_bankguru\uploadFiles\Adobe.jpg
-  (Session info: chrome=96.0.4664.45)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
-	at commons.BasePage.uploadImage(BasePage.java:770)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_02_Upload_Avatar(Level_16_Live_Coding_IV_Saucelab.java:126)
+						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id='mainMenu']//a[string()='PIM'] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at commons.BasePage.waitForElementClickable(BasePage.java:569)
+	at commons.BasePage.openSubMenuPage(BasePage.java:678)
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_01_Add_New_Employee(Level_16_Live_Coding_V_All.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -523,6 +466,36 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='mainMenu']//a[string()='PIM']"}
+  (Session info: chrome=96.0.4664.93)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-EIC3NR5', ip: '172.28.144.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\DTTAM~1\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ef752643dc9b3031dbd74b788fd4ef8
+*** Element info: {Using=xpath, value=//div[@id='mainMenu']//a[string()='PIM']}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
 </textarea>
 					
 				</td>
@@ -534,15 +507,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  skip' status='skip' bdd='false' test-id='6'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_03_Personal_Details</span>
-						<span class='test-time'>Dec 5, 2021 08:35:46 AM</span>
+						<span class='test-name'>Employee_01_Add_New_Employee</span>
+						<span class='test-time'>Dec 12, 2021 11:14:34 AM</span>
 						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:35:46 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 2m 17s+651ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:14:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 1s+953ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -556,17 +529,106 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='skip'>
 				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">java.lang.AssertionError: expected [0269] but found [0261]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:387)
-	at commons.BaseTest.verifyEquals(BaseTest.java:399)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_03_Personal_Details(Level_16_Live_Coding_IV_Saucelab.java:206)
+						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id='mainMenu']//a[string()='PIM'] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at commons.BasePage.waitForElementClickable(BasePage.java:569)
+	at commons.BasePage.openSubMenuPage(BasePage.java:678)
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_01_Add_New_Employee(Level_16_Live_Coding_V_All.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='mainMenu']//a[string()='PIM']"}
+  (Session info: chrome=96.0.4664.93)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-EIC3NR5', ip: '172.28.144.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\DTTAM~1\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ef752643dc9b3031dbd74b788fd4ef8
+*** Element info: {Using=xpath, value=//div[@id='mainMenu']//a[string()='PIM']}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+</textarea>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Employee_03_Personal_Details</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+833ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>11:16:36 AM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.MyInfoPO.openTabMenuByName(String)" because "this.myInfoPage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_03_Personal_Details(Level_16_Live_Coding_V_All.java:141)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -601,110 +663,17 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  skip' status='skip' bdd='false' test-id='7'>
-					<div class='test-heading'>
-						<span class='test-name'>Employee_01_Add_New_Employee</span>
-						<span class='test-time'>Dec 5, 2021 08:26:40 AM</span>
-						<span class='test-status right skip'>skip</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:26:40 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 11m 23s+265ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='skip'>
-				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
-				<td class='step-details'>
-						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //table[@id='resultTable']/tbody/tr[1]/td[2] (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at commons.BasePage.waitForElementVisible(BasePage.java:544)
-	at commons.BasePage.getValueInTableIDAtColumnNameAndRowIndex(BasePage.java:727)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_01_Add_New_Employee(Level_16_Live_Coding_IV_Saucelab.java:107)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='resultTable']/tbody/tr[1]/td[2]"}
-  (Session info: chrome=96.0.4664.45)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-*** Element info: {Using=xpath, value=//table[@id='resultTable']/tbody/tr[1]/td[2]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 28 more
-</textarea>
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
 				<li class='test displayed active  skip' status='skip' bdd='false' test-id='8'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_03_Personal_Details</span>
-						<span class='test-time'>Dec 5, 2021 08:34:44 AM</span>
+						<span class='test-name'>Employee_02_Upload_Avatar</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:34:44 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 3m 19s+482ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+857ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -718,25 +687,18 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='skip'>
 				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">java.lang.AssertionError: expected [0269] but found [0261]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:387)
-	at commons.BaseTest.verifyEquals(BaseTest.java:399)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_03_Personal_Details(Level_16_Live_Coding_IV_Saucelab.java:206)
+						<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.EmployeeListPO.clickToLogoutLink(org.openqa.selenium.WebDriver)" because "this.employeePage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_02_Upload_Avatar(Level_16_Live_Coding_V_All.java:116)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 	at org.testng.TestRunner.privateRun(TestRunner.java:648)
@@ -765,15 +727,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  skip' status='skip' bdd='false' test-id='9'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_01_Add_New_Employee</span>
-						<span class='test-time'>Dec 5, 2021 08:28:55 AM</span>
+						<span class='test-name'>Employee_03_Personal_Details</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:28:55 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 9m 8s+99ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+843ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -787,22 +749,18 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='skip'>
 				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
-						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //table[@id='resultTable']/tbody/tr[1]/td[2] (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at commons.BasePage.waitForElementVisible(BasePage.java:544)
-	at commons.BasePage.getValueInTableIDAtColumnNameAndRowIndex(BasePage.java:727)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_01_Add_New_Employee(Level_16_Live_Coding_IV_Saucelab.java:107)
+						<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.MyInfoPO.openTabMenuByName(String)" because "this.myInfoPage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_03_Personal_Details(Level_16_Live_Coding_V_All.java:141)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 	at org.testng.TestRunner.privateRun(TestRunner.java:648)
@@ -820,33 +778,6 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='resultTable']/tbody/tr[1]/td[2]"}
-  (Session info: chrome=96.0.4664.45)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-*** Element info: {Using=xpath, value=//table[@id='resultTable']/tbody/tr[1]/td[2]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 28 more
 </textarea>
 					
 				</td>
@@ -858,15 +789,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_11_Search_Employee</span>
-						<span class='test-time'>Dec 5, 2021 08:38:02 AM</span>
+						<span class='test-name'>Employee_07_Edit_View_Job</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:38:02 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+294ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+808ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -880,7 +811,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
 						Test passed
 					
@@ -893,15 +824,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_05_Emergency_Details</span>
-						<span class='test-time'>Dec 5, 2021 08:38:02 AM</span>
+						<span class='test-name'>Employee_06_Assigned_Dependents</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:38:02 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+309ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+812ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -915,7 +846,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
 						Test passed
 					
@@ -928,15 +859,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_09_Edit_View_Tax</span>
-						<span class='test-time'>Dec 5, 2021 08:38:02 AM</span>
+						<span class='test-name'>Employee_04_Contact_Details</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:38:02 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+299ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+823ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -950,7 +881,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
 						Test passed
 					
@@ -963,15 +894,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_07_Edit_View_Job</span>
-						<span class='test-time'>Dec 5, 2021 08:38:02 AM</span>
+						<span class='test-name'>Employee_08_Edit_View_Salary</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:38:02 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+304ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+771ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -985,7 +916,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
 						Test passed
 					
@@ -998,15 +929,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_04_Contact_Details</span>
-						<span class='test-time'>Dec 5, 2021 08:38:02 AM</span>
+						<span class='test-name'>Employee_11_Search_Employee</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:38:02 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+313ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+744ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1020,7 +951,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
 						Test passed
 					
@@ -1033,15 +964,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_10_Qualifications</span>
-						<span class='test-time'>Dec 5, 2021 08:38:02 AM</span>
+						<span class='test-name'>Employee_09_Edit_View_Tax</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:38:02 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+299ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+757ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1055,7 +986,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
 						Test passed
 					
@@ -1068,15 +999,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_06_Assigned_Dependents</span>
-						<span class='test-time'>Dec 5, 2021 08:38:02 AM</span>
+						<span class='test-name'>Employee_05_Emergency_Details</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:38:02 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+307ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+820ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1090,7 +1021,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
 						Test passed
 					
@@ -1103,15 +1034,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
 					<div class='test-heading'>
-						<span class='test-name'>Employee_08_Edit_View_Salary</span>
-						<span class='test-time'>Dec 5, 2021 08:38:02 AM</span>
+						<span class='test-name'>Employee_10_Qualifications</span>
+						<span class='test-time'>Dec 12, 2021 11:16:34 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 5, 2021 08:38:02 AM</span>
-	<span class='label end-time'>Dec 5, 2021 08:38:03 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+304ms</span>
+	<span class='label start-time'>Dec 12, 2021 11:16:34 AM</span>
+	<span class='label end-time'>Dec 12, 2021 11:16:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+755ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1125,7 +1056,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>8:38:03 AM</td>
+				<td class='timestamp'>11:16:36 AM</td>
 				<td class='step-details'>
 						Test passed
 					
@@ -1176,6 +1107,231 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 			<ul id='exception-collection' class='exception-collection'>
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.NullPointerException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>6</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 12, 2021 11:16:34 AM</td>
+										<td class='linked' test-id='1'>Employee_02_Upload_Avatar</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.EmployeeListPO.clickToLogoutLink(org.openqa.selenium.WebDriver)" because "this.employeePage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_02_Upload_Avatar(Level_16_Live_Coding_V_All.java:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 12, 2021 11:16:34 AM</td>
+										<td class='linked' test-id='3'>Employee_03_Personal_Details</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.MyInfoPO.openTabMenuByName(String)" because "this.myInfoPage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_03_Personal_Details(Level_16_Live_Coding_V_All.java:141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 12, 2021 11:16:34 AM</td>
+										<td class='linked' test-id='4'>Employee_02_Upload_Avatar</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.EmployeeListPO.clickToLogoutLink(org.openqa.selenium.WebDriver)" because "this.employeePage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_02_Upload_Avatar(Level_16_Live_Coding_V_All.java:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 12, 2021 11:16:34 AM</td>
+										<td class='linked' test-id='7'>Employee_03_Personal_Details</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.MyInfoPO.openTabMenuByName(String)" because "this.myInfoPage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_03_Personal_Details(Level_16_Live_Coding_V_All.java:141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 12, 2021 11:16:34 AM</td>
+										<td class='linked' test-id='8'>Employee_02_Upload_Avatar</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.EmployeeListPO.clickToLogoutLink(org.openqa.selenium.WebDriver)" because "this.employeePage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_02_Upload_Avatar(Level_16_Live_Coding_V_All.java:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Dec 12, 2021 11:16:34 AM</td>
+										<td class='linked' test-id='9'>Employee_03_Personal_Details</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "pageObject.hrm.MyInfoPO.openTabMenuByName(String)" because "this.myInfoPage" is null
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_03_Personal_Details(Level_16_Live_Coding_V_All.java:141)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
 						<span class='exception-name'>org.openqa.selenium.TimeoutException</span>
 						<span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
 					</div>
@@ -1191,15 +1347,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 5, 2021 08:31:10 AM</td>
-										<td class='linked' test-id='1'>Employee_01_Add_New_Employee</td>
+										<td>Dec 12, 2021 11:15:34 AM</td>
+										<td class='linked' test-id='2'>Employee_01_Add_New_Employee</td>
 										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //table[@id='resultTable']/tbody/tr[1]/td[2] (tried for 30 second(s) with 500 milliseconds interval)
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id='mainMenu']//a[string()='PIM'] (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at commons.BasePage.waitForElementVisible(BasePage.java:544)
-	at commons.BasePage.getValueInTableIDAtColumnNameAndRowIndex(BasePage.java:727)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_01_Add_New_Employee(Level_16_Live_Coding_IV_Saucelab.java:107)
+	at commons.BasePage.waitForElementClickable(BasePage.java:569)
+	at commons.BasePage.openSubMenuPage(BasePage.java:678)
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_01_Add_New_Employee(Level_16_Live_Coding_V_All.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1225,15 +1381,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='resultTable']/tbody/tr[1]/td[2]"}
-  (Session info: chrome=96.0.4664.45)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='mainMenu']//a[string()='PIM']"}
+  (Session info: chrome=96.0.4664.93)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-*** Element info: {Using=xpath, value=//table[@id='resultTable']/tbody/tr[1]/td[2]}
+System info: host: 'DESKTOP-EIC3NR5', ip: '172.28.144.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\DTTAM~1\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ef752643dc9b3031dbd74b788fd4ef8
+*** Element info: {Using=xpath, value=//div[@id='mainMenu']//a[string()='PIM']}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -1243,6 +1399,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
@@ -1250,21 +1407,23 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 28 more
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 5, 2021 08:26:40 AM</td>
-										<td class='linked' test-id='7'>Employee_01_Add_New_Employee</td>
+										<td>Dec 12, 2021 11:13:34 AM</td>
+										<td class='linked' test-id='5'>Employee_01_Add_New_Employee</td>
 										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //table[@id='resultTable']/tbody/tr[1]/td[2] (tried for 30 second(s) with 500 milliseconds interval)
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id='mainMenu']//a[string()='PIM'] (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at commons.BasePage.waitForElementVisible(BasePage.java:544)
-	at commons.BasePage.getValueInTableIDAtColumnNameAndRowIndex(BasePage.java:727)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_01_Add_New_Employee(Level_16_Live_Coding_IV_Saucelab.java:107)
+	at commons.BasePage.waitForElementClickable(BasePage.java:569)
+	at commons.BasePage.openSubMenuPage(BasePage.java:678)
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_01_Add_New_Employee(Level_16_Live_Coding_V_All.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1290,15 +1449,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='resultTable']/tbody/tr[1]/td[2]"}
-  (Session info: chrome=96.0.4664.45)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='mainMenu']//a[string()='PIM']"}
+  (Session info: chrome=96.0.4664.93)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-*** Element info: {Using=xpath, value=//table[@id='resultTable']/tbody/tr[1]/td[2]}
+System info: host: 'DESKTOP-EIC3NR5', ip: '172.28.144.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\DTTAM~1\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ef752643dc9b3031dbd74b788fd4ef8
+*** Element info: {Using=xpath, value=//div[@id='mainMenu']//a[string()='PIM']}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -1308,6 +1467,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
@@ -1315,21 +1475,23 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 28 more
 </textarea>
 										</td>
 									</tr>
 									<tr>
-										<td>Dec 5, 2021 08:28:55 AM</td>
-										<td class='linked' test-id='9'>Employee_01_Add_New_Employee</td>
+										<td>Dec 12, 2021 11:14:34 AM</td>
+										<td class='linked' test-id='6'>Employee_01_Add_New_Employee</td>
 										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //table[@id='resultTable']/tbody/tr[1]/td[2] (tried for 30 second(s) with 500 milliseconds interval)
+											<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id='mainMenu']//a[string()='PIM'] (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at commons.BasePage.waitForElementVisible(BasePage.java:544)
-	at commons.BasePage.getValueInTableIDAtColumnNameAndRowIndex(BasePage.java:727)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_01_Add_New_Employee(Level_16_Live_Coding_IV_Saucelab.java:107)
+	at commons.BasePage.waitForElementClickable(BasePage.java:569)
+	at commons.BasePage.openSubMenuPage(BasePage.java:678)
+	at com.hrm.cloud.Level_16_Live_Coding_V_All.Employee_01_Add_New_Employee(Level_16_Live_Coding_V_All.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1355,15 +1517,15 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='resultTable']/tbody/tr[1]/td[2]"}
-  (Session info: chrome=96.0.4664.45)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='mainMenu']//a[string()='PIM']"}
+  (Session info: chrome=96.0.4664.93)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-*** Element info: {Using=xpath, value=//table[@id='resultTable']/tbody/tr[1]/td[2]}
+System info: host: 'DESKTOP-EIC3NR5', ip: '172.28.144.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\DTTAM~1\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ef752643dc9b3031dbd74b788fd4ef8
+*** Element info: {Using=xpath, value=//div[@id='mainMenu']//a[string()='PIM']}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -1373,6 +1535,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
@@ -1380,332 +1543,10 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 28 more
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.InvalidArgumentException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Dec 5, 2021 08:34:14 AM</td>
-										<td class='linked' test-id='2'>Employee_02_Upload_Avatar</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : D:\TAM\Auto test\AutomationFC\Pet Project\hybriddemo\hybrid_framework_bankguru\uploadFiles\Adobe.jpg
-  (Session info: chrome=96.0.4664.45)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
-	at commons.BasePage.uploadImage(BasePage.java:770)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_02_Upload_Avatar(Level_16_Live_Coding_IV_Saucelab.java:126)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Dec 5, 2021 08:33:44 AM</td>
-										<td class='linked' test-id='4'>Employee_02_Upload_Avatar</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : D:\TAM\Auto test\AutomationFC\Pet Project\hybriddemo\hybrid_framework_bankguru\uploadFiles\Adobe.jpg
-  (Session info: chrome=96.0.4664.45)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
-	at commons.BasePage.uploadImage(BasePage.java:770)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_02_Upload_Avatar(Level_16_Live_Coding_IV_Saucelab.java:126)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Dec 5, 2021 08:33:13 AM</td>
-										<td class='linked' test-id='5'>Employee_02_Upload_Avatar</td>
-										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : D:\TAM\Auto test\AutomationFC\Pet Project\hybriddemo\hybrid_framework_bankguru\uploadFiles\Adobe.jpg
-  (Session info: chrome=96.0.4664.45)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-EIC3NR5', ip: '192.168.1.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56074}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
-	at commons.BasePage.uploadImage(BasePage.java:770)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_02_Upload_Avatar(Level_16_Live_Coding_IV_Saucelab.java:126)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.AssertionError</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>3</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Dec 5, 2021 08:36:53 AM</td>
-										<td class='linked' test-id='3'>Employee_03_Personal_Details</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: expected [0269] but found [0261]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:387)
-	at commons.BaseTest.verifyEquals(BaseTest.java:399)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_03_Personal_Details(Level_16_Live_Coding_IV_Saucelab.java:206)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Dec 5, 2021 08:35:46 AM</td>
-										<td class='linked' test-id='6'>Employee_03_Personal_Details</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: expected [0269] but found [0261]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:387)
-	at commons.BaseTest.verifyEquals(BaseTest.java:399)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_03_Personal_Details(Level_16_Live_Coding_IV_Saucelab.java:206)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Dec 5, 2021 08:34:44 AM</td>
-										<td class='linked' test-id='8'>Employee_03_Personal_Details</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: expected [0269] but found [0261]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
-	at commons.BaseTest.checkEquals(BaseTest.java:387)
-	at commons.BaseTest.verifyEquals(BaseTest.java:399)
-	at com.hrm.cloud.Level_16_Live_Coding_IV_Saucelab.Employee_03_Personal_Details(Level_16_Live_Coding_IV_Saucelab.java:206)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </textarea>
 										</td>
 									</tr>
@@ -1743,19 +1584,19 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 5, 2021 08:38:03 AM</div>
+					<div class='panel-lead'>Dec 12, 2021 11:16:36 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 5, 2021 08:38:03 AM</div>
+			 		<div class='panel-lead'>Dec 12, 2021 11:16:36 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 0s+235ms</div>
+					<div class='panel-lead'>0h 0m 0s+148ms</div>
 				</div>
 			</div>
 		</div>
@@ -1767,395 +1608,35 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		<h5>TestRunner Logs</h5>
 		
 		<div class='card-panel'>
-				[INFO ] [2021-12-05 08:26:11,425] --------START delete file in folder---------
+				[INFO ] [2021-12-12 11:13:20,200] --------START delete file in folder---------
 <br><br>
-				[INFO ] [2021-12-05 08:26:11,428] --------END delete file in folder---------
+				[INFO ] [2021-12-12 11:13:20,202] --------END delete file in folder---------
 <br><br>
-				[INFO ] [2021-12-05 08:26:11,453] Pre-Condition - Step 01: Open browser 'Chrome' and navigate 'https://opensource-demo.orangehrmlive.com/'
+				[INFO ] [2021-12-12 11:13:20,235] Pre-Condition - Step 01: Open browser 'chrome' and navigate 'dev'
 <br><br>
-				[INFO ] [2021-12-05 08:26:22,232] Pre-Condition - Step 02: Login with Admin role
+				[INFO ] [2021-12-12 11:13:30,478] Pre-Condition - Step 02: Login with Admin role
 <br><br>
-				[INFO ] [2021-12-05 08:26:40,449] Add_New - Step 01: Open 'Employee List' page
+				[INFO ] [2021-12-12 11:13:34,561] Add_New - Step 01: Open 'Employee List' page
 <br><br>
-				[INFO ] [2021-12-05 08:26:51,418] Add_New - Step 02: Click to 'Add' button
+				[INFO ] [2021-12-12 11:14:34,655] Add_New - Step 01: Open 'Employee List' page
 <br><br>
-				[INFO ] [2021-12-05 08:26:55,675] Add_New - Step 03: Enter valid info to 'First Name' textbox
+				[INFO ] [2021-12-12 11:15:34,677] Add_New - Step 01: Open 'Employee List' page
 <br><br>
-				[INFO ] [2021-12-05 08:27:01,294] Add_New - Step 04: Enter valid info to 'Last Name' textbox
+				[INFO ] [2021-12-12 11:16:34,739] Upload_Avatar_02 - Step 01: Login with Employee role
 <br><br>
-				[INFO ] [2021-12-05 08:27:06,002] Add_New - Step 05: Get value of 'Employee ID' textbox
+				[INFO ] [2021-12-12 11:16:34,751] Upload_Avatar_02 - Step 01: Login with Employee role
 <br><br>
-				[INFO ] [2021-12-05 08:27:07,084] Add_New - Step 06: Click to 'Create Login Details' checkbox
+				[INFO ] [2021-12-12 11:16:34,758] Upload_Avatar_02 - Step 01: Login with Employee role
 <br><br>
-				[INFO ] [2021-12-05 08:27:11,135] Add_New - Step 07: Enter valid info to 'Username' textbox
+				[INFO ] [2021-12-12 11:16:34,766] Personal Details - Step 01: Open 'Personal Details' form 
 <br><br>
-				[INFO ] [2021-12-05 08:27:15,290] Add_New - Step 08: Enter valid info to 'Password' textbox
+				[INFO ] [2021-12-12 11:16:34,775] Personal Details - Step 01: Open 'Personal Details' form 
 <br><br>
-				[INFO ] [2021-12-05 08:27:19,852] Add_New - Step 09: Enter valid info to 'Confirm password' textbox
+				[INFO ] [2021-12-12 11:16:34,783] Personal Details - Step 01: Open 'Personal Details' form 
 <br><br>
-				[INFO ] [2021-12-05 08:27:27,389] Add_New - Step 10: Select 'Enable' value in 'Status' dropndow
+				[INFO ] [2021-12-12 11:16:34,875] Post-Condition - Close Browser - chrome
 <br><br>
-				[INFO ] [2021-12-05 08:27:29,473] Add_New - Step 11: Click to 'Save' button
-<br><br>
-				[INFO ] [2021-12-05 08:27:34,787] Add_New - Step 12: Open 'Employee List' page
-<br><br>
-				[INFO ] [2021-12-05 08:27:46,690]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:27:46,692] Add_New - Step 13: Enter valid info to 'Employee Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:27:46,924]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:27:50,759] Add_New - Step 14: Click to 'Search' button
-<br><br>
-				[INFO ] [2021-12-05 08:27:55,013]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:27:55,014] Add_New - Step 15: Verify Employee Information displayed at 'Result Table'
-<br><br>
-				[INFO ] [2021-12-05 08:28:55,611] Add_New - Step 01: Open 'Employee List' page
-<br><br>
-				[INFO ] [2021-12-05 08:29:04,524] Add_New - Step 02: Click to 'Add' button
-<br><br>
-				[INFO ] [2021-12-05 08:29:08,853] Add_New - Step 03: Enter valid info to 'First Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:29:14,488] Add_New - Step 04: Enter valid info to 'Last Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:29:18,426] Add_New - Step 05: Get value of 'Employee ID' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:29:19,969] Add_New - Step 06: Click to 'Create Login Details' checkbox
-<br><br>
-				[INFO ] [2021-12-05 08:29:25,318] Add_New - Step 07: Enter valid info to 'Username' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:29:29,970] Add_New - Step 08: Enter valid info to 'Password' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:29:34,935] Add_New - Step 09: Enter valid info to 'Confirm password' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:29:38,750] Add_New - Step 10: Select 'Enable' value in 'Status' dropndow
-<br><br>
-				[INFO ] [2021-12-05 08:29:41,272] Add_New - Step 11: Click to 'Save' button
-<br><br>
-				[INFO ] [2021-12-05 08:29:47,723] Add_New - Step 12: Open 'Employee List' page
-<br><br>
-				[INFO ] [2021-12-05 08:29:58,703]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:29:58,703] Add_New - Step 13: Enter valid info to 'Employee Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:29:58,949]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:30:05,396] Add_New - Step 14: Click to 'Search' button
-<br><br>
-				[INFO ] [2021-12-05 08:30:10,064]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:30:10,064] Add_New - Step 15: Verify Employee Information displayed at 'Result Table'
-<br><br>
-				[INFO ] [2021-12-05 08:31:10,583] Add_New - Step 01: Open 'Employee List' page
-<br><br>
-				[INFO ] [2021-12-05 08:31:20,258] Add_New - Step 02: Click to 'Add' button
-<br><br>
-				[INFO ] [2021-12-05 08:31:24,343] Add_New - Step 03: Enter valid info to 'First Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:31:28,162] Add_New - Step 04: Enter valid info to 'Last Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:31:32,070] Add_New - Step 05: Get value of 'Employee ID' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:31:33,146] Add_New - Step 06: Click to 'Create Login Details' checkbox
-<br><br>
-				[INFO ] [2021-12-05 08:31:36,363] Add_New - Step 07: Enter valid info to 'Username' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:31:40,199] Add_New - Step 08: Enter valid info to 'Password' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:31:44,518] Add_New - Step 09: Enter valid info to 'Confirm password' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:31:48,864] Add_New - Step 10: Select 'Enable' value in 'Status' dropndow
-<br><br>
-				[INFO ] [2021-12-05 08:31:50,967] Add_New - Step 11: Click to 'Save' button
-<br><br>
-				[INFO ] [2021-12-05 08:31:55,005] Add_New - Step 12: Open 'Employee List' page
-<br><br>
-				[INFO ] [2021-12-05 08:32:03,999]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:32:04,000] Add_New - Step 13: Enter valid info to 'Employee Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:32:04,245]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:32:08,104] Add_New - Step 14: Click to 'Search' button
-<br><br>
-				[INFO ] [2021-12-05 08:32:13,206]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:32:13,207] Add_New - Step 15: Verify Employee Information displayed at 'Result Table'
-<br><br>
-				[INFO ] [2021-12-05 08:33:13,760] Upload_Avatar_02 - Step 01: Login with Employee role
-<br><br>
-				[INFO ] [2021-12-05 08:33:35,530] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
-<br><br>
-				[INFO ] [2021-12-05 08:33:39,870] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
-<br><br>
-				[INFO ] [2021-12-05 08:33:44,097] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
-<br><br>
-				[INFO ] [2021-12-05 08:33:44,706] Upload_Avatar_02 - Step 01: Login with Employee role
-<br><br>
-				[INFO ] [2021-12-05 08:34:03,802] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
-<br><br>
-				[INFO ] [2021-12-05 08:34:08,719] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
-<br><br>
-				[INFO ] [2021-12-05 08:34:13,401] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
-<br><br>
-				[INFO ] [2021-12-05 08:34:14,023] Upload_Avatar_02 - Step 01: Login with Employee role
-<br><br>
-				[INFO ] [2021-12-05 08:34:35,462] Upload_Avatar_02 - Step 02: Open 'Personal Details' Page
-<br><br>
-				[INFO ] [2021-12-05 08:34:39,823] Upload_Avatar_02 - Step 03: Click to 'Change Photo' Image
-<br><br>
-				[INFO ] [2021-12-05 08:34:43,628] Upload_Avatar_02 - Step 03: Upload new avatar 'Adobe.jpg' image 
-<br><br>
-				[INFO ] [2021-12-05 08:34:44,226] Personal Details - Step 01: Open 'Personal Details' form 
-<br><br>
-				[INFO ] [2021-12-05 08:34:48,220] Personal Details - Step 02: Verify all fields disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:34:49,940]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:34:51,054]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:34:52,619]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:34:53,657]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:34:56,363]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:34:57,854]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:34:58,884]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:00,333]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:01,483]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:02,658]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:02,658] Personal Details - Step 03: Click to 'Edit' button
-<br><br>
-				[INFO ] [2021-12-05 08:35:06,153] Personal Details - Step 04: Verify 'Employee Id' field disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:35:07,218]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:07,218] Personal Details - Step 06: Verify 'SSN Number' disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:35:08,251]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:08,251] Personal Details - Step 07: Verify 'SIN Number' disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:35:09,274]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:09,275] Personal Details - Step 08: Verify 'Date of Birth' disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:35:10,293]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:10,293] Personal Details - Step 09: Enter 'First Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:35:14,116] Personal Details - Step 10: Enter 'Last Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:35:18,001] Personal Details - Step 11: Enter 'License Expiry Date' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:35:22,660] Personal Details - Step 12: Select 'Gender' radio button
-<br><br>
-				[INFO ] [2021-12-05 08:35:26,002] Personal Details - Step 13: Select 'Marital Status' dropdown
-<br><br>
-				[INFO ] [2021-12-05 08:35:28,074] Personal Details - Step 14: Click to 'Save' button
-<br><br>
-				[INFO ] [2021-12-05 08:35:32,241] Personal Details - Step 15: Verify success message is displayed
-<br><br>
-				[INFO ] [2021-12-05 08:35:33,367]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:33,368] Personal Details - Step 16: Verify 'First Name' textbox is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:35:34,519]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:34,520] Personal Details - Step 16: Verify 'Last Name' textbox is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:35:35,586]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:35,587] Personal Details - Step 11: Verify 'License Expiry Date' textbox is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:35:40,056]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:40,057] Personal Details - Step 12: Verify 'Gender' radio button is updated success 
-<br><br>
-				[INFO ] [2021-12-05 08:35:41,808]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:41,808] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:35:44,810]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:44,810] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:35:46,046]  -------------------------- FAILED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:46,055] Personal Details - Step 01: Open 'Personal Details' form 
-<br><br>
-				[INFO ] [2021-12-05 08:35:51,146] Personal Details - Step 02: Verify all fields disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:35:52,391]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:55,070]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:56,285]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:57,483]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:35:58,809]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:00,090]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:02,798]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:03,879]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:04,988]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:06,152]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:06,152] Personal Details - Step 03: Click to 'Edit' button
-<br><br>
-				[INFO ] [2021-12-05 08:36:09,748] Personal Details - Step 04: Verify 'Employee Id' field disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:36:10,796]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:10,797] Personal Details - Step 06: Verify 'SSN Number' disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:36:11,851]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:11,851] Personal Details - Step 07: Verify 'SIN Number' disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:36:12,898]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:12,898] Personal Details - Step 08: Verify 'Date of Birth' disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:36:13,985]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:13,985] Personal Details - Step 09: Enter 'First Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:36:18,033] Personal Details - Step 10: Enter 'Last Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:36:23,036] Personal Details - Step 11: Enter 'License Expiry Date' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:36:31,442] Personal Details - Step 12: Select 'Gender' radio button
-<br><br>
-				[INFO ] [2021-12-05 08:36:36,379] Personal Details - Step 13: Select 'Marital Status' dropdown
-<br><br>
-				[INFO ] [2021-12-05 08:36:39,988] Personal Details - Step 14: Click to 'Save' button
-<br><br>
-				[INFO ] [2021-12-05 08:36:44,772] Personal Details - Step 15: Verify success message is displayed
-<br><br>
-				[INFO ] [2021-12-05 08:36:45,857]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:45,857] Personal Details - Step 16: Verify 'First Name' textbox is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:36:47,019]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:47,020] Personal Details - Step 16: Verify 'Last Name' textbox is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:36:48,073]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:48,073] Personal Details - Step 11: Verify 'License Expiry Date' textbox is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:36:49,131]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:49,132] Personal Details - Step 12: Verify 'Gender' radio button is updated success 
-<br><br>
-				[INFO ] [2021-12-05 08:36:50,570]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:50,571] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:36:52,869]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:52,869] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:36:53,979]  -------------------------- FAILED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:36:53,986] Personal Details - Step 01: Open 'Personal Details' form 
-<br><br>
-				[INFO ] [2021-12-05 08:36:59,144] Personal Details - Step 02: Verify all fields disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:37:01,774]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:02,817]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:03,883]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:05,493]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:06,580]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:07,789]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:08,865]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:10,007]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:11,076]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:12,139]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:12,140] Personal Details - Step 03: Click to 'Edit' button
-<br><br>
-				[INFO ] [2021-12-05 08:37:15,742] Personal Details - Step 04: Verify 'Employee Id' field disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:37:16,794]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:16,794] Personal Details - Step 06: Verify 'SSN Number' disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:37:17,823]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:17,824] Personal Details - Step 07: Verify 'SIN Number' disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:37:18,835]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:18,836] Personal Details - Step 08: Verify 'Date of Birth' disable at 'Personal Details' form
-<br><br>
-				[INFO ] [2021-12-05 08:37:21,366]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:21,367] Personal Details - Step 09: Enter 'First Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:37:27,011] Personal Details - Step 10: Enter 'Last Name' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:37:31,916] Personal Details - Step 11: Enter 'License Expiry Date' textbox
-<br><br>
-				[INFO ] [2021-12-05 08:37:36,939] Personal Details - Step 12: Select 'Gender' radio button
-<br><br>
-				[INFO ] [2021-12-05 08:37:40,864] Personal Details - Step 13: Select 'Marital Status' dropdown
-<br><br>
-				[INFO ] [2021-12-05 08:37:43,700] Personal Details - Step 14: Click to 'Save' button
-<br><br>
-				[INFO ] [2021-12-05 08:37:49,199] Personal Details - Step 15: Verify success message is displayed
-<br><br>
-				[INFO ] [2021-12-05 08:37:51,192]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:51,192] Personal Details - Step 16: Verify 'First Name' textbox is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:37:54,502]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:54,502] Personal Details - Step 16: Verify 'Last Name' textbox is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:37:55,901]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:55,901] Personal Details - Step 11: Verify 'License Expiry Date' textbox is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:37:57,496]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:57,497] Personal Details - Step 12: Verify 'Gender' radio button is updated success 
-<br><br>
-				[INFO ] [2021-12-05 08:37:58,923]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:37:58,924] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:38:01,342]  -------------------------- PASSED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:38:01,342] Personal Details - Step 13: Verify 'Marital Status' dropdown is updated success
-<br><br>
-				[INFO ] [2021-12-05 08:38:02,395]  -------------------------- FAILED -------------------------- 
-<br><br>
-				[INFO ] [2021-12-05 08:38:02,422] Post-Condition - Close Browser - Chrome
-<br><br>
-				[INFO ] [2021-12-05 08:38:02,422] OS name = windows 10
+				[INFO ] [2021-12-12 11:16:34,875] OS name = windows 10
 <br><br>
 		</div>
 	</div>
@@ -2196,7 +1677,7 @@ Session ID: 379810e6b27a4dc9ab6b46f4ae67951b
 		</script>
 		<script>
 			var timeline = {
-			        "Employee_01_Add_New_Employee":413.096,"Employee_02_Upload_Avatar":229.676,"Employee_03_Personal_Details":69.713,"Employee_02_Upload_Avatar":258.996,"Employee_02_Upload_Avatar":289.945,"Employee_03_Personal_Details":137.651,"Employee_01_Add_New_Employee":683.265,"Employee_03_Personal_Details":199.482,"Employee_01_Add_New_Employee":548.099,"Employee_11_Search_Employee":1.294,"Employee_05_Emergency_Details":1.309,"Employee_09_Edit_View_Tax":1.299,"Employee_07_Edit_View_Job":1.304,"Employee_04_Contact_Details":1.313,"Employee_10_Qualifications":1.299,"Employee_06_Assigned_Dependents":1.307,"Employee_08_Edit_View_Salary":1.304
+			        "Employee_02_Upload_Avatar":1.832,"Employee_01_Add_New_Employee":61.925,"Employee_03_Personal_Details":1.822,"Employee_02_Upload_Avatar":1.866,"Employee_01_Add_New_Employee":182.055,"Employee_01_Add_New_Employee":121.953,"Employee_03_Personal_Details":1.833,"Employee_02_Upload_Avatar":1.857,"Employee_03_Personal_Details":1.843,"Employee_07_Edit_View_Job":1.808,"Employee_06_Assigned_Dependents":1.812,"Employee_04_Contact_Details":1.823,"Employee_08_Edit_View_Salary":1.771,"Employee_11_Search_Employee":1.744,"Employee_09_Edit_View_Tax":1.757,"Employee_05_Emergency_Details":1.82,"Employee_10_Qualifications":1.755
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

@@ -17,6 +17,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import commons.GlobalConstants;
+import factoryBrowsers.BrowsersList;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GridFactory {
@@ -33,10 +34,10 @@ public class GridFactory {
 
 	
 	public WebDriver createDriver () {
-		Browsers browser = Browsers.valueOf(browserName.toUpperCase());
+		BrowsersList browser = BrowsersList.valueOf(browserName.toUpperCase());
 		DesiredCapabilities capability = null;
 		
-		if (browser==Browsers.FIREFOX) {
+		if (browser==BrowsersList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			//add extensions
 //			FirefoxProfile profile = new FirefoxProfile();
@@ -56,7 +57,7 @@ public class GridFactory {
 			
 			FirefoxOptions options = new FirefoxOptions();
 			options.merge(capability);
-		} else if (browser==Browsers.CHROME) {
+		} else if (browser==BrowsersList.CHROME) {
 			//Latest official
 			WebDriverManager.chromedriver().setup();
 			
@@ -71,25 +72,25 @@ public class GridFactory {
 //			options.addArguments("--disable-infobars");
 			driver = new ChromeDriver(options);
 			
-		} else if (browser==Browsers.IE) {
+		} else if (browser==BrowsersList.IE) {
 			WebDriverManager.iedriver().arch32().driverVersion("3.141.59").setup();
 			driver = new InternetExplorerDriver();
 			
-		} else if (browser==Browsers.EDGE) {
+		} else if (browser==BrowsersList.EDGE) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			
-		} else if (browser==Browsers.SAFARI) {
+		} else if (browser==BrowsersList.SAFARI) {
 			driver = new SafariDriver();
 			
-		} else if (browser==Browsers.H_CHROME) {
+		} else if (browser==BrowsersList.H_CHROME) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(true);
 			options.addArguments("window-size=1920x1080");
 			driver = new ChromeDriver(options);
 			
-		} else if (browser==Browsers.H_FIREFOX) {
+		} else if (browser==BrowsersList.H_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
 			options.setHeadless(true);
